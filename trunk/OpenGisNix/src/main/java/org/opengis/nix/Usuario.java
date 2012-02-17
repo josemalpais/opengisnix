@@ -6,7 +6,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.util.Calendar;
+import java.util.Date;
+
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -34,10 +35,10 @@ public class Usuario {
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
-    private Calendar fechaNacimiento;
+    private Date fechaNacimiento;
 
     @NotNull
-    @Pattern(regexp = "[0-9]{9}")
+    @Pattern(regexp = "[0-9]+$")
     private String telefono;
 
     @NotNull
