@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_opengis_nix_Prestamo" object="${prestamo}" path="/prestamoes" z="TKNOenrqb0T0CRsCHojYlTXnza8=">
+        <field:display field="usuario" id="s_org_opengis_nix_Prestamo_Usuario" object="${prestamo}" z="IWfeQAflpElUznZHFZraKYocnF0="/>
+        <field:display field="dispositivo" id="s_org_opengis_nix_Prestamo_Dispositivo" object="${prestamo}" z="xEuzyljy2rDy3uKxhrRPX1RuLPU="/>
+        <field:display calendar="true" dateTimePattern="${prestamo_fechainicio_date_format}" field="fechaInicio" id="s_org_opengis_nix_Prestamo_fechaInicio" object="${prestamo}" z="kd/83V0WfObl0ZwJSXTMicxRcX8="/>
+        <field:display calendar="true" dateTimePattern="${prestamo_fechafin_date_format}" field="fechaFin" id="s_org_opengis_nix_Prestamo_fechaFin" object="${prestamo}" z="56bmSshUbMlv9FCe1Apu/c96ZjA="/>
+    </page:show>
+</div>

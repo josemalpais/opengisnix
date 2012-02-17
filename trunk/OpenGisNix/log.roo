@@ -54,3 +54,6 @@ field enum --fieldName tarea --type ~.enumerated.Tarea --enumType STRING --class
 field number --fieldName dosis --type int --max 999 --notNull 
 field boolean --fieldName Activo --value True
 // script /Users/dai/log.roo
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-02-17 11:51:16
+web mvc setup
+web mvc all --package ~.web 

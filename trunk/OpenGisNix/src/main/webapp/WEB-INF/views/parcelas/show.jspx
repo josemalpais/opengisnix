@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_opengis_nix_Parcela" object="${parcela}" path="/parcelas" z="OonapTo5akd+MCspI0yOaBEWEL0=">
+        <field:display field="propietario" id="s_org_opengis_nix_Parcela_Propietario" object="${parcela}" z="IGnoCoIFvg7PvnfAvAMWDUe5Eto="/>
+        <field:display field="alias" id="s_org_opengis_nix_Parcela_alias" object="${parcela}" z="wahjsA73vPDufhMWmtaYAhPGIcg="/>
+        <field:display field="numPoblacion" id="s_org_opengis_nix_Parcela_numPoblacion" object="${parcela}" z="y8CcMFARPCP2Kmoa91pck/Luejg="/>
+        <field:display field="numProvincia" id="s_org_opengis_nix_Parcela_numProvincia" object="${parcela}" z="QWUk/g4uKcosT6Xko5Y84v3G2fs="/>
+        <field:display field="numParcela" id="s_org_opengis_nix_Parcela_numParcela" object="${parcela}" z="G0nh9SFOgQ9pIk1dKCxpqxRH5F8="/>
+        <field:display field="numPartida" id="s_org_opengis_nix_Parcela_numPartida" object="${parcela}" z="OmOGQrZx2kafYtYKE752Q1wYNbc="/>
+        <field:display field="activa" id="s_org_opengis_nix_Parcela_activa" object="${parcela}" z="x6CxDl2KwFCZyZC/zxmiSAADKVc="/>
+    </page:show>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_opengis_nix_Dispositivo" items="${dispositivoes}" z="3FKUkvWaYtVzUBCVjkcjrf4Zf10=">
+        <table:table data="${dispositivoes}" id="l_org_opengis_nix_Dispositivo" path="/dispositivoes" z="aQw3XKsMl2Nvcwy5CszmTMRLtAE=">
+            <table:column id="c_org_opengis_nix_Dispositivo_modelo" property="modelo" z="SzgtXepYrmbpa+9tpP9dy3A/1zw="/>
+            <table:column id="c_org_opengis_nix_Dispositivo_numSerie" property="numSerie" z="sFLodU9bXEJqxbQfDQHMXCSbMK4="/>
+            <table:column id="c_org_opengis_nix_Dispositivo_disponible" property="disponible" z="miYsEtaEY78pZwjVZFc5UUbxtSc="/>
+            <table:column id="c_org_opengis_nix_Dispositivo_activo" property="activo" z="MsVGmAsspQO7o/vFPW/2QKjXuVA="/>
+        </table:table>
+    </page:list>
+</div>

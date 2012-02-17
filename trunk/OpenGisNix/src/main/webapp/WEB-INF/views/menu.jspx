@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_usuario" z="g6oG0656PcsmmvUYeBtpgiQROck=">
+            <menu:item id="i_usuario_new" messageCode="global_menu_new" url="/usuarios?form" z="RG1gCsiZQjg1HLDzXbHKht6yDkw="/>
+            <menu:item id="i_usuario_list" messageCode="global_menu_list" url="/usuarios?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P7ZIPrcTTBR41JYD0QldbYgsZrM="/>
+        </menu:category>
+        <menu:category id="c_parcela" z="gE2ikfsXLALiVs0vLR4rWLPCEzQ=">
+            <menu:item id="i_parcela_new" messageCode="global_menu_new" url="/parcelas?form" z="S0qD/awgICiMThWtDtNwcn5jsqk="/>
+            <menu:item id="i_parcela_list" messageCode="global_menu_list" url="/parcelas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kKVdVx0fiUNoHvJ0a0wNz/85p6E="/>
+        </menu:category>
+        <menu:category id="c_apero" z="uH4mBFzvc3/PaYaX8nekX1nfAlg=">
+            <menu:item id="i_apero_new" messageCode="global_menu_new" url="/aperoes?form" z="zWFDynXGuqBv9TaGNx0JmaVORqY="/>
+            <menu:item id="i_apero_list" messageCode="global_menu_list" url="/aperoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MUp/PskdjyKmq4UYMDaQg89RkUE="/>
+        </menu:category>
+        <menu:category id="c_dispositivo" z="LmhAm25b/cuzruqeC85Hz8M6vPY=">
+            <menu:item id="i_dispositivo_new" messageCode="global_menu_new" url="/dispositivoes?form" z="us6cPxOqWjUNP9WZvqTt0h7r8+Q="/>
+            <menu:item id="i_dispositivo_list" messageCode="global_menu_list" url="/dispositivoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+ooT/y09Pf/VNW1Yoj9OiADF/p8="/>
+        </menu:category>
+        <menu:category id="c_prestamo" z="dSpdXMOw/CMn2DdACyW5eg05lSI=">
+            <menu:item id="i_prestamo_new" messageCode="global_menu_new" url="/prestamoes?form" z="4OLf3bBvqHay3tZWvMNhOaZUgoA="/>
+            <menu:item id="i_prestamo_list" messageCode="global_menu_list" url="/prestamoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="F8hanDtXzyzsKjm7kjVq9zRJdnk="/>
+        </menu:category>
+        <menu:category id="c_producto" z="ulnZNKk/GIwBqxjIWsYtiPgqT4I=">
+            <menu:item id="i_producto_new" messageCode="global_menu_new" url="/productoes?form" z="NU69Oah+Fo/A/7suYZU0TbHCT/w="/>
+            <menu:item id="i_producto_list" messageCode="global_menu_list" url="/productoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EqA+KL5NJZW09+MF6BSDVmfkk80="/>
+        </menu:category>
+    </menu:menu>
+</div>

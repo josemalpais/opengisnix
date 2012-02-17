@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_opengis_nix_Apero" modelAttribute="apero" path="/aperoes" versionField="Version" z="x82FSCf5CpO2eyJcJlOyEpfouao=">
+        <field:select field="propietario" id="c_org_opengis_nix_Apero_propietario" itemValue="id" items="${usuarios}" path="/usuarios" z="hp9TZJXivWm2h/Dp2yZzzrlptd8="/>
+        <field:input field="nombre" id="c_org_opengis_nix_Apero_nombre" max="20" required="true" z="bRRtVW9pMRgAfu2svhLH+CdgwkE="/>
+        <field:input field="tamanyo" id="c_org_opengis_nix_Apero_tamanyo" max="999" required="true" z="+h+gSoachbHzOKIkhIfR+2u8JgA="/>
+        <field:textarea field="descripcion" id="c_org_opengis_nix_Apero_descripcion" z="xv0iaR96kH3L0i9UddwpuwCRdb0="/>
+        <field:select field="tarea" id="c_org_opengis_nix_Apero_tarea" items="${tareas}" path="tareas" z="toIViqWeFAgq+A/lRqDGW6mcy7Q="/>
+        <field:checkbox field="Activo" id="c_org_opengis_nix_Apero_Activo" z="W/3lyiF3e6P/P+X25spRy0KDQ7A="/>
+    </form:update>
+</div>
