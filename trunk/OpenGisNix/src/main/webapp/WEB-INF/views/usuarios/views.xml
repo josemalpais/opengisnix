@@ -13,4 +13,19 @@
 <definition extends="default" name="usuarios/update">
         <put-attribute name="body" value="/WEB-INF/views/usuarios/update.jspx"/>
     </definition>
+<definition extends="default" name="usuarios/findUsuariosByApellidosLike">
+        <put-attribute name="body" value="/WEB-INF/views/usuarios/findUsuariosByApellidosLike.jspx"/>
+    </definition>
+<definition extends="default" name="usuarios/findUsuariosByDniLike">
+        <put-attribute name="body" value="/WEB-INF/views/usuarios/findUsuariosByDniLike.jspx"/>
+    </definition>
+<definition extends="default" name="usuarios/findUsuariosByNombreLike">
+        <put-attribute name="body" value="/WEB-INF/views/usuarios/findUsuariosByNombreLike.jspx"/>
+    </definition>
+<definition extends="default" name="usuarios/findUsuariosByTelefono">
+        <put-attribute name="body" value="/WEB-INF/views/usuarios/findUsuariosByTelefono.jspx"/>
+    </definition>
+<definition extends="default" name="usuarios/findUsuariosByTipo">
+        <put-attribute name="body" value="/WEB-INF/views/usuarios/findUsuariosByTipo.jspx"/>
+    </definition>
 </tiles-definitions>

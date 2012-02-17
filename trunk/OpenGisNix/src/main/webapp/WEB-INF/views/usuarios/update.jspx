@@ -7,7 +7,7 @@
         <field:input field="nombre" id="c_org_opengis_nix_Usuario_nombre" max="30" required="true" z="gpgrgapjSaVIgk+9aYpK3MZYp5I="/>
         <field:input field="apellidos" id="c_org_opengis_nix_Usuario_apellidos" max="30" required="true" z="bxgYpQoe10ix+/BaMKwKmkYOC+g="/>
         <field:datetime dateTimePattern="${usuario_fechanacimiento_date_format}" field="fechaNacimiento" id="c_org_opengis_nix_Usuario_fechaNacimiento" z="v6DxJsPCiMObsdaobB1c689LWno="/>
-        <field:input field="telefono" id="c_org_opengis_nix_Usuario_telefono" required="true" validationRegex="[0-9]{9}" z="CQdjNFq+19kaMiq37dzBkGAAQr0="/>
+        <field:input field="telefono" id="c_org_opengis_nix_Usuario_telefono" required="true" validationRegex="[0-9]+$" z="uazvVl/r2Bh4zUnKdpNodDJNFOQ="/>
         <field:textarea field="direccion" id="c_org_opengis_nix_Usuario_direccion" required="true" z="0eM1P6zLmB09S1VxdHtVSDQuKDc="/>
         <field:input field="poblacion" id="c_org_opengis_nix_Usuario_poblacion" max="20" required="true" z="zxz5OF/RkPbX3tr9uYBieASnL38="/>
         <field:input field="provincia" id="c_org_opengis_nix_Usuario_provincia" max="20" required="true" z="blP2pWcqwwBVYX0tfI+18wL4moQ="/>

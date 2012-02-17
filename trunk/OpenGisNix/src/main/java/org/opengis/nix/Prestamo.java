@@ -14,7 +14,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity
+@RooEntity(finders = { "findPrestamoesByDispositivo", "findPrestamoesByUsuario" })
 public class Prestamo {
 
     @ManyToOne

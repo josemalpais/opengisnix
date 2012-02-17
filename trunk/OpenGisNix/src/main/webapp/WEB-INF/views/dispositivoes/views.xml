@@ -13,4 +13,7 @@
 <definition extends="default" name="dispositivoes/update">
         <put-attribute name="body" value="/WEB-INF/views/dispositivoes/update.jspx"/>
     </definition>
+<definition extends="default" name="dispositivoes/findDispositivoesByModeloLike">
+        <put-attribute name="body" value="/WEB-INF/views/dispositivoes/findDispositivoesByModeloLike.jspx"/>
+    </definition>
 </tiles-definitions>

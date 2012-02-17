@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @RooJavaBean
 @RooToString
-@RooEntity(identifierColumn = "idUsuario")
+@RooEntity(identifierColumn = "idUsuario", finders = { "findUsuariosByDniLike", "findUsuariosByNombreLike", "findUsuariosByApellidosLike", "findUsuariosByTelefono", "findUsuariosByEmailLike", "findUsuariosByTipo" })
 public class Usuario {
 
     @NotNull

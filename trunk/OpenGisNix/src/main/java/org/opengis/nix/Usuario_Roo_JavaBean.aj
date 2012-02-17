@@ -5,7 +5,7 @@ package org.opengis.nix;
 
 import java.lang.Boolean;
 import java.lang.String;
-import java.util.Calendar;
+import java.util.Date;
 import org.opengis.nix.enumerated.TipoUser;
 
 privileged aspect Usuario_Roo_JavaBean {
@@ -34,11 +34,11 @@ privileged aspect Usuario_Roo_JavaBean {
         this.apellidos = apellidos;
     }
     
-    public Calendar Usuario.getFechaNacimiento() {
+    public Date Usuario.getFechaNacimiento() {
         return this.fechaNacimiento;
     }
     
-    public void Usuario.setFechaNacimiento(Calendar fechaNacimiento) {
+    public void Usuario.setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
     

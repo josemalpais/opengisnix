@@ -8,6 +8,7 @@ import java.lang.String;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
@@ -74,7 +75,7 @@ privileged aspect UsuarioDataOnDemand_Roo_DataOnDemand {
     }
     
     public void UsuarioDataOnDemand.setFechaNacimiento(Usuario obj, int index) {
-        Calendar fechaNacimiento = Calendar.getInstance();
+        Date fechaNacimiento = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
         obj.setFechaNacimiento(fechaNacimiento);
     }
     

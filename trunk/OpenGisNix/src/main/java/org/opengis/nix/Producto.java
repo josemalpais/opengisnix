@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @RooJavaBean
 @RooToString
-@RooEntity(identifierColumn = "idProducto")
+@RooEntity(identifierColumn = "idProducto", finders = { "findProductoesByUsuario", "findProductoesByNombreLike", "findProductoesByNomtarea" })
 public class Producto {
 
     @ManyToOne

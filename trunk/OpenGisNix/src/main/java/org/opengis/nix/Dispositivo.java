@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @RooJavaBean
 @RooToString
-@RooEntity(identifierColumn = "idDispositivo")
+@RooEntity(identifierColumn = "idDispositivo", finders = { "findDispositivoesByModeloLike" })
 public class Dispositivo {
 
     @NotNull
