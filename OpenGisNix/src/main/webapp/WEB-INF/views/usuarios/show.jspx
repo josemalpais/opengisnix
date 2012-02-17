@@ -6,7 +6,7 @@
         <field:display field="dni" id="s_org_opengis_nix_Usuario_dni" object="${usuario}" z="+chBeLJv8PzWB9o/rVYJQiVaZEM="/>
         <field:display field="nombre" id="s_org_opengis_nix_Usuario_nombre" object="${usuario}" z="UA2cMGJPx51dTOokqgDJgwNQmhk="/>
         <field:display field="apellidos" id="s_org_opengis_nix_Usuario_apellidos" object="${usuario}" z="TFDBiNByBCWvIHOMsKQ6ZQo2pEo="/>
-        <field:display calendar="true" dateTimePattern="${usuario_fechanacimiento_date_format}" field="fechaNacimiento" id="s_org_opengis_nix_Usuario_fechaNacimiento" object="${usuario}" z="FDUX+EpMKCU+knz5blk7FtPoPGM="/>
+        <field:display date="true" dateTimePattern="${usuario_fechanacimiento_date_format}" field="fechaNacimiento" id="s_org_opengis_nix_Usuario_fechaNacimiento" object="${usuario}" z="HJoh9YWhaUz4xuz+QVawarUb10M="/>
         <field:display field="telefono" id="s_org_opengis_nix_Usuario_telefono" object="${usuario}" z="78RrruZfBFm+HPPMjcRPa9SRViw="/>
         <field:display field="direccion" id="s_org_opengis_nix_Usuario_direccion" object="${usuario}" z="7YKlfeOsZ8CiYMZP602kPtzUCGY="/>
         <field:display field="poblacion" id="s_org_opengis_nix_Usuario_poblacion" object="${usuario}" z="yUqTxMrXj3NUbEskJdzwTLMlbVM="/>

@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @RooJavaBean
 @RooToString
-@RooEntity(identifierColumn = "idParcela")
+@RooEntity(identifierColumn = "idParcela", finders = { "findParcelasByProvincia", "findParcelasByPoblacion", "findParcelasByPoligono", "findParcelasByNumero", "findParcelasByPartida", "findParcelasByPropietario", "findParcelasByProvinciaAndPoblacionAndPoligonoAndNumero"})
 public class Parcela {
 
     @ManyToOne

@@ -13,4 +13,10 @@
 <definition extends="default" name="aperoes/update">
         <put-attribute name="body" value="/WEB-INF/views/aperoes/update.jspx"/>
     </definition>
+<definition extends="default" name="aperoes/findAperoesByNombreLike">
+        <put-attribute name="body" value="/WEB-INF/views/aperoes/findAperoesByNombreLike.jspx"/>
+    </definition>
+<definition extends="default" name="aperoes/findAperoesByTarea">
+        <put-attribute name="body" value="/WEB-INF/views/aperoes/findAperoesByTarea.jspx"/>
+    </definition>
 </tiles-definitions>

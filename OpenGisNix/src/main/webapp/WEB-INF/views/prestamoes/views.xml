@@ -13,4 +13,10 @@
 <definition extends="default" name="prestamoes/update">
         <put-attribute name="body" value="/WEB-INF/views/prestamoes/update.jspx"/>
     </definition>
+<definition extends="default" name="prestamoes/findPrestamoesByDispositivo">
+        <put-attribute name="body" value="/WEB-INF/views/prestamoes/findPrestamoesByDispositivo.jspx"/>
+    </definition>
+<definition extends="default" name="prestamoes/findPrestamoesByUsuario">
+        <put-attribute name="body" value="/WEB-INF/views/prestamoes/findPrestamoesByUsuario.jspx"/>
+    </definition>
 </tiles-definitions>

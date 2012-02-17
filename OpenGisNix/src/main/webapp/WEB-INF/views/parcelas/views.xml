@@ -13,4 +13,7 @@
 <definition extends="default" name="parcelas/update">
         <put-attribute name="body" value="/WEB-INF/views/parcelas/update.jspx"/>
     </definition>
+<definition extends="default" name="parcelas/findParcelasByPropietario">
+        <put-attribute name="body" value="/WEB-INF/views/parcelas/findParcelasByPropietario.jspx"/>
+    </definition>
 </tiles-definitions>

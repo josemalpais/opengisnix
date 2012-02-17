@@ -6,22 +6,33 @@
         <menu:category id="c_usuario" z="g6oG0656PcsmmvUYeBtpgiQROck=">
             <menu:item id="i_usuario_new" messageCode="global_menu_new" url="/usuarios?form" z="RG1gCsiZQjg1HLDzXbHKht6yDkw="/>
             <menu:item id="i_usuario_list" messageCode="global_menu_list" url="/usuarios?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P7ZIPrcTTBR41JYD0QldbYgsZrM="/>
+            <menu:item id="fi_usuario_apellidoslike" messageCode="global_menu_find" url="/usuarios?find=ByApellidosLike&amp;form" z="QhLoLlzEpZqn9CYJv65Mx9L9Q34="/>
+            <menu:item id="fi_usuario_dnilike" messageCode="global_menu_find" url="/usuarios?find=ByDniLike&amp;form" z="tPin69QHyn7ws+R4AoSfXf5XECY="/>
+            <menu:item id="fi_usuario_nombrelike" messageCode="global_menu_find" url="/usuarios?find=ByNombreLike&amp;form" z="VfO+tqbk9AsyYXKiIQ+rdGmmJhA="/>
+            <menu:item id="fi_usuario_telefono" messageCode="global_menu_find" url="/usuarios?find=ByTelefono&amp;form" z="CrXJR62eLCg/9xmG73aKmPNtZg8="/>
+            <menu:item id="fi_usuario_tipo" messageCode="global_menu_find" url="/usuarios?find=ByTipo&amp;form" z="rmKbFBuvXdsDmEIDhj5r50RJT+M="/>
         </menu:category>
         <menu:category id="c_parcela" z="gE2ikfsXLALiVs0vLR4rWLPCEzQ=">
             <menu:item id="i_parcela_new" messageCode="global_menu_new" url="/parcelas?form" z="S0qD/awgICiMThWtDtNwcn5jsqk="/>
             <menu:item id="i_parcela_list" messageCode="global_menu_list" url="/parcelas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kKVdVx0fiUNoHvJ0a0wNz/85p6E="/>
+            <menu:item id="fi_parcela_propietario" messageCode="global_menu_find" url="/parcelas?find=ByPropietario&amp;form" z="B/K+25EkQzQ8TNKTRVN0dBVBuR4="/>
         </menu:category>
         <menu:category id="c_apero" z="uH4mBFzvc3/PaYaX8nekX1nfAlg=">
             <menu:item id="i_apero_new" messageCode="global_menu_new" url="/aperoes?form" z="zWFDynXGuqBv9TaGNx0JmaVORqY="/>
             <menu:item id="i_apero_list" messageCode="global_menu_list" url="/aperoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MUp/PskdjyKmq4UYMDaQg89RkUE="/>
+            <menu:item id="fi_apero_nombrelike" messageCode="global_menu_find" url="/aperoes?find=ByNombreLike&amp;form" z="jSlXjztN5flRRdNpVBgdzret4GY="/>
+            <menu:item id="fi_apero_tarea" messageCode="global_menu_find" url="/aperoes?find=ByTarea&amp;form" z="THOboqKGgnPu6w8kTfCu1l4KLLc="/>
         </menu:category>
         <menu:category id="c_dispositivo" z="LmhAm25b/cuzruqeC85Hz8M6vPY=">
             <menu:item id="i_dispositivo_new" messageCode="global_menu_new" url="/dispositivoes?form" z="us6cPxOqWjUNP9WZvqTt0h7r8+Q="/>
             <menu:item id="i_dispositivo_list" messageCode="global_menu_list" url="/dispositivoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+ooT/y09Pf/VNW1Yoj9OiADF/p8="/>
+            <menu:item id="fi_dispositivo_modelolike" messageCode="global_menu_find" url="/dispositivoes?find=ByModeloLike&amp;form" z="hm5b1386NwuMCNmpNItNoa9663Y="/>
         </menu:category>
         <menu:category id="c_prestamo" z="dSpdXMOw/CMn2DdACyW5eg05lSI=">
             <menu:item id="i_prestamo_new" messageCode="global_menu_new" url="/prestamoes?form" z="4OLf3bBvqHay3tZWvMNhOaZUgoA="/>
             <menu:item id="i_prestamo_list" messageCode="global_menu_list" url="/prestamoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="F8hanDtXzyzsKjm7kjVq9zRJdnk="/>
+            <menu:item id="fi_prestamo_dispositivo" messageCode="global_menu_find" url="/prestamoes?find=ByDispositivo&amp;form" z="T8mEue8+F2u2FAnLzm9hRRuUvb8="/>
+            <menu:item id="fi_prestamo_usuario" messageCode="global_menu_find" url="/prestamoes?find=ByUsuario&amp;form" z="tfjHT2UV2xzsY6h+gTgKFXbixIs="/>
         </menu:category>
         <menu:category id="c_producto" z="ulnZNKk/GIwBqxjIWsYtiPgqT4I=">
             <menu:item id="i_producto_new" messageCode="global_menu_new" url="/productoes?form" z="NU69Oah+Fo/A/7suYZU0TbHCT/w="/>
