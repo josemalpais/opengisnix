@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_opengis_nix_Producto" modelAttribute="producto" path="/productoes" render="${empty dependencies}" z="+76f+Vmo9J+SzuDOy4kWHdI56sA=">
+        <field:select field="propietario" id="c_org_opengis_nix_Producto_propietario" itemValue="id" items="${usuarios}" path="/usuarios" z="GDJ/x8sxJ8gXAIPNyyk/2zrkFdk="/>
+        <field:textarea field="descripcion" id="c_org_opengis_nix_Producto_descripcion" z="NOH7eNL2IISv3Bv/R5oYQWo1dFo="/>
+        <field:select field="tarea" id="c_org_opengis_nix_Producto_tarea" items="${tareas}" path="tareas" z="uosxgAwUv/D3nKGb4lRoWuAlmbo="/>
+        <field:input field="dosis" id="c_org_opengis_nix_Producto_dosis" max="999" required="true" z="El085xzRHDsIIwrz0HAddSr6jWw="/>
+        <field:checkbox field="Activo" id="c_org_opengis_nix_Producto_Activo" z="FJBx8s5WDHafMVDuW23d82/L49U="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_Producto" render="${not empty dependencies}" z="WKKZj5udCqUVz01HswG/enUK67Q="/>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_opengis_nix_Prestamo" modelAttribute="prestamo" path="/prestamoes" versionField="Version" z="m2ZcG0d9U4n0zjSm8DfRxVnCXzs=">
+        <field:select field="Usuario" id="c_org_opengis_nix_Prestamo_Usuario" itemValue="id" items="${usuarios}" path="/usuarios" z="e3+mFMvLM7NrtlM/0ngC7K/N7n0="/>
+        <field:select field="Dispositivo" id="c_org_opengis_nix_Prestamo_Dispositivo" itemValue="id" items="${dispositivoes}" path="/dispositivoes" z="wsWEqSQHRpAC2Iio/C+RElFCREY="/>
+        <field:datetime dateTimePattern="${prestamo_fechainicio_date_format}" field="fechaInicio" id="c_org_opengis_nix_Prestamo_fechaInicio" required="true" z="tL4G+7pMZFddshAcCSF1ZqFbCsQ="/>
+        <field:datetime dateTimePattern="${prestamo_fechafin_date_format}" field="fechaFin" id="c_org_opengis_nix_Prestamo_fechaFin" z="69U7ui7U0sOOS5ykH0tp5UNiNvc="/>
+    </form:update>
+</div>

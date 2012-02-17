@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_opengis_nix_Dispositivo" modelAttribute="dispositivo" path="/dispositivoes" versionField="Version" z="g3pFGxQmHmf9qBt3aKnVvn0CiTQ=">
+        <field:input field="modelo" id="c_org_opengis_nix_Dispositivo_modelo" max="20" required="true" z="P1VTU23Pbdbkxt1QvlYPvH/UJXE="/>
+        <field:input field="numSerie" id="c_org_opengis_nix_Dispositivo_numSerie" max="20" required="true" z="wHSG9U9V1AcezwXXE3jGE1v9F0I="/>
+        <field:checkbox field="disponible" id="c_org_opengis_nix_Dispositivo_disponible" z="2bfG6D2c37nrZyyyzOYMdDBh61g="/>
+        <field:checkbox field="activo" id="c_org_opengis_nix_Dispositivo_activo" z="Jn367kFSZPApZQwq+wgON7E7uT8="/>
+    </form:update>
+</div>

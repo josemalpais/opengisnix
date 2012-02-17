@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_opengis_nix_Prestamo" items="${prestamoes}" z="y9iU4oaWsodQ8Oz/JtA2B3yypao=">
+        <table:table data="${prestamoes}" id="l_org_opengis_nix_Prestamo" path="/prestamoes" z="PtlYMfkiOActEWPqqqq7hruuUoQ=">
+            <table:column id="c_org_opengis_nix_Prestamo_Usuario" property="usuario" z="ShEWvbdeaQPm8sQrS31/DLyOsDM="/>
+            <table:column id="c_org_opengis_nix_Prestamo_Dispositivo" property="dispositivo" z="JhdIXhD56TCxzra3Nvk8GKcUtJ4="/>
+            <table:column calendar="true" dateTimePattern="${prestamo_fechainicio_date_format}" id="c_org_opengis_nix_Prestamo_fechaInicio" property="fechaInicio" z="741NHuBLrWtRuSgXo8AI67WOaE8="/>
+            <table:column calendar="true" dateTimePattern="${prestamo_fechafin_date_format}" id="c_org_opengis_nix_Prestamo_fechaFin" property="fechaFin" z="4VdTWsVrI+FfntOc5Kz8cZ22Opc="/>
+        </table:table>
+    </page:list>
+</div>
