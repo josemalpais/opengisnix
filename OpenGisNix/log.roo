@@ -1,0 +1,56 @@
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-02-17 10:30:56
+project --topLevelPackage org.opengis.nix --projectName OpenGisNix --java 6
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2012-02-17 10:30:57
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-02-17 10:31:04
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.Usuario --testAutomatically --identifierColumn idUsuario
+field string --fieldName dni --notNull --regexp [0-9]{8}[A-Za-z]
+field string --fieldName nombre --notNull --sizeMax 30
+field string --fieldName apellidos --notNull --sizeMax 30
+field date --fieldName fechaNacimiento --type java.util.Calendar --dateFormat SHORT 
+field string --fieldName telefono --notNull --regexp [0-9]{9}
+field string --fieldName direccion --sizeMax 40 --notNull
+field string --fieldName poblacion --notNull --sizeMax 20
+field string --fieldName provincia --notNull --sizeMax 20
+field string --fieldName codPostal --regexp [0-9]{5}
+enum type --class ~.enumerated.tipoUser
+enum constant --name Administrador
+enum constant --name Trabajador
+field enum --fieldName tipo --type ~.enumerated.tipoUser --enumType STRING --class ~.Usuario
+field boolean --fieldName activo --value True
+entity --class ~.Parcela --identifierColumn idParcela --testAutomatically
+field reference --type ~.Usuario --fieldName Propietario --class ~.Parcela
+field string --fieldName alias --notNull --sizeMax 20
+field number --fieldName numPoblacion --type int --max 999 --notNull
+field number --fieldName numProvincia --type int --max 999 --notNull
+field number --fieldName numParcela --type int --max 999 --notNull
+field number --fieldName numPartida --type int --max 999 --notNull
+field boolean --fieldName activa --value True
+entity --class ~.Dispositivo --testAutomatically --identifierColumn idDispositivo
+field string --fieldName modelo --notNull --sizeMax 20
+field string --fieldName numSerie --notNull --sizeMax 20
+field boolean --fieldName disponible --value True
+field boolean --fieldName activo --value True
+entity --class ~.Prestamo --testAutomatically 
+field reference --type ~.Usuario --fieldName Usuario --class ~.Prestamo
+field reference --type ~.Dispositivo --fieldName Dispositivo --class ~.Prestamo
+field date --fieldName fechaInicio --type java.util.Calendar --dateFormat SHORT --notNull
+field date --fieldName fechaFin --type java.util.Calendar --dateFormat SHORT
+entity --class ~.Apero --testAutomatically --identifierColumn idApero
+field reference --type ~.Usuario --fieldName propietario --class ~.Apero
+field string --fieldName nombre --sizeMax 20 --notNull 
+field number --fieldName tamanyo --type int --max 999 --notNull 
+field string --fieldName descripcion --sizeMax 120
+enum type --class ~.enumerated.Tarea
+enum constant --name Liquido
+enum constant --name Polvo
+enum constant --name Granulado
+field enum --fieldName tarea --type ~.enumerated.Tarea --enumType STRING --class ~.Apero
+field boolean --fieldName Activo --value True
+entity --class ~.Producto --testAutomatically --identifierColumn idProducto
+field reference --type ~.Usuario --fieldName propietario --class ~.Producto
+field string --fieldName descripcion --sizeMax 120
+field enum --fieldName tarea --type ~.enumerated.Tarea --enumType STRING --class ~.Producto
+field number --fieldName dosis --type int --max 999 --notNull 
+field boolean --fieldName Activo --value True
+// script /Users/dai/log.roo
