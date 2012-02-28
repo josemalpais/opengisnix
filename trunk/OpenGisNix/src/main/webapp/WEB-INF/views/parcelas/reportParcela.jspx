@@ -3,34 +3,20 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <h3>
-        <spring:message code="label_report_prestamoes_prestamos" htmlEscape="false"/>
+        <spring:message code="label_report_parcelas_parcelas" htmlEscape="false"/>
     </h3>
     <c:if test="${not empty error}">
         <h3>
             <spring:message code="${error}" htmlEscape="false"/>
         </h3>
     </c:if>
-    <form:form action="InformeParcela" id="fr_org_opengis_nix_Prestamo" method="GET">
-     
-       <spring:message code="message_report_prestamos" htmlEscape="false"/>
-       <table border="0">
-       <td>
-        <spring:message code="message_report_prestamos_fecini" htmlEscape="false"/>
-        </td>
-        <td>
-        <input name="fecini" type="text"/>
-        </td>
-        <tr>
-        </tr>
-        <td>
-	     <spring:message code="message_report_prestamos_fecfin" htmlEscape="false"/>
-	     </td>
-	     <td> 
-	     <input name="fecfin" type="text"/>
-	     </td>      
-  	</table>		
-  	<br/>
-  	<br/>
+    <form:form action="InformeParcela" id="fr_org_opengis_nix_Parcela" method="GET">
+    	      <spring:message code="message_report_parcela" htmlEscape="false"/>
+      <br/>
+      <br/>
+        <input name="parcela" type="text"/>
+      <br/>
+      <br/>
         <input type="submit"/>
     </form:form>
 </div>
