@@ -6,11 +6,11 @@ package org.opengis.nix;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import org.opengis.nix.Parcela;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 
 privileged aspect Parcela_Roo_Finder {
     
-    public static TypedQuery<Parcela> Parcela.findParcelasByPropietario(Usuario Propietario) {
+    public static TypedQuery<Parcela> Parcela.findParcelasByPropietario(User Propietario) {
         if (Propietario == null) throw new IllegalArgumentException("The Propietario argument is required");
         EntityManager em = Parcela.entityManager();
         TypedQuery<Parcela> q = em.createQuery("SELECT o FROM Parcela AS o WHERE o.Propietario = :Propietario", Parcela.class);

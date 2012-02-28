@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_opengis_nix_domain_UserRole" modelAttribute="userRole" path="/userroles" versionField="Version" z="0u3piR95t05c1gU0yMe1RCGQOXM=">
+        <field:select field="userEntry" id="c_org_opengis_nix_domain_UserRole_userEntry" itemValue="id" items="${users}" path="/users" required="true" z="+fGVyswTMvsxH+A1motlpTukM/g="/>
+        <field:select field="roleEntry" id="c_org_opengis_nix_domain_UserRole_roleEntry" itemValue="id" items="${roles}" path="/roles" required="true" z="5r4WtySmA9DGiPtMTC7e0dnsvec="/>
+        <field:select field="usuario" id="c_org_opengis_nix_domain_UserRole_usuario" itemValue="id" items="${users}" path="/users" z="8E1U2W9woJEibGuTtH2CkhO6sUU="/>
+    </form:update>
+</div>

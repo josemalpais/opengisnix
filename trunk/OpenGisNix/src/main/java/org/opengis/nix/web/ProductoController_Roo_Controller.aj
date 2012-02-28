@@ -12,7 +12,7 @@ import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.opengis.nix.Producto;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 import org.opengis.nix.enumerated.Tarea;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -94,9 +94,9 @@ privileged aspect ProductoController_Roo_Controller {
         return Producto.findAllProductoes();
     }
     
-    @ModelAttribute("usuarios")
-    public Collection<Usuario> ProductoController.populateUsuarios() {
-        return Usuario.findAllUsuarios();
+    @ModelAttribute("users")
+    public Collection<User> ProductoController.populateUsers() {
+        return User.findAllUsers();
     }
     
     @ModelAttribute("tareas")

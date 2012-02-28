@@ -3,7 +3,9 @@ package org.opengis.nix;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
-import org.opengis.nix.Usuario;
+
+import org.opengis.nix.domain.User;
+
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -16,7 +18,7 @@ import org.springframework.beans.factory.annotation.Value;
 public class Parcela {
 
     @ManyToOne
-    private Usuario Propietario;
+    private User Propietario;
 
     @NotNull
     @Size(max = 20)

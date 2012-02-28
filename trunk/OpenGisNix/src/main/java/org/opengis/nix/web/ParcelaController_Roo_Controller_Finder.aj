@@ -5,7 +5,7 @@ package org.opengis.nix.web;
 
 import java.lang.String;
 import org.opengis.nix.Parcela;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,12 +15,12 @@ privileged aspect ParcelaController_Roo_Controller_Finder {
     
     @RequestMapping(params = { "find=ByPropietario", "form" }, method = RequestMethod.GET)
     public String ParcelaController.findParcelasByPropietarioForm(Model uiModel) {
-        uiModel.addAttribute("usuarios", Usuario.findAllUsuarios());
+        uiModel.addAttribute("users", User.findAllUsers());
         return "parcelas/findParcelasByPropietario";
     }
     
     @RequestMapping(params = "find=ByPropietario", method = RequestMethod.GET)
-    public String ParcelaController.findParcelasByPropietario(@RequestParam("propietario") Usuario Propietario, Model uiModel) {
+    public String ParcelaController.findParcelasByPropietario(@RequestParam("propietario") User Propietario, Model uiModel) {
         uiModel.addAttribute("parcelas", Parcela.findParcelasByPropietario(Propietario).getResultList());
         return "parcelas/list";
     }

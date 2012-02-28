@@ -6,7 +6,7 @@ package org.opengis.nix.web;
 import java.lang.String;
 import org.opengis.nix.Dispositivo;
 import org.opengis.nix.Prestamo;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,12 +28,12 @@ privileged aspect PrestamoController_Roo_Controller_Finder {
     
     @RequestMapping(params = { "find=ByUsuario", "form" }, method = RequestMethod.GET)
     public String PrestamoController.findPrestamoesByUsuarioForm(Model uiModel) {
-        uiModel.addAttribute("usuarios", Usuario.findAllUsuarios());
+        uiModel.addAttribute("users", User.findAllUsers());
         return "prestamoes/findPrestamoesByUsuario";
     }
     
     @RequestMapping(params = "find=ByUsuario", method = RequestMethod.GET)
-    public String PrestamoController.findPrestamoesByUsuario(@RequestParam("usuario") Usuario Usuario, Model uiModel) {
+    public String PrestamoController.findPrestamoesByUsuario(@RequestParam("usuario") User Usuario, Model uiModel) {
         uiModel.addAttribute("prestamoes", Prestamo.findPrestamoesByUsuario(Usuario).getResultList());
         return "prestamoes/list";
     }

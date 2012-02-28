@@ -13,8 +13,8 @@ import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.opengis.nix.Producto;
-import org.opengis.nix.Usuario;
-import org.opengis.nix.UsuarioDataOnDemand;
+import org.opengis.nix.domain.User;
+import org.opengis.nix.domain.UserDataOnDemand;
 import org.opengis.nix.enumerated.Tarea;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -28,7 +28,7 @@ privileged aspect ProductoDataOnDemand_Roo_DataOnDemand {
     private List<Producto> ProductoDataOnDemand.data;
     
     @Autowired
-    private UsuarioDataOnDemand ProductoDataOnDemand.usuarioDataOnDemand;
+    private UserDataOnDemand ProductoDataOnDemand.userDataOnDemand;
     
     public Producto ProductoDataOnDemand.getNewTransientProducto(int index) {
         Producto obj = new Producto();
@@ -62,7 +62,7 @@ privileged aspect ProductoDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ProductoDataOnDemand.setPropietario(Producto obj, int index) {
-        Usuario propietario = usuarioDataOnDemand.getRandomUsuario();
+        User propietario = userDataOnDemand.getRandomUser();
         obj.setPropietario(propietario);
     }
     

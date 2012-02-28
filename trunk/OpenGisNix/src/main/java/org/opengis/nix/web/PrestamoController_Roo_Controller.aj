@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
 import org.opengis.nix.Dispositivo;
 import org.opengis.nix.Prestamo;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -106,9 +106,9 @@ privileged aspect PrestamoController_Roo_Controller {
         return Prestamo.findAllPrestamoes();
     }
     
-    @ModelAttribute("usuarios")
-    public Collection<Usuario> PrestamoController.populateUsuarios() {
-        return Usuario.findAllUsuarios();
+    @ModelAttribute("users")
+    public Collection<User> PrestamoController.populateUsers() {
+        return User.findAllUsers();
     }
     
     void PrestamoController.addDateTimeFormatPatterns(Model uiModel) {

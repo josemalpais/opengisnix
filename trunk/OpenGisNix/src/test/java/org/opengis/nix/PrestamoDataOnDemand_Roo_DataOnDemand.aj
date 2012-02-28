@@ -15,8 +15,8 @@ import javax.validation.ConstraintViolationException;
 import org.opengis.nix.Dispositivo;
 import org.opengis.nix.DispositivoDataOnDemand;
 import org.opengis.nix.Prestamo;
-import org.opengis.nix.Usuario;
-import org.opengis.nix.UsuarioDataOnDemand;
+import org.opengis.nix.domain.User;
+import org.opengis.nix.domain.UserDataOnDemand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -32,7 +32,7 @@ privileged aspect PrestamoDataOnDemand_Roo_DataOnDemand {
     private DispositivoDataOnDemand PrestamoDataOnDemand.dispositivoDataOnDemand;
     
     @Autowired
-    private UsuarioDataOnDemand PrestamoDataOnDemand.usuarioDataOnDemand;
+    private UserDataOnDemand PrestamoDataOnDemand.userDataOnDemand;
     
     public Prestamo PrestamoDataOnDemand.getNewTransientPrestamo(int index) {
         Prestamo obj = new Prestamo();
@@ -59,7 +59,7 @@ privileged aspect PrestamoDataOnDemand_Roo_DataOnDemand {
     }
     
     public void PrestamoDataOnDemand.setUsuario(Prestamo obj, int index) {
-        Usuario Usuario = usuarioDataOnDemand.getRandomUsuario();
+        User Usuario = userDataOnDemand.getRandomUser();
         obj.setUsuario(Usuario);
     }
     

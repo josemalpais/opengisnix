@@ -13,8 +13,8 @@ import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.opengis.nix.Parcela;
-import org.opengis.nix.Usuario;
-import org.opengis.nix.UsuarioDataOnDemand;
+import org.opengis.nix.domain.User;
+import org.opengis.nix.domain.UserDataOnDemand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +27,7 @@ privileged aspect ParcelaDataOnDemand_Roo_DataOnDemand {
     private List<Parcela> ParcelaDataOnDemand.data;
     
     @Autowired
-    private UsuarioDataOnDemand ParcelaDataOnDemand.usuarioDataOnDemand;
+    private UserDataOnDemand ParcelaDataOnDemand.userDataOnDemand;
     
     public Parcela ParcelaDataOnDemand.getNewTransientParcela(int index) {
         Parcela obj = new Parcela();
@@ -87,7 +87,7 @@ privileged aspect ParcelaDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ParcelaDataOnDemand.setPropietario(Parcela obj, int index) {
-        Usuario Propietario = usuarioDataOnDemand.getRandomUsuario();
+        User Propietario = userDataOnDemand.getRandomUser();
         obj.setPropietario(Propietario);
     }
     

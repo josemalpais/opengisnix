@@ -3,9 +3,11 @@ package org.opengis.nix;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
-import org.opengis.nix.Usuario;
+
 import javax.persistence.ManyToOne;
 import org.opengis.nix.Dispositivo;
+import org.opengis.nix.domain.User;
+
 import java.util.Calendar;
 import javax.validation.constraints.NotNull;
 import javax.persistence.Temporal;
@@ -18,7 +20,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Prestamo {
 
     @ManyToOne
-    private Usuario Usuario;
+    private User Usuario;
 
     @ManyToOne
     private Dispositivo Dispositivo;
