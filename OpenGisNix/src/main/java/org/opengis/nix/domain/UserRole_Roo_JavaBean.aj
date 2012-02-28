@@ -24,12 +24,4 @@ privileged aspect UserRole_Roo_JavaBean {
         this.roleEntry = roleEntry;
     }
     
-    public User UserRole.getUsuario() {
-        return this.usuario;
-    }
-    
-    public void UserRole.setUsuario(User usuario) {
-        this.usuario = usuario;
-    }
-    
 }

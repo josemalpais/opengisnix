@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_opengis_nix_Usuario" modelAttribute="usuario" path="/usuarios" render="${empty dependencies}" z="DBu8LAcJw7FOozwyea5mBW4Fc6g=">
+        <field:input field="dni" id="c_org_opengis_nix_Usuario_dni" required="true" validationRegex="[0-9]{8}[A-Za-z]" z="5kK97cacO23Mn/6cIDykeFQU5nI="/>
+        <field:input field="nombre" id="c_org_opengis_nix_Usuario_nombre" max="30" required="true" z="gpgrgapjSaVIgk+9aYpK3MZYp5I="/>
+        <field:input field="apellidos" id="c_org_opengis_nix_Usuario_apellidos" max="30" required="true" z="bxgYpQoe10ix+/BaMKwKmkYOC+g="/>
+        <field:datetime dateTimePattern="${usuario_fechanacimiento_date_format}" field="fechaNacimiento" id="c_org_opengis_nix_Usuario_fechaNacimiento" z="v6DxJsPCiMObsdaobB1c689LWno="/>
+        <field:input field="telefono" id="c_org_opengis_nix_Usuario_telefono" required="true" validationRegex="[0-9]+$" z="uazvVl/r2Bh4zUnKdpNodDJNFOQ="/>
+        <field:textarea field="direccion" id="c_org_opengis_nix_Usuario_direccion" required="true" z="0eM1P6zLmB09S1VxdHtVSDQuKDc="/>
+        <field:input field="poblacion" id="c_org_opengis_nix_Usuario_poblacion" max="20" required="true" z="zxz5OF/RkPbX3tr9uYBieASnL38="/>
+        <field:input field="provincia" id="c_org_opengis_nix_Usuario_provincia" max="20" required="true" z="blP2pWcqwwBVYX0tfI+18wL4moQ="/>
+        <field:input field="codPostal" id="c_org_opengis_nix_Usuario_codPostal" validationRegex="[0-9]{5}" z="iEyIMk2JGwylw4FYtlnKKWk6oWc="/>
+        <field:select field="tipo" id="c_org_opengis_nix_Usuario_tipo" items="${tipousers}" path="tipousers" z="GmqDf4/JfatV38pxO5xN1vSCpPA="/>
+        <field:checkbox field="activo" id="c_org_opengis_nix_Usuario_activo" z="fwwkEBUpPQ9f7pyLWg/Kk12hH5U="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_Usuario" render="${not empty dependencies}" z="/DXpepg3UKSSgB4R63snybkBe88="/>
+</div>

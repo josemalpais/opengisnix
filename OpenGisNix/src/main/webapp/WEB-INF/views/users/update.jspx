@@ -5,8 +5,6 @@
     <form:update id="fu_org_opengis_nix_domain_User" modelAttribute="user" path="/users" versionField="Version" z="a1Jxx/ZVT5HHj/lX8s2TkOfzKdQ=">
         <field:input field="emailAddress" id="c_org_opengis_nix_domain_User_emailAddress" min="1" required="true" validationMessageCode="field_invalid_email" z="pkEUA2/G0kobKSWTe7OneGDLIJo="/>
         <field:input field="password" id="c_org_opengis_nix_domain_User_password" min="1" required="true" z="ZpxAfWODcWhYSDTwHVWzCZ5uvSg="/>
-        <field:datetime dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="c_org_opengis_nix_domain_User_activationDate" z="QWvzSfXD7JVo/8oeW+VIzryNK/I="/>
-        <field:input field="activationKey" id="c_org_opengis_nix_domain_User_activationKey" z="ryDQ7dZIcecKdmbQqssGWiJV0TU="/>
         <field:checkbox field="enabled" id="c_org_opengis_nix_domain_User_enabled" z="jJV6xkDKtxRnaitHKhQCdAYsDVM="/>
         <field:checkbox field="locked" id="c_org_opengis_nix_domain_User_locked" z="LlaMOCdS9HdE85OIGX//EzhfnJ0="/>
         <field:input field="dni" id="c_org_opengis_nix_domain_User_dni" required="true" validationRegex="[0-9]{8}[A-Za-z]" z="qpEHGLnBFOmiAn/G7PfhXpZ/qlY="/>
@@ -19,5 +17,7 @@
         <field:input field="provincia" id="c_org_opengis_nix_domain_User_provincia" max="20" required="true" z="2BIXs6T49Z239MZnXaWKPk1bsd4="/>
         <field:input field="codPostal" id="c_org_opengis_nix_domain_User_codPostal" validationRegex="[0-9]{5}" z="t0jio98Pd0oSW6YnNWrIp3F/9cY="/>
         <field:select field="tipo" id="c_org_opengis_nix_domain_User_tipo" items="${tipousers}" path="tipousers" z="j5zCob873EJZn5M/J8BcK+c+UyA="/>
+        <field:datetime dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="c_org_opengis_nix_domain_User_activationDate" z="QWvzSfXD7JVo/8oeW+VIzryNK/I="/>
+        <field:input field="activationKey" id="c_org_opengis_nix_domain_User_activationKey" z="ryDQ7dZIcecKdmbQqssGWiJV0TU="/>
     </form:update>
 </div>

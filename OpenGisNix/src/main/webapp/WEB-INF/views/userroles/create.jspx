@@ -5,7 +5,6 @@
     <form:create id="fc_org_opengis_nix_domain_UserRole" modelAttribute="userRole" path="/userroles" render="${empty dependencies}" z="wFL8tLhKPsEGK0wNDGaBGfjyTWs=">
         <field:select field="userEntry" id="c_org_opengis_nix_domain_UserRole_userEntry" itemValue="id" items="${users}" path="/users" required="true" z="+fGVyswTMvsxH+A1motlpTukM/g="/>
         <field:select field="roleEntry" id="c_org_opengis_nix_domain_UserRole_roleEntry" itemValue="id" items="${roles}" path="/roles" required="true" z="5r4WtySmA9DGiPtMTC7e0dnsvec="/>
-        <field:select field="usuario" id="c_org_opengis_nix_domain_UserRole_usuario" itemValue="id" items="${users}" path="/users" z="8E1U2W9woJEibGuTtH2CkhO6sUU="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_domain_UserRole" render="${not empty dependencies}" z="si0mRu7+C4t5qpbNSlfT6m4N5oI="/>
 </div>

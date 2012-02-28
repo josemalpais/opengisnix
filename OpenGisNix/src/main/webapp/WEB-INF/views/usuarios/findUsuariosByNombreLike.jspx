@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:find finderName="ByEmailAddress" id="ff_org_opengis_nix_domain_User" path="/users" z="KnTsSwqBvfx5BiN6pp/ryflftQE=">
-        <field:input disableFormBinding="true" field="emailAddress" id="f_org_opengis_nix_domain_User_emailAddress" min="1" required="true" validationMessageCode="field_invalid_email" z="xHmrZsy6lSAoea0iSOa/cJpYVtg="/>
+    <form:find finderName="ByNombreLike" id="ff_org_opengis_nix_Usuario" path="/usuarios" z="goQh5uc1mvL2Yh1B+b4hyqZfQ1Y=">
+        <field:input disableFormBinding="true" field="nombre" id="f_org_opengis_nix_Usuario_nombre" max="30" required="true" z="tvJLV/ltnce1gSIXyrpQk2J+Trk="/>
     </form:find>
 </div>

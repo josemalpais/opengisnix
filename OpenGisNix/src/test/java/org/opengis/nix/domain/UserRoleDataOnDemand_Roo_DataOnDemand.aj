@@ -36,7 +36,6 @@ privileged aspect UserRoleDataOnDemand_Roo_DataOnDemand {
         UserRole obj = new UserRole();
         setRoleEntry(obj, index);
         setUserEntry(obj, index);
-        setUsuario(obj, index);
         return obj;
     }
     
@@ -48,11 +47,6 @@ privileged aspect UserRoleDataOnDemand_Roo_DataOnDemand {
     public void UserRoleDataOnDemand.setUserEntry(UserRole obj, int index) {
         User userEntry = userDataOnDemand.getRandomUser();
         obj.setUserEntry(userEntry);
-    }
-    
-    public void UserRoleDataOnDemand.setUsuario(UserRole obj, int index) {
-        User usuario = userDataOnDemand.getRandomUser();
-        obj.setUsuario(usuario);
     }
     
     public UserRole UserRoleDataOnDemand.getSpecificUserRole(int index) {

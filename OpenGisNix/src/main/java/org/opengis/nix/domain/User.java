@@ -1,3 +1,4 @@
+
 package org.opengis.nix.domain;
 
 import org.opengis.nix.enumerated.TipoUser;
@@ -18,9 +19,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo"  })
+@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo", "findUsersByActivationKeyAndEmailAddress" })
 public class User {
-	
+        
     @NotNull
     @Pattern(regexp = "[0-9]{8}[A-Za-z]")
     private String dni;
@@ -82,8 +83,8 @@ public class User {
 
     private Boolean locked;
 
-	public void setUser(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
+        public void setUser(Object object) {
+                // TODO Auto-generated method stub
+                
+        }
 }
