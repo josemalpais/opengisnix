@@ -3,18 +3,8 @@
  */
 package org.opengis.nix.web;
 
-import java.util.Date;
-
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
-import org.opengis.nix.enumerated.TipoUser;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import net.tanesha.recaptcha.ReCaptcha;
 import net.tanesha.recaptcha.ReCaptchaFactory;
@@ -25,44 +15,6 @@ import net.tanesha.recaptcha.ReCaptchaResponse;
  * 
  */
 public class UserRegistrationForm {
-	
-    @NotNull
-    @Pattern(regexp = "[0-9]{8}[A-Za-z]")
-    private String dni;
-
-    @NotNull
-    @Size(max = 30)
-    private String nombre;
-
-    @NotNull
-    @Size(max = 30)
-    private String apellidos;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "S-")
-    private Date fechaNacimiento;
-
-    @NotNull
-    @Pattern(regexp = "[0-9]+$")
-    private String telefono;
-
-    @NotNull
-    @Size(max = 40)
-    private String direccion;
-
-    @NotNull
-    @Size(max = 20)
-    private String poblacion;
-
-    @NotNull
-    @Size(max = 20)
-    private String provincia;
-
-    @Pattern(regexp = "[0-9]{5}")
-    private String codPostal;
-
-    @Enumerated(EnumType.STRING)
-    private TipoUser tipo;
 
 	@NotNull
 	@Size(min = 1)

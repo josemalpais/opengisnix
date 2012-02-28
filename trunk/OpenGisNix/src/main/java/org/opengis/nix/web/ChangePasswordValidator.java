@@ -60,7 +60,8 @@ public class ChangePasswordValidator implements Validator {
 					String storedPassword = person.getPassword();
 					String currentPassword = form.getOldPassword();
 					if (!messageDigestPasswordEncoder.isPasswordValid(storedPassword, currentPassword, null)) {
-						errors.rejectValue("oldPassword", "changepassword.invalidpassword");
+						errors.rejectValue("oldPassword",
+								"changepassword.invalidpassword");
 					}
 					String newPassword = form.getNewPassword();
 					String newPasswordAgain = form.getNewPasswordAgain();

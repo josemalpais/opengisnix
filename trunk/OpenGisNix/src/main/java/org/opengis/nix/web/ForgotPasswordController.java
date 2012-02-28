@@ -60,7 +60,7 @@ public class ForgotPasswordController {
         		SimpleMailMessage mail = new SimpleMailMessage();
         		mail.setTo(form.getEmailAddress());
         		mail.setSubject("Password Recover");
-        		mail.setText("Hi "+",\n. You had requested for password recovery. Your password is "+newPassword+". \n Thanks Tyical Security Admin");
+        		mail.setText("Hi "+User.getNombre()+",\n. You had requested for password recovery. Your password is "+newPassword+". \n Thanks Tyical Security Admin");
         		mailSender.send(mail);
         	}
 

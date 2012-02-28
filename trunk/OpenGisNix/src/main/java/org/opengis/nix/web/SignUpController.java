@@ -52,7 +52,21 @@ public class SignUpController {
         return "signup/index";
     }
     
-  
+    @RequestMapping(params = "activate", method = RequestMethod.GET)
+    public String activateUser(@RequestParam(value = "activate", required = true) String activationKey,@RequestParam(value = "emailAddress", required = true) String emailAddress,Model model) {
+        TypedQuery<User> query = User.findUsersByActivationKeyAndEmailAddress(activationKey, emailAddress);
+        User User=query.getSingleResult();
+        if(null!=User){
+        	User.setActivationDate(new Date());
+        	User.setEnabled(true);
+        	User.merge();
+        	return "login";
+        }
+        else{
+        	return "signup/error";
+        }
+
+    }
 
     @RequestMapping(method = RequestMethod.POST)
     public String create(@Valid UserRegistrationForm userRegistration, BindingResult result, Model model, HttpServletRequest request) {
@@ -63,15 +77,8 @@ public class SignUpController {
         } else {
             Random random = new Random(System.currentTimeMillis());
             String activationKey = "activationKey:" + random.nextInt();
- 
-            
-            		   
-            
-            
-            
-            
+
             User User = new User();
-            //User.setUser(userRegistration.getEmailAddress());
             User.setActivationDate(null);
             User.setEmailAddress(userRegistration.getEmailAddress());
             User.setNombre(userRegistration.getFirstName());
@@ -86,7 +93,7 @@ public class SignUpController {
     		mail.setTo(User.getEmailAddress());
     		mail.setSubject("User Activaton");
     		
-    		mail.setText("Hi "+",\n. You had registered with us. Please click on this link to activate your account - <a href=\"http://localhost:8080/OpenGisNix/signup?emailAddress="+User.getEmailAddress()+"&activate="+activationKey+"\">Activate Link</a>. \n Thanks Tyical Security Admin");
+    		mail.setText("Hi "+User.getNombre()+",\n. You had registered with us. Please click on this link to activate your account - <a href=\"http://__BASE_URL__/signup?emailAddress="+User.getEmailAddress()+"&activate="+activationKey+"\">Activate Link</a>. \n Thanks Tyical Security Admin");
             mailSender.send(mail);
             return "signup/thanks";
         }

@@ -15,10 +15,10 @@
         <field:input field="emailAddress" id="c_org_opengis_nix_domain_User_emailAddress" min="1" required="true" validationMessageCode="field_invalid_email" z="pkEUA2/G0kobKSWTe7OneGDLIJo="/>
         <field:select field="tipo" id="c_org_opengis_nix_domain_User_tipo" items="${tipousers}" path="tipousers" z="j5zCob873EJZn5M/J8BcK+c+UyA="/>
         <field:input field="password" id="c_org_opengis_nix_domain_User_password" min="1" required="true" z="ZpxAfWODcWhYSDTwHVWzCZ5uvSg="/>
-        <field:datetime dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="c_org_opengis_nix_domain_User_activationDate" z="QWvzSfXD7JVo/8oeW+VIzryNK/I="/>
-        <field:input field="activationKey" id="c_org_opengis_nix_domain_User_activationKey" z="ryDQ7dZIcecKdmbQqssGWiJV0TU="/>
         <field:checkbox field="enabled" id="c_org_opengis_nix_domain_User_enabled" z="jJV6xkDKtxRnaitHKhQCdAYsDVM="/>
         <field:checkbox field="locked" id="c_org_opengis_nix_domain_User_locked" z="LlaMOCdS9HdE85OIGX//EzhfnJ0="/>
+        <field:datetime dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="c_org_opengis_nix_domain_User_activationDate" z="QWvzSfXD7JVo/8oeW+VIzryNK/I="/>
+        <field:input field="activationKey" id="c_org_opengis_nix_domain_User_activationKey" z="ryDQ7dZIcecKdmbQqssGWiJV0TU="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_domain_User" render="${not empty dependencies}" z="S3Pi6JsFb859uuWxqdUSx/nvjmg="/>
 </div>

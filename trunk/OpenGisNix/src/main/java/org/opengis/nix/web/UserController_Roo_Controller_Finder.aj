@@ -12,6 +12,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect UserController_Roo_Controller_Finder {
     
+    @RequestMapping(params = { "find=ByActivationKeyAndEmailAddress", "form" }, method = RequestMethod.GET)
+    public String UserController.findUsersByActivationKeyAndEmailAddressForm(Model uiModel) {
+        return "users/findUsersByActivationKeyAndEmailAddress";
+    }
+    
+    @RequestMapping(params = "find=ByActivationKeyAndEmailAddress", method = RequestMethod.GET)
+    public String UserController.findUsersByActivationKeyAndEmailAddress(@RequestParam("activationKey") String activationKey, @RequestParam("emailAddress") String emailAddress, Model uiModel) {
+        uiModel.addAttribute("users", User.findUsersByActivationKeyAndEmailAddress(activationKey, emailAddress).getResultList());
+        return "users/list";
+    }
+    
     @RequestMapping(params = { "find=ByApellidosLike", "form" }, method = RequestMethod.GET)
     public String UserController.findUsersByApellidosLikeForm(Model uiModel) {
         return "users/findUsersByApellidosLike";

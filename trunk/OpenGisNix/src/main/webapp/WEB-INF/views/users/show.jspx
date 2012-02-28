@@ -5,8 +5,6 @@
     <page:show id="ps_org_opengis_nix_domain_User" object="${user}" path="/users" z="ic3yJrgOcY/vUeIhk92p5rZj1+w=">
         <field:display field="emailAddress" id="s_org_opengis_nix_domain_User_emailAddress" object="${user}" z="XWYCNTOH25+0pr9iQD9H/jVTcuw="/>
         <field:display field="password" id="s_org_opengis_nix_domain_User_password" object="${user}" z="pa/kPkokC5h0eqxOnKwfvg6JDe8="/>
-        <field:display date="true" dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="s_org_opengis_nix_domain_User_activationDate" object="${user}" z="o9jb33DHv5q5o32B1PYYGeqOLlA="/>
-        <field:display field="activationKey" id="s_org_opengis_nix_domain_User_activationKey" object="${user}" z="WKpCC5rXHsRLqRTwfFOPeET04zk="/>
         <field:display field="enabled" id="s_org_opengis_nix_domain_User_enabled" object="${user}" z="BDmmjOZsi2BXVXm94KmJC6bC9kQ="/>
         <field:display field="locked" id="s_org_opengis_nix_domain_User_locked" object="${user}" z="FtDyjZdNQyjyZYVugGrAItTgxPQ="/>
         <field:display field="dni" id="s_org_opengis_nix_domain_User_dni" object="${user}" z="2IaYj0N1LXlW1UIT2mC/cYcC79k="/>
@@ -19,6 +17,7 @@
         <field:display field="provincia" id="s_org_opengis_nix_domain_User_provincia" object="${user}" z="OV14bJqPjZLGMO7j5ODaMv1Rjbs="/>
         <field:display field="codPostal" id="s_org_opengis_nix_domain_User_codPostal" object="${user}" z="BIPxgbEFDgedAFw0QglhwuE5APQ="/>
         <field:display field="tipo" id="s_org_opengis_nix_domain_User_tipo" object="${user}" z="V/pejpf/d2InLVE0DPpVp1k100M="/>
-       
+        <field:display date="true" dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="s_org_opengis_nix_domain_User_activationDate" object="${user}" z="o9jb33DHv5q5o32B1PYYGeqOLlA="/>
+        <field:display field="activationKey" id="s_org_opengis_nix_domain_User_activationKey" object="${user}" z="WKpCC5rXHsRLqRTwfFOPeET04zk="/>
     </page:show>
 </div>
