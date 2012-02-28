@@ -5,16 +5,16 @@ package org.opengis.nix;
 
 import java.lang.Boolean;
 import java.lang.String;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 import org.opengis.nix.enumerated.Tarea;
 
 privileged aspect Producto_Roo_JavaBean {
     
-    public Usuario Producto.getPropietario() {
+    public User Producto.getPropietario() {
         return this.propietario;
     }
     
-    public void Producto.setPropietario(Usuario propietario) {
+    public void Producto.setPropietario(User propietario) {
         this.propietario = propietario;
     }
     

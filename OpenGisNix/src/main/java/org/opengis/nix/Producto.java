@@ -3,9 +3,11 @@ package org.opengis.nix;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
-import org.opengis.nix.Usuario;
+
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
+
+import org.opengis.nix.domain.User;
 import org.opengis.nix.enumerated.Tarea;
 import javax.persistence.Enumerated;
 import javax.persistence.EnumType;
@@ -19,7 +21,7 @@ import org.springframework.beans.factory.annotation.Value;
 public class Producto {
 
     @ManyToOne
-    private Usuario propietario;
+    private User propietario;
 
     @Size(max = 120)
     private String descripcion;

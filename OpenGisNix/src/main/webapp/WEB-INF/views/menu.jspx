@@ -3,15 +3,14 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_usuario" z="g6oG0656PcsmmvUYeBtpgiQROck=">
-            <menu:item id="i_usuario_new" messageCode="global_menu_new" url="/usuarios?form" z="RG1gCsiZQjg1HLDzXbHKht6yDkw="/>
-            <menu:item id="i_usuario_list" messageCode="global_menu_list" url="/usuarios?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P7ZIPrcTTBR41JYD0QldbYgsZrM="/>
-            <menu:item id="fi_usuario_apellidoslike" messageCode="global_menu_find" url="/usuarios?find=ByApellidosLike&amp;form" z="QhLoLlzEpZqn9CYJv65Mx9L9Q34="/>
-            <menu:item id="fi_usuario_dnilike" messageCode="global_menu_find" url="/usuarios?find=ByDniLike&amp;form" z="tPin69QHyn7ws+R4AoSfXf5XECY="/>
-            <menu:item id="fi_usuario_nombrelike" messageCode="global_menu_find" url="/usuarios?find=ByNombreLike&amp;form" z="VfO+tqbk9AsyYXKiIQ+rdGmmJhA="/>
-            <menu:item id="fi_usuario_telefono" messageCode="global_menu_find" url="/usuarios?find=ByTelefono&amp;form" z="CrXJR62eLCg/9xmG73aKmPNtZg8="/>
-            <menu:item id="fi_usuario_tipo" messageCode="global_menu_find" url="/usuarios?find=ByTipo&amp;form" z="rmKbFBuvXdsDmEIDhj5r50RJT+M="/>
-        </menu:category>
+       <menu:category id="c_user" z="uoTSf/uIZ821ZppidzS9aO776yk=">
+            <menu:item id="i_user_new" messageCode="global_menu_new" url="/users?form" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
+            <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
+            <menu:item id="fi_user_emailaddress" messageCode="global_menu_find" url="/users?find=ByEmailAddress&amp;form" z="zQpmROgoAt/F36huYhJLnYE4iTg="/>
+            <menu:item id="fi_user_apellidoslike" messageCode="global_menu_find" url="/users?find=ByApellidosLike&amp;form" z="FVknPe+/fVLITKuD/rSwhjwvcl4="/>
+            <menu:item id="fi_user_dnilike" messageCode="global_menu_find" url="/users?find=ByDniLike&amp;form" z="Kc+yYVeTq0Nnz/HUIRbP0X8f5dM="/>
+            <menu:item id="fi_user_nombrelike" messageCode="global_menu_find" url="/users?find=ByNombreLike&amp;form" z="t0c3z6dMG16enmSwVy3Dz0Dvl2Y="/>
+        </menu:category>       
         <menu:category id="c_parcela" z="gE2ikfsXLALiVs0vLR4rWLPCEzQ=">
             <menu:item id="i_parcela_new" messageCode="global_menu_new" url="/parcelas?form" z="S0qD/awgICiMThWtDtNwcn5jsqk="/>
             <menu:item id="i_parcela_list" messageCode="global_menu_list" url="/parcelas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kKVdVx0fiUNoHvJ0a0wNz/85p6E="/>
@@ -37,6 +36,16 @@
         <menu:category id="c_producto" z="ulnZNKk/GIwBqxjIWsYtiPgqT4I=">
             <menu:item id="i_producto_new" messageCode="global_menu_new" url="/productoes?form" z="NU69Oah+Fo/A/7suYZU0TbHCT/w="/>
             <menu:item id="i_producto_list" messageCode="global_menu_list" url="/productoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EqA+KL5NJZW09+MF6BSDVmfkk80="/>
+        </menu:category>
+   
+        <menu:category id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=">
+            <menu:item id="i_role_new" messageCode="global_menu_new" url="/roles?form" z="WNB2HvnzvtbOA3r7qL1gqrUOq8g="/>
+            <menu:item id="i_role_list" messageCode="global_menu_list" url="/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DVFtqj4xcHbEiJh6bgI7Tyre3ec="/>
+        </menu:category>
+        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
+            <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
+            <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
+            <menu:item id="fi_userrole_userentry" messageCode="global_menu_find" url="/userroles?find=ByUserEntry&amp;form" z="JLowrgxSZ/Geluin/9qGXem92Ng="/>
         </menu:category>
     </menu:menu>
 </div>

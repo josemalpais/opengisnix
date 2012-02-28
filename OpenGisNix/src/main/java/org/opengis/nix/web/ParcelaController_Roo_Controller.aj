@@ -11,7 +11,7 @@ import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.opengis.nix.Parcela;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -92,9 +92,9 @@ privileged aspect ParcelaController_Roo_Controller {
         return Parcela.findAllParcelas();
     }
     
-    @ModelAttribute("usuarios")
-    public Collection<Usuario> ParcelaController.populateUsuarios() {
-        return Usuario.findAllUsuarios();
+    @ModelAttribute("users")
+    public Collection<User> ParcelaController.populateUsers() {
+        return User.findAllUsers();
     }
     
     String ParcelaController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

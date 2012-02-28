@@ -5,15 +5,15 @@ package org.opengis.nix;
 
 import java.lang.Boolean;
 import java.lang.String;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 
 privileged aspect Parcela_Roo_JavaBean {
     
-    public Usuario Parcela.getPropietario() {
+    public User Parcela.getPropietario() {
         return this.Propietario;
     }
     
-    public void Parcela.setPropietario(Usuario Propietario) {
+    public void Parcela.setPropietario(User Propietario) {
         this.Propietario = Propietario;
     }
     

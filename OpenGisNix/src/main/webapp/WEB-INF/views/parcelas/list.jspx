@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_org_opengis_nix_Parcela" items="${parcelas}" z="miUC109EjtpKfJgq8HVaaobkLPE=">
         <table:table data="${parcelas}" id="l_org_opengis_nix_Parcela" path="/parcelas" z="OieNIsekWi1Y+9le9m+gD7hJmJE=">
-            <table:column id="c_org_opengis_nix_Parcela_Propietario" property="propietario" z="i8gtfC+5kSZgdwUmi4cDiL8zKpo="/>
             <table:column id="c_org_opengis_nix_Parcela_alias" property="alias" z="MiIphfVM2InTZEHYg/NI8i7nCUg="/>
             <table:column id="c_org_opengis_nix_Parcela_numPoblacion" property="numPoblacion" z="N526TlJSAAA4RRVbict7Rw1ZtH0="/>
             <table:column id="c_org_opengis_nix_Parcela_numProvincia" property="numProvincia" z="GW56JZSM7W6cT1MhTZFSN146kPw="/>
             <table:column id="c_org_opengis_nix_Parcela_numParcela" property="numParcela" z="oE/A3ik0bVa/HjNfLTvpGOOnGOQ="/>
             <table:column id="c_org_opengis_nix_Parcela_numPartida" property="numPartida" z="GYm1oMq8ibqOqCrXUJ2YVbAPAuU="/>
+            <table:column id="c_org_opengis_nix_Parcela_Propietario" property="propietario" z="i8gtfC+5kSZgdwUmi4cDiL8zKpo="/>
         </table:table>
     </page:list>
 </div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_opengis_nix_domain_Role" object="${role}" path="/roles" z="MNyUCpwWQabdUldTOTFUb19Og4U=">
+        <field:display field="roleName" id="s_org_opengis_nix_domain_Role_roleName" object="${role}" z="sLS9WWIJPuFrFN1uYtWx0qFpPWM="/>
+        <field:display field="roleDescription" id="s_org_opengis_nix_domain_Role_roleDescription" object="${role}" z="7ygY2xt1+oZlBKHmc2L+n5llvlg="/>
+    </page:show>
+</div>

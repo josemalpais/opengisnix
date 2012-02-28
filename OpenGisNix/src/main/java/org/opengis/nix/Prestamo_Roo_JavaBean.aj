@@ -5,15 +5,15 @@ package org.opengis.nix;
 
 import java.util.Calendar;
 import org.opengis.nix.Dispositivo;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 
 privileged aspect Prestamo_Roo_JavaBean {
     
-    public Usuario Prestamo.getUsuario() {
+    public User Prestamo.getUsuario() {
         return this.Usuario;
     }
     
-    public void Prestamo.setUsuario(Usuario Usuario) {
+    public void Prestamo.setUsuario(User Usuario) {
         this.Usuario = Usuario;
     }
     

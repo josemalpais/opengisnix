@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_opengis_nix_domain_User" items="${users}" z="DHPbsfkWekUgVLpFTSO8hcLmknc=">
+        <table:table data="${users}" id="l_org_opengis_nix_domain_User" path="/users" z="1tz/ye6GMu51PtoWLU3h3AapmCg=">
+            <table:column id="c_org_opengis_nix_domain_User_dni" property="dni" z="sZwQQtdp2xx1ufX4JvCWE6kUlgg="/>
+            <table:column id="c_org_opengis_nix_domain_User_nombre" property="nombre" z="YJ0/mNTwIUY+3W36nad8PbZNdc0="/>
+            <table:column id="c_org_opengis_nix_domain_User_apellidos" property="apellidos" z="LKXC7Bw4+GMR+wzQjsWqAsB3fTk="/>
+            <table:column id="c_org_opengis_nix_domain_User_alias" property="alias" z="JswPcdF1tFlrWgk6vTxAsCt1KTU="/>
+            <table:column id="c_org_opengis_nix_domain_User_telefono" property="telefono" z="IK2iCF8fAWLzwL5wG8mxHbV3EPo="/>
+            <table:column id="c_org_opengis_nix_domain_User_direccion" property="direccion" z="8H7tIrFbiNUukmtuqTLjbX/hh78="/>
+        </table:table>
+    </page:list>
+</div>

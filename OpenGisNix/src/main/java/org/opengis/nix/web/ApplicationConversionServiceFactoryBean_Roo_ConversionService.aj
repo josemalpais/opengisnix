@@ -9,7 +9,8 @@ import org.opengis.nix.Dispositivo;
 import org.opengis.nix.Parcela;
 import org.opengis.nix.Prestamo;
 import org.opengis.nix.Producto;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.Role;
+import org.opengis.nix.domain.User;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.FormatterRegistry;
 
@@ -21,7 +22,8 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(new ParcelaConverter());
         registry.addConverter(new PrestamoConverter());
         registry.addConverter(new ProductoConverter());
-        registry.addConverter(new UsuarioConverter());
+        registry.addConverter(new RoleConverter());
+        registry.addConverter(new UserConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
@@ -64,9 +66,16 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         
     }
     
-    static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.UsuarioConverter implements Converter<Usuario, String> {
-        public String convert(Usuario usuario) {
-            return new StringBuilder().append(usuario.getDni()).append(" ").append(usuario.getNombre()).append(" ").append(usuario.getApellidos()).append(" ").append(usuario.getFechaNacimiento()).toString();
+    static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.RoleConverter implements Converter<Role, String> {
+        public String convert(Role role) {
+            return new StringBuilder().append(role.getRoleName()).append(" ").append(role.getRoleDescription()).toString();
+        }
+        
+    }
+    
+    static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.UserConverter implements Converter<User, String> {
+        public String convert(User user) {
+            return new StringBuilder().append(user.getDni()).append(" ").append(user.getNombre()).append(" ").append(user.getApellidos()).append(" ").append(user.getAlias()).toString();
         }
         
     }

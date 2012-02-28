@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import org.opengis.nix.Dispositivo;
 import org.opengis.nix.Prestamo;
-import org.opengis.nix.Usuario;
+import org.opengis.nix.domain.User;
 
 privileged aspect Prestamo_Roo_Finder {
     
@@ -19,7 +19,7 @@ privileged aspect Prestamo_Roo_Finder {
         return q;
     }
     
-    public static TypedQuery<Prestamo> Prestamo.findPrestamoesByUsuario(Usuario Usuario) {
+    public static TypedQuery<Prestamo> Prestamo.findPrestamoesByUsuario(User Usuario) {
         if (Usuario == null) throw new IllegalArgumentException("The Usuario argument is required");
         EntityManager em = Prestamo.entityManager();
         TypedQuery<Prestamo> q = em.createQuery("SELECT o FROM Prestamo AS o WHERE o.Usuario = :Usuario", Prestamo.class);
