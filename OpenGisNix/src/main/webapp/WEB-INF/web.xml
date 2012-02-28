@@ -72,10 +72,21 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>InformeParcela</display-name>
+    	<servlet-name>InformeParcela</servlet-name>
+    	<servlet-class>org.opengis.nix.web.InformeParcela</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>OpenGisNix</servlet-name>
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>InformeParcela</servlet-name>
+    	<url-pattern>/InformeParcela</url-pattern>
     </servlet-mapping>
     
     <session-config>
