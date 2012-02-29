@@ -7,6 +7,6 @@
         <field:select field="tarea" id="c_org_opengis_nix_Producto_tarea" items="${tareas}" path="tareas" z="uosxgAwUv/D3nKGb4lRoWuAlmbo="/>
         <field:input field="dosis" id="c_org_opengis_nix_Producto_dosis" max="999" required="true" z="El085xzRHDsIIwrz0HAddSr6jWw="/>
         <field:checkbox field="Activo" id="c_org_opengis_nix_Producto_Activo" z="FJBx8s5WDHafMVDuW23d82/L49U="/>
-        <field:select field="propietario" id="c_org_opengis_nix_Producto_propietario" itemValue="id" itemLabel="fullName" items="${users}" path="/users" z="o5AAgLC3qVEKSVs8ErZ6wlZNkZY="/>
+        <field:select field="propietario" id="c_org_opengis_nix_Producto_propietario" itemLabel="fullName" itemValue="id" items="${users}" path="/users" z="user-managed"/>
     </form:update>
 </div>
