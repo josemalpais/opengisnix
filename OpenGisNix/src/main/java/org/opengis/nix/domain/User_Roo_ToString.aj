@@ -18,6 +18,7 @@ privileged aspect User_Roo_ToString {
         sb.append("Dni: ").append(getDni()).append(", ");
         sb.append("EmailAddress: ").append(getEmailAddress()).append(", ");
         sb.append("Enabled: ").append(getEnabled()).append(", ");
+        sb.append("FullName: ").append(getFullName()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Locked: ").append(getLocked()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");

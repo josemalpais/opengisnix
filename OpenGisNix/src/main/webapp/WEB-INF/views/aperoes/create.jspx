@@ -8,7 +8,7 @@
         <field:textarea field="descripcion" id="c_org_opengis_nix_Apero_descripcion" z="xv0iaR96kH3L0i9UddwpuwCRdb0="/>
         <field:select field="tarea" id="c_org_opengis_nix_Apero_tarea" items="${tareas}" path="tareas" z="toIViqWeFAgq+A/lRqDGW6mcy7Q="/>
         <field:checkbox field="Activo" id="c_org_opengis_nix_Apero_Activo" z="W/3lyiF3e6P/P+X25spRy0KDQ7A="/>
-        <field:select field="propietario" id="c_org_opengis_nix_Apero_propietario" itemValue="id" items="${users}" path="/users" z="Mzx5JY6ghtW+BNVDNh6fLkRrSWA="/>
+        <field:select field="propietario" id="c_org_opengis_nix_Apero_propietario" itemValue="id" items="${users}" path="/users" itemLabel="fullName" z="Mzx5JY6ghtW+BNVDNh6fLkRrSWA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_Apero" render="${not empty dependencies}" z="ZKHK+lAHmKmGXPAN+5BKdu4s/hc="/>
 </div>

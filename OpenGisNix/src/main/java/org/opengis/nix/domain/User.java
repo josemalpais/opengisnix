@@ -87,4 +87,7 @@ public class User {
                 // TODO Auto-generated method stub
                 
         }
+    public String getFullName(){
+    	return nombre+" "+apellidos;
+    }
 }
