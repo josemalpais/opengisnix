@@ -9,7 +9,7 @@
         <field:input field="numParcela" id="c_org_opengis_nix_Parcela_numParcela" max="999" required="true" z="tYoCQA3bywBtEBaOEg26TX2bY4U="/>
         <field:input field="numPartida" id="c_org_opengis_nix_Parcela_numPartida" max="999" required="true" z="zx1yLQig9n6y2utVYwTlgeygAhc="/>
         <field:checkbox field="activa" id="c_org_opengis_nix_Parcela_activa" z="ba5Btc5FFFVYABD2t0Lt7GVC+XE="/>
-        <field:select field="Propietario" id="c_org_opengis_nix_Parcela_Propietario" itemValue="id" items="${users}" path="/users" z="TCNE08FeNWlTFrShtlREGJNf7UM="/>
+        <field:select field="Propietario" id="c_org_opengis_nix_Parcela_Propietario" itemValue="id" items="${users}" itemLabel="fullName" path="/users" z="TCNE08FeNWlTFrShtlREGJNf7UM="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_Parcela" render="${not empty dependencies}" z="1o9f+SlYsUvACIS9Dz9VxKPAuA0="/>
 </div>
