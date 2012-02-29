@@ -6,6 +6,6 @@
         <field:select field="Dispositivo" id="c_org_opengis_nix_Prestamo_Dispositivo" itemValue="id" items="${dispositivoes}" path="/dispositivoes" z="wsWEqSQHRpAC2Iio/C+RElFCREY="/>
         <field:datetime dateTimePattern="${prestamo_fechainicio_date_format}" field="fechaInicio" id="c_org_opengis_nix_Prestamo_fechaInicio" required="true" z="tL4G+7pMZFddshAcCSF1ZqFbCsQ="/>
         <field:datetime dateTimePattern="${prestamo_fechafin_date_format}" field="fechaFin" id="c_org_opengis_nix_Prestamo_fechaFin" z="69U7ui7U0sOOS5ykH0tp5UNiNvc="/>
-        <field:select field="Usuario" id="c_org_opengis_nix_Prestamo_Usuario" itemValue="id" itemLabel="fullName" items="${users}" path="/users" z="8qPQAfldv7cg/tK0uE2hTTI3WH4="/>
+        <field:select field="Usuario" id="c_org_opengis_nix_Prestamo_Usuario" itemLabel="fullName" itemValue="id" items="${users}" path="/users" z="user-managed"/>
     </form:update>
 </div>
