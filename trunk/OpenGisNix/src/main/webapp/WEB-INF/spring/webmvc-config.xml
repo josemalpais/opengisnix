@@ -72,4 +72,5 @@
     </property>
   </bean>
 <bean class="org.opengis.nix.web.ApplicationConversionServiceFactoryBean" id="applicationConversionService"/>
+<bean class="org.springframework.web.servlet.view.XmlViewResolver" id="jasperReportsXmlViewResolver" p:location="/WEB-INF/spring/jasper-views.xml" p:order="0"/>
 </beans>

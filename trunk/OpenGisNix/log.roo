@@ -58,3 +58,5 @@ field boolean --fieldName Activo --value True
 web mvc setup
 web mvc all --package ~.web 
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-02-17 12:25:51
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-02-29 18:31:12
+web report setup
