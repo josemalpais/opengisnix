@@ -3,15 +3,15 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <h3>
-        <spring:message code="label_report_usuarios_trabajadores" htmlEscape="false"/>
+        <spring:message code="label_report_usuario_title" htmlEscape="false"/>
     </h3>
     <c:if test="${not empty error}">
         <h3>
             <spring:message code="${error}" htmlEscape="false"/>
         </h3>
     </c:if>
-    <form:form action="InformeUsuario" id="fr_org_opengis_nix_Usuario" method="GET"> 	
-      <spring:message code="message_report_usuario" htmlEscape="false"/>
+    <form:form action="trabajadores" id="fr_org_opengis_nix_Usuario" method="GET"> 	
+      <spring:message code="label_report_usuario" htmlEscape="false"/>
       <br/>
       <br/>
         <input name="dni" type="text"/>

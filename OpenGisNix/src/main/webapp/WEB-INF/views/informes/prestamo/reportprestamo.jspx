@@ -1,22 +1,21 @@
-
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <h3>
-        <spring:message code="label_report_prestamoes_prestamos" htmlEscape="false"/>
+        <spring:message code="label_report_prestamo_title" htmlEscape="false"/>
     </h3>
     <c:if test="${not empty error}">
         <h3>
             <spring:message code="${error}" htmlEscape="false"/>
         </h3>
     </c:if>
-    <form:form action="InformePrestamo" id="fr_org_opengis_nix_Prestamo" method="GET">
+    <form:form action="prestamos" id="fr_org_opengis_nix_Prestamo" method="GET">
      
-       <spring:message code="message_report_prestamos" htmlEscape="false"/>
+       <spring:message code="label_report_prestamo" htmlEscape="false"/>
        <table border="0">
        <td>
-        <spring:message code="message_report_prestamos_fecini" htmlEscape="false"/>
+        <spring:message code="label_report_prestamo_fecini" htmlEscape="false"/>
         </td>
         <td>
         <input name="fecini" type="text"/>
@@ -24,7 +23,7 @@
         <tr>
         </tr>
         <td>
-	     <spring:message code="message_report_prestamos_fecfin" htmlEscape="false"/>
+	     <spring:message code="label_report_prestamo_fecfin" htmlEscape="false"/>
 	     </td>
 	     <td> 
 	     <input name="fecfin" type="text"/>
