@@ -23,7 +23,10 @@
 	</mvc:interceptors>
 	
 	<!-- selects a static view for rendering without the need for an explicit controller -->
-	<mvc:view-controller path="/login"/>
+	<mvc:view-controller path="/informes/prestamo/reportprestamo"/>
+    <mvc:view-controller path="/informes/usuario/reportusuario"/>
+    <mvc:view-controller path="/informes/parcela/reportparcela"/>
+    <mvc:view-controller path="/login"/>
     <mvc:view-controller path="/" view-name="index"/>
 	<mvc:view-controller path="/uncaughtException"/>
 	<mvc:view-controller path="/resourceNotFound"/>

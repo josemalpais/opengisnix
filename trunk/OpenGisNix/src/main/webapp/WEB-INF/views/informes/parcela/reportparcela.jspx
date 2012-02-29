@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+xmlns:form="http://www.springframework.org/tags/form"
+xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <h3>
-        <spring:message code="label_report_parcelas_parcelas" htmlEscape="false"/>
+        <spring:message code="label_report_parcelas_title" htmlEscape="false"/>
     </h3>
     <c:if test="${not empty error}">
         <h3>
@@ -11,7 +14,7 @@
         </h3>
     </c:if>
     <form:form action="InformeParcela" id="fr_org_opengis_nix_Parcela" method="GET">
-    	      <spring:message code="message_report_parcela" htmlEscape="false"/>
+      <spring:message code="label_report_parcela" htmlEscape="false"/>
       <br/>
       <br/>
         <input name="parcela" type="text"/>
