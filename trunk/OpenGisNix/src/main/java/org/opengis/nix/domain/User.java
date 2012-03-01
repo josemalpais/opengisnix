@@ -19,7 +19,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo", "findUsersByActivationKeyAndEmailAddress" })
+@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo" })
 public class User {
         
     @NotNull

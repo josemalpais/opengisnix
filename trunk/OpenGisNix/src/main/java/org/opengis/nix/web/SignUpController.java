@@ -52,21 +52,9 @@ public class SignUpController {
         return "signup/index";
     }
     
-    @RequestMapping(params = "activate", method = RequestMethod.GET)
-    public String activateUser(@RequestParam(value = "activate", required = true) String activationKey,@RequestParam(value = "emailAddress", required = true) String emailAddress,Model model) {
-        TypedQuery<User> query = User.findUsersByActivationKeyAndEmailAddress(activationKey, emailAddress);
-        User User=query.getSingleResult();
-        if(null!=User){
-        	User.setActivationDate(new Date());
-        	User.setEnabled(true);
-        	User.merge();
-        	return "login";
-        }
-        else{
-        	return "signup/error";
-        }
 
-    }
+
+    
 
     @RequestMapping(method = RequestMethod.POST)
     public String create(@Valid UserRegistrationForm userRegistration, BindingResult result, Model model, HttpServletRequest request) {
