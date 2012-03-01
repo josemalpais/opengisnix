@@ -10,16 +10,6 @@ import org.opengis.nix.domain.User;
 
 privileged aspect User_Roo_Finder {
     
-    public static TypedQuery<User> User.findUsersByActivationKeyAndEmailAddress(String activationKey, String emailAddress) {
-        if (activationKey == null || activationKey.length() == 0) throw new IllegalArgumentException("The activationKey argument is required");
-        if (emailAddress == null || emailAddress.length() == 0) throw new IllegalArgumentException("The emailAddress argument is required");
-        EntityManager em = User.entityManager();
-        TypedQuery<User> q = em.createQuery("SELECT o FROM User AS o WHERE o.activationKey = :activationKey AND o.emailAddress = :emailAddress", User.class);
-        q.setParameter("activationKey", activationKey);
-        q.setParameter("emailAddress", emailAddress);
-        return q;
-    }
-    
     public static TypedQuery<User> User.findUsersByApellidosLike(String apellidos) {
         if (apellidos == null || apellidos.length() == 0) throw new IllegalArgumentException("The apellidos argument is required");
         apellidos = apellidos.replace('*', '%');
