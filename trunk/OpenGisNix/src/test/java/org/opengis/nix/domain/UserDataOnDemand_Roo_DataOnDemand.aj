@@ -7,16 +7,15 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.opengis.nix.domain.Role;
+import org.opengis.nix.domain.RoleDataOnDemand;
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.TipoUser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect UserDataOnDemand_Roo_DataOnDemand {
@@ -27,10 +26,11 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
     
     private List<User> UserDataOnDemand.data;
     
+    @Autowired
+    private RoleDataOnDemand UserDataOnDemand.roleDataOnDemand;
+    
     public User UserDataOnDemand.getNewTransientUser(int index) {
         User obj = new User();
-        setActivationDate(obj, index);
-        setActivationKey(obj, index);
         setAlias(obj, index);
         setApellidos(obj, index);
         setCodPostal(obj, index);
@@ -38,24 +38,13 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
         setDni(obj, index);
         setEmailAddress(obj, index);
         setEnabled(obj, index);
-        setLocked(obj, index);
         setNombre(obj, index);
         setPassword(obj, index);
         setPoblacion(obj, index);
         setProvincia(obj, index);
+        setRoleEntry(obj, index);
         setTelefono(obj, index);
-        setTipo(obj, index);
         return obj;
-    }
-    
-    public void UserDataOnDemand.setActivationDate(User obj, int index) {
-        Date activationDate = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
-        obj.setActivationDate(activationDate);
-    }
-    
-    public void UserDataOnDemand.setActivationKey(User obj, int index) {
-        String activationKey = "activationKey_" + index;
-        obj.setActivationKey(activationKey);
     }
     
     public void UserDataOnDemand.setAlias(User obj, int index) {
@@ -81,8 +70,8 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
     
     public void UserDataOnDemand.setDireccion(User obj, int index) {
         String direccion = "direccion_" + index;
-        if (direccion.length() > 40) {
-            direccion = direccion.substring(0, 40);
+        if (direccion.length() > 30) {
+            direccion = direccion.substring(0, 30);
         }
         obj.setDireccion(direccion);
     }
@@ -100,11 +89,6 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
     public void UserDataOnDemand.setEnabled(User obj, int index) {
         Boolean enabled = Boolean.TRUE;
         obj.setEnabled(enabled);
-    }
-    
-    public void UserDataOnDemand.setLocked(User obj, int index) {
-        Boolean locked = Boolean.TRUE;
-        obj.setLocked(locked);
     }
     
     public void UserDataOnDemand.setNombre(User obj, int index) {
@@ -136,14 +120,14 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
         obj.setProvincia(provincia);
     }
     
+    public void UserDataOnDemand.setRoleEntry(User obj, int index) {
+        Role roleEntry = roleDataOnDemand.getRandomRole();
+        obj.setRoleEntry(roleEntry);
+    }
+    
     public void UserDataOnDemand.setTelefono(User obj, int index) {
         String telefono = "telefono_" + index;
         obj.setTelefono(telefono);
-    }
-    
-    public void UserDataOnDemand.setTipo(User obj, int index) {
-        TipoUser tipo = TipoUser.class.getEnumConstants()[0];
-        obj.setTipo(tipo);
     }
     
     public User UserDataOnDemand.getSpecificUser(int index) {

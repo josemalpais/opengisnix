@@ -7,14 +7,11 @@ import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
-import java.util.Arrays;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import org.joda.time.format.DateTimeFormat;
+import org.opengis.nix.domain.Role;
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.TipoUser;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -30,13 +27,11 @@ privileged aspect UserController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String UserController.createForm(Model uiModel) {
         uiModel.addAttribute("user", new User());
-        addDateTimeFormatPatterns(uiModel);
         return "users/create";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String UserController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("user", User.findUser(id));
         uiModel.addAttribute("itemId", id);
         return "users/show";
@@ -52,7 +47,6 @@ privileged aspect UserController_Roo_Controller {
         } else {
             uiModel.addAttribute("users", User.findAllUsers());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "users/list";
     }
     
@@ -60,7 +54,6 @@ privileged aspect UserController_Roo_Controller {
     public String UserController.update(@Valid User user, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("user", user);
-            addDateTimeFormatPatterns(uiModel);
             return "users/update";
         }
         uiModel.asMap().clear();
@@ -71,7 +64,6 @@ privileged aspect UserController_Roo_Controller {
     @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
     public String UserController.updateForm(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("user", User.findUser(id));
-        addDateTimeFormatPatterns(uiModel);
         return "users/update";
     }
     
@@ -84,18 +76,14 @@ privileged aspect UserController_Roo_Controller {
         return "redirect:/users";
     }
     
+    @ModelAttribute("roles")
+    public Collection<Role> UserController.populateRoles() {
+        return Role.findAllRoles();
+    }
+    
     @ModelAttribute("users")
     public Collection<User> UserController.populateUsers() {
         return User.findAllUsers();
-    }
-    
-    @ModelAttribute("tipousers")
-    public Collection<TipoUser> UserController.populateTipoUsers() {
-        return Arrays.asList(TipoUser.class.getEnumConstants());
-    }
-    
-    void UserController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("user_activationdate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String UserController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

@@ -28,4 +28,7 @@
 <definition extends="default" name="users/findUsersByNombreLike">
         <put-attribute name="body" value="/WEB-INF/views/users/findUsersByNombreLike.jspx"/>
     </definition>
+<definition extends="default" name="users/findUsersByDni">
+        <put-attribute name="body" value="/WEB-INF/views/users/findUsersByDni.jspx"/>
+    </definition>
 </tiles-definitions>

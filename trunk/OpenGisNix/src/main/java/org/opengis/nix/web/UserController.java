@@ -25,11 +25,11 @@ public class UserController {
     public String create(@Valid User user, BindingResult result, Model model, HttpServletRequest request) {
         if (result.hasErrors()) {
             model.addAttribute("user", user);
-            addDateTimeFormatPatterns(model);
+            //addDateTimeFormatPatterns(model);
             return "users/create";
         }
         if(user.getId() != null){
-        	User savedUser = User.findUser(user.getId());
+        	User savedUser = User.findUser(user.getDni());
         	if(!savedUser.getPassword().equals(user.getPassword())){
         		user.setPassword(messageDigestPasswordEncoder.encodePassword(user.getPassword(), null));
         	}

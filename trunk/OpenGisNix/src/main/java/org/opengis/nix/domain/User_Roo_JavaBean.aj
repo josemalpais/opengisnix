@@ -5,8 +5,7 @@ package org.opengis.nix.domain;
 
 import java.lang.Boolean;
 import java.lang.String;
-import java.util.Date;
-import org.opengis.nix.enumerated.TipoUser;
+import org.opengis.nix.domain.Role;
 
 privileged aspect User_Roo_JavaBean {
     
@@ -82,12 +81,12 @@ privileged aspect User_Roo_JavaBean {
         this.codPostal = codPostal;
     }
     
-    public TipoUser User.getTipo() {
-        return this.tipo;
+    public Role User.getRoleEntry() {
+        return this.roleEntry;
     }
     
-    public void User.setTipo(TipoUser tipo) {
-        this.tipo = tipo;
+    public void User.setRoleEntry(Role roleEntry) {
+        this.roleEntry = roleEntry;
     }
     
     public String User.getEmailAddress() {
@@ -106,36 +105,12 @@ privileged aspect User_Roo_JavaBean {
         this.password = password;
     }
     
-    public Date User.getActivationDate() {
-        return this.activationDate;
-    }
-    
-    public void User.setActivationDate(Date activationDate) {
-        this.activationDate = activationDate;
-    }
-    
-    public String User.getActivationKey() {
-        return this.activationKey;
-    }
-    
-    public void User.setActivationKey(String activationKey) {
-        this.activationKey = activationKey;
-    }
-    
     public Boolean User.getEnabled() {
         return this.enabled;
     }
     
     public void User.setEnabled(Boolean enabled) {
         this.enabled = enabled;
-    }
-    
-    public Boolean User.getLocked() {
-        return this.locked;
-    }
-    
-    public void User.setLocked(Boolean locked) {
-        this.locked = locked;
     }
     
 }

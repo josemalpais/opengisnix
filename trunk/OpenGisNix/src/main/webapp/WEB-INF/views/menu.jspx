@@ -10,6 +10,7 @@
             <menu:item id="fi_user_apellidoslike" messageCode="global_menu_find" url="/users?find=ByApellidosLike&amp;form" z="FVknPe+/fVLITKuD/rSwhjwvcl4="/>
             <menu:item id="fi_user_dnilike" messageCode="global_menu_find" url="/users?find=ByDniLike&amp;form" z="Kc+yYVeTq0Nnz/HUIRbP0X8f5dM="/>
             <menu:item id="fi_user_nombrelike" messageCode="global_menu_find" url="/users?find=ByNombreLike&amp;form" z="t0c3z6dMG16enmSwVy3Dz0Dvl2Y="/>
+            <menu:item id="fi_user_dni" messageCode="global_menu_find" url="/users?find=ByDni&amp;form" z="C+gry2dLtG3EMsjYWEYDwNLYptE="/>
         </menu:category>
         <menu:category id="c_parcela" z="gE2ikfsXLALiVs0vLR4rWLPCEzQ=">
             <menu:item id="i_parcela_new" messageCode="global_menu_new" url="/parcelas?form" z="S0qD/awgICiMThWtDtNwcn5jsqk="/>
