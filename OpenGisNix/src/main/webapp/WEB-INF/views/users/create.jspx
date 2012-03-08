@@ -6,16 +6,16 @@
         <field:input field="dni" id="c_org_opengis_nix_domain_User_dni" required="true" validationRegex="[0-9]{8}[A-Za-z]" z="qpEHGLnBFOmiAn/G7PfhXpZ/qlY="/>
         <field:input field="nombre" id="c_org_opengis_nix_domain_User_nombre" max="30" required="true" z="zzsCEsGn0JXpo1mkdKq4ZfTrGbQ="/>
         <field:input field="apellidos" id="c_org_opengis_nix_domain_User_apellidos" max="30" required="true" z="WvEAHcm9H+CTNecEaK7Ao1LCa6s="/>
-        <field:input field="alias" id="c_org_opengis_nix_domain_User_alias" max="15" required="true" z="QJPnDn/ccXoEImtzLBRaaOBuK1c="/>
+        <field:input field="alias" id="c_org_opengis_nix_domain_User_alias" max="15" z="Vv20whpI09DOEXAnqh1VhyG3hFY="/>
         <field:input field="telefono" id="c_org_opengis_nix_domain_User_telefono" required="true" validationRegex="[0-9]+$" z="gZslfBkXA8asuupgOuokcNVdcYM="/>
-        <field:textarea field="direccion" id="c_org_opengis_nix_domain_User_direccion" required="true" z="8ySuIJdOAiPgeG0W9w9H2FrmfLI="/>
+        <field:input field="direccion" id="c_org_opengis_nix_domain_User_direccion" max="30" required="true" z="pFfdlZAXmvwoMNPBSY/ewwX0sMc="/>
         <field:input field="poblacion" id="c_org_opengis_nix_domain_User_poblacion" max="20" required="true" z="BY76ss0hZiqB66W9Kyf+gvjNhB8="/>
         <field:input field="provincia" id="c_org_opengis_nix_domain_User_provincia" max="20" required="true" z="2BIXs6T49Z239MZnXaWKPk1bsd4="/>
         <field:input field="codPostal" id="c_org_opengis_nix_domain_User_codPostal" validationRegex="[0-9]{5}" z="t0jio98Pd0oSW6YnNWrIp3F/9cY="/>
         <field:input field="emailAddress" id="c_org_opengis_nix_domain_User_emailAddress" min="1" required="true" validationMessageCode="field_invalid_email" z="pkEUA2/G0kobKSWTe7OneGDLIJo="/>
-        <field:select field="tipo" id="c_org_opengis_nix_domain_User_tipo" items="${tipousers}" path="tipousers" z="j5zCob873EJZn5M/J8BcK+c+UyA="/>
         <field:input field="password" id="c_org_opengis_nix_domain_User_password" min="1" required="true" z="ZpxAfWODcWhYSDTwHVWzCZ5uvSg="/>
-       
+        <field:checkbox field="enabled" id="c_org_opengis_nix_domain_User_enabled" z="jJV6xkDKtxRnaitHKhQCdAYsDVM="/>
+        <field:select field="roleEntry" id="c_org_opengis_nix_domain_User_roleEntry" itemValue="id" items="${roles}" path="/roles" z="mts/J9O6ExP4cUC26GossyeLQso="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_domain_User" render="${not empty dependencies}" z="S3Pi6JsFb859uuWxqdUSx/nvjmg="/>
 </div>

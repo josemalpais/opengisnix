@@ -13,17 +13,21 @@ import java.util.Date;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo" })
+@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo", "findUsersByDni" })
 public class User {
         
     @NotNull
     @Pattern(regexp = "[0-9]{8}[A-Za-z]")
+    
     private String dni;
 
     @NotNull
@@ -35,7 +39,6 @@ public class User {
     private String apellidos;
 
 
-    @NotNull
     @Size(max = 15)
     private String alias;
 
@@ -45,7 +48,7 @@ public class User {
     private String telefono;
 
     @NotNull
-    @Size(max = 40)
+    @Size(max = 30)
     private String direccion;
 
     @NotNull
@@ -59,10 +62,11 @@ public class User {
     @Pattern(regexp = "[0-9]{5}")
     private String codPostal;
 
-    @Enumerated(EnumType.STRING)
-    private TipoUser tipo;
-  
-  
+    //@Enumerated(EnumType.STRING)
+    //private TipoUser tipo;
+    
+    @ManyToOne
+    private Role roleEntry;
 
     @NotNull
     @Column(unique = true)
@@ -73,15 +77,16 @@ public class User {
     @Size(min = 1)
     private String password;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date activationDate;
+    //@Temporal(TemporalType.TIMESTAMP)
+    //@DateTimeFormat(style = "M-")
+    //private Date activationDate;
 
-    private String activationKey;
-
+    //private String activationKey;
+    
+    @Value("true")
     private Boolean enabled;
 
-    private Boolean locked;
+    //private Boolean locked;
 
         public void setUser(Object object) {
                 // TODO Auto-generated method stub
@@ -89,5 +94,10 @@ public class User {
         }
     public String getFullName(){
     	return nombre+" "+apellidos;
+    }
+
+	public static User findUser(String dni) {
+        if (dni == null) return null;
+        return entityManager().find(User.class, dni);
     }
 }

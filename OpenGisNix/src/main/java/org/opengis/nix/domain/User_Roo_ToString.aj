@@ -9,8 +9,6 @@ privileged aspect User_Roo_ToString {
     
     public String User.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("ActivationDate: ").append(getActivationDate()).append(", ");
-        sb.append("ActivationKey: ").append(getActivationKey()).append(", ");
         sb.append("Alias: ").append(getAlias()).append(", ");
         sb.append("Apellidos: ").append(getApellidos()).append(", ");
         sb.append("CodPostal: ").append(getCodPostal()).append(", ");
@@ -20,13 +18,12 @@ privileged aspect User_Roo_ToString {
         sb.append("Enabled: ").append(getEnabled()).append(", ");
         sb.append("FullName: ").append(getFullName()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
-        sb.append("Locked: ").append(getLocked()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("Password: ").append(getPassword()).append(", ");
         sb.append("Poblacion: ").append(getPoblacion()).append(", ");
         sb.append("Provincia: ").append(getProvincia()).append(", ");
+        sb.append("RoleEntry: ").append(getRoleEntry()).append(", ");
         sb.append("Telefono: ").append(getTelefono()).append(", ");
-        sb.append("Tipo: ").append(getTipo()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

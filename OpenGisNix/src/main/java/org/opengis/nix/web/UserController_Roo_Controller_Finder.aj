@@ -23,6 +23,17 @@ privileged aspect UserController_Roo_Controller_Finder {
         return "users/list";
     }
     
+    @RequestMapping(params = { "find=ByDni", "form" }, method = RequestMethod.GET)
+    public String UserController.findUsersByDniForm(Model uiModel) {
+        return "users/findUsersByDni";
+    }
+    
+    @RequestMapping(params = "find=ByDni", method = RequestMethod.GET)
+    public String UserController.findUsersByDni(@RequestParam("dni") String dni, Model uiModel) {
+        uiModel.addAttribute("users", User.findUsersByDni(dni).getResultList());
+        return "users/list";
+    }
+    
     @RequestMapping(params = { "find=ByDniLike", "form" }, method = RequestMethod.GET)
     public String UserController.findUsersByDniLikeForm(Model uiModel) {
         return "users/findUsersByDniLike";

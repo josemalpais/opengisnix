@@ -67,14 +67,14 @@ public class SignUpController {
             String activationKey = "activationKey:" + random.nextInt();
 
             User User = new User();
-            User.setActivationDate(null);
+            //User.setActivationDate(null);
             User.setEmailAddress(userRegistration.getEmailAddress());
             User.setNombre(userRegistration.getFirstName());
             User.setApellidos(userRegistration.getLastName());
             User.setPassword(messageDigestPasswordEncoder.encodePassword(userRegistration.getPassword(), null));
-            User.setActivationKey(activationKey);
+            //User.setActivationKey(activationKey);
             User.setEnabled(false);
-            User.setLocked(false);
+            //User.setLocked(false);
             User.persist();
             
             SimpleMailMessage mail = new SimpleMailMessage();

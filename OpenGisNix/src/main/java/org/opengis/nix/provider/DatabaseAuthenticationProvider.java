@@ -108,7 +108,7 @@ public class DatabaseAuthenticationProvider extends
 	      authorities.add(new GrantedAuthorityImpl("ROLE_ADMIN"));
 	    } else {
 	      try {
-	    	TypedQuery<User> query= User.findUsersByEmailAddress(username);
+	    	TypedQuery<User> query= User.findUsersByDni(username);
 	    	
 	        User targetUser = (User) query.getSingleResult();
 	        // authenticate the person
