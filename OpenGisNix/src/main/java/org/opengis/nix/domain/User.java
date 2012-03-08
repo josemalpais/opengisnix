@@ -58,7 +58,8 @@ public class User {
     @NotNull
     @Size(max = 20)
     private String provincia;
-
+    
+    @NotNull
     @Pattern(regexp = "[0-9]{5}")
     private String codPostal;
 
