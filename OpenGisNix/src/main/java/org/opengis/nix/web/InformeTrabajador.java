@@ -77,10 +77,9 @@ public class InformeTrabajador extends HttpServlet {
  response.getContentType();
  try
  {
-    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeParcela.jasper"));
+    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeTrabajador.jasper"));
     Map parametros = new HashMap();
     parametros.put("dni", request.getParameter("dni"));
-
     JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametros, ConnectorServlets.conectar());
 
     JRExporter exporter = new JRPdfExporter();
