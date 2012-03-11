@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <h3>
+        <spring:message code="label_informes_cuaderno__cuaderno" htmlEscape="false"/>
+    </h3>
+    <c:if test="${not empty error}">
+        <h3>
+            <spring:message code="${error}" htmlEscape="false"/>
+        </h3>
+    </c:if>
+    <form:form action="InformeCuaderno" id="fr_org_opengis_nix_Usuario" method="POST"> 	
+      <spring:message code="label_report_usuario" htmlEscape="false"/>
+      <br/>
+      <br/>
+        <input name="dni" type="text"/>
+      <br/>
+      <br/>
+        <input type="submit"/>
+    </form:form>
+</div>
