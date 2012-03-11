@@ -13,6 +13,7 @@
         <intercept-url access="permitAll" pattern="/resources/**"/>
         <intercept-url access="permitAll" pattern="/static/**"/>
         <intercept-url access="permitAll" pattern="/login/**"/>
+        <intercept-url access="permitAll" pattern="/forgotpassword/**"/>
 		
 		<intercept-url access="isAuthenticated()" pattern="/change**/**"/>
         <intercept-url access="isAuthenticated()" pattern="/changepassword/**"/>
