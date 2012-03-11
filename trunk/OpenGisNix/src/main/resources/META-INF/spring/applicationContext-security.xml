@@ -13,7 +13,18 @@
         <intercept-url access="permitAll" pattern="/resources/**"/>
         <intercept-url access="permitAll" pattern="/static/**"/>
         <intercept-url access="permitAll" pattern="/login/**"/>
-        <intercept-url access="isAuthenticated()" pattern="/**"/>
+		
+		<intercept-url access="isAuthenticated()" pattern="/change**/**"/>
+        <intercept-url access="isAuthenticated()" pattern="/changepassword/**"/>
+        <intercept-url access="isAuthenticated()" pattern="/aperoes**"/>
+        <intercept-url access="isAuthenticated()" pattern="/productoes**"/>
+        <intercept-url access="isAuthenticated()" pattern="/parcelas**"/>
+        <intercept-url access="hasRole('Administrador')" pattern="/**"/>
+        <intercept-url access="hasRole('Administrador')" pattern="/users**"/>
+        <intercept-url access="hasRole('Administrador')" pattern="/dispositivoes**"/>
+        <intercept-url access="hasRole('Administrador')" pattern="/prestamoes**"/>
+        <intercept-url access="hasRole('Administrador')" pattern="/userroles**"/>
+        <intercept-url access="hasRole('Administrador')" pattern="/roles**"/>
     </http>
 
 	<!-- Configure Authentication mechanism -->

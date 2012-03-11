@@ -1,5 +1,7 @@
 package org.opengis.nix;
 
+import java.util.List;
+
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -25,4 +27,8 @@ public class Dispositivo {
 
     @Value("True")
     private Boolean activo;
+    
+    public static List<Dispositivo> findAvaiableDevices() {
+    	return entityManager().createQuery("SELECT o FROM Dispositivo o WHERE disponible = '1' and activo = '1'", Dispositivo.class).getResultList();
+    }
 }

@@ -6,9 +6,9 @@
         <field:input field="nombre" id="c_org_opengis_nix_Apero_nombre" max="20" required="true" z="bRRtVW9pMRgAfu2svhLH+CdgwkE="/>
         <field:input field="tamanyo" id="c_org_opengis_nix_Apero_tamanyo" max="999" required="true" z="+h+gSoachbHzOKIkhIfR+2u8JgA="/>
         <field:textarea field="descripcion" id="c_org_opengis_nix_Apero_descripcion" z="xv0iaR96kH3L0i9UddwpuwCRdb0="/>
-        <field:select field="tarea" id="c_org_opengis_nix_Apero_tarea" items="${tareas}" path="tareas" z="toIViqWeFAgq+A/lRqDGW6mcy7Q="/>
         <field:checkbox field="Activo" id="c_org_opengis_nix_Apero_Activo" z="W/3lyiF3e6P/P+X25spRy0KDQ7A="/>
         <field:select field="propietario" id="c_org_opengis_nix_Apero_propietario" itemLabel="fullName" itemValue="id" items="${users}" path="/users" z="user-managed"/>
+        <field:select field="tarea" id="c_org_opengis_nix_Apero_tarea" itemValue="id" items="${tareas}" path="/tareas" z="N7GkjCMGnJBMCG4EBijGVb+k3N8="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_Apero" render="${not empty dependencies}" z="ZKHK+lAHmKmGXPAN+5BKdu4s/hc="/>
 </div>

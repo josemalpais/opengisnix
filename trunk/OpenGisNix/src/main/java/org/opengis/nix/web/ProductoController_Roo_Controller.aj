@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.opengis.nix.Producto;
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.Tarea;
+import org.opengis.nix.enumerated.Tipo;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -99,9 +99,9 @@ privileged aspect ProductoController_Roo_Controller {
         return User.findAllUsers();
     }
     
-    @ModelAttribute("tareas")
-    public Collection<Tarea> ProductoController.populateTareas() {
-        return Arrays.asList(Tarea.class.getEnumConstants());
+    @ModelAttribute("tipoes")
+    public Collection<Tipo> ProductoController.populateTipoes() {
+        return Arrays.asList(Tipo.class.getEnumConstants());
     }
     
     String ProductoController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

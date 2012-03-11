@@ -31,4 +31,7 @@
 <definition extends="default" name="users/findUsersByDni">
         <put-attribute name="body" value="/WEB-INF/views/users/findUsersByDni.jspx"/>
     </definition>
+<definition extends="default" name="users/findUsersByRoleEntry">
+        <put-attribute name="body" value="/WEB-INF/views/users/findUsersByRoleEntry.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -44,7 +44,7 @@ public class ChangePasswordController {
 			BindingResult result) {
 		validator.validate(form, result);
 		if (result.hasErrors()) {
-			return "changepassword/index"; // back to form
+			return "changepassword/index/"; // back to form
 		} else {
 			if (SecurityContextHolder.getContext().getAuthentication()
 					.isAuthenticated()) {
@@ -52,7 +52,7 @@ public class ChangePasswordController {
 						.getContext().getAuthentication().getPrincipal();
 				String newPassword = form.getNewPassword();
 				Query query = User
-						.findUsersByEmailAddress(userDetails.getUsername());
+						.findUsersByDni(userDetails.getUsername());
 				User person = (User) query.getSingleResult();
 				person.setPassword(messageDigestPasswordEncoder.encodePassword(newPassword, null));
 				person.merge();

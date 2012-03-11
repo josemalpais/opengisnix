@@ -34,9 +34,10 @@ privileged aspect ParcelaDataOnDemand_Roo_DataOnDemand {
         setActiva(obj, index);
         setAlias(obj, index);
         setNumParcela(obj, index);
-        setNumPartida(obj, index);
         setNumPoblacion(obj, index);
+        setNumPoligono(obj, index);
         setNumProvincia(obj, index);
+        setPartida(obj, index);
         setPropietario(obj, index);
         return obj;
     }
@@ -62,14 +63,6 @@ privileged aspect ParcelaDataOnDemand_Roo_DataOnDemand {
         obj.setNumParcela(numParcela);
     }
     
-    public void ParcelaDataOnDemand.setNumPartida(Parcela obj, int index) {
-        int numPartida = index;
-        if (numPartida > 999) {
-            numPartida = 999;
-        }
-        obj.setNumPartida(numPartida);
-    }
-    
     public void ParcelaDataOnDemand.setNumPoblacion(Parcela obj, int index) {
         int numPoblacion = index;
         if (numPoblacion > 999) {
@@ -78,12 +71,28 @@ privileged aspect ParcelaDataOnDemand_Roo_DataOnDemand {
         obj.setNumPoblacion(numPoblacion);
     }
     
+    public void ParcelaDataOnDemand.setNumPoligono(Parcela obj, int index) {
+        int numPoligono = index;
+        if (numPoligono > 999) {
+            numPoligono = 999;
+        }
+        obj.setNumPoligono(numPoligono);
+    }
+    
     public void ParcelaDataOnDemand.setNumProvincia(Parcela obj, int index) {
         int numProvincia = index;
         if (numProvincia > 999) {
             numProvincia = 999;
         }
         obj.setNumProvincia(numProvincia);
+    }
+    
+    public void ParcelaDataOnDemand.setPartida(Parcela obj, int index) {
+        String Partida = "Partida_" + index;
+        if (Partida.length() > 10) {
+            Partida = Partida.substring(0, 10);
+        }
+        obj.setPartida(Partida);
     }
     
     public void ParcelaDataOnDemand.setPropietario(Parcela obj, int index) {

@@ -29,7 +29,7 @@ public class UserController {
             return "users/create";
         }
         if(user.getId() != null){
-        	User savedUser = User.findUser(user.getDni());
+        	User savedUser = User.findUser(user.getId());
         	if(!savedUser.getPassword().equals(user.getPassword())){
         		user.setPassword(messageDigestPasswordEncoder.encodePassword(user.getPassword(), null));
         	}

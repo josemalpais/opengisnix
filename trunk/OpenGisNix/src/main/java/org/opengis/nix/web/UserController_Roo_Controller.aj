@@ -10,7 +10,6 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import org.opengis.nix.domain.Role;
 import org.opengis.nix.domain.User;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -74,11 +73,6 @@ privileged aspect UserController_Roo_Controller {
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/users";
-    }
-    
-    @ModelAttribute("roles")
-    public Collection<Role> UserController.populateRoles() {
-        return Role.findAllRoles();
     }
     
     @ModelAttribute("users")

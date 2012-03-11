@@ -15,6 +15,5 @@
         <field:display field="poblacion" id="s_org_opengis_nix_domain_User_poblacion" object="${user}" z="wvrmd/3ZuL2YPfg6lKfzCxeivbk="/>
         <field:display field="provincia" id="s_org_opengis_nix_domain_User_provincia" object="${user}" z="OV14bJqPjZLGMO7j5ODaMv1Rjbs="/>
         <field:display field="codPostal" id="s_org_opengis_nix_domain_User_codPostal" object="${user}" z="BIPxgbEFDgedAFw0QglhwuE5APQ="/>
-        <field:display field="roleEntry" id="s_org_opengis_nix_domain_User_roleEntry" object="${user}" z="/w+8MePJwy3LmYZ7zyhxlJk4vWc="/>
     </page:show>
 </div>

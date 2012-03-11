@@ -13,9 +13,10 @@ import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.opengis.nix.Apero;
+import org.opengis.nix.Tarea;
+import org.opengis.nix.TareaDataOnDemand;
 import org.opengis.nix.domain.User;
 import org.opengis.nix.domain.UserDataOnDemand;
-import org.opengis.nix.enumerated.Tarea;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +30,9 @@ privileged aspect AperoDataOnDemand_Roo_DataOnDemand {
     
     @Autowired
     private UserDataOnDemand AperoDataOnDemand.userDataOnDemand;
+    
+    @Autowired
+    private TareaDataOnDemand AperoDataOnDemand.tareaDataOnDemand;
     
     public Apero AperoDataOnDemand.getNewTransientApero(int index) {
         Apero obj = new Apero();
@@ -76,7 +80,7 @@ privileged aspect AperoDataOnDemand_Roo_DataOnDemand {
     }
     
     public void AperoDataOnDemand.setTarea(Apero obj, int index) {
-        Tarea tarea = Tarea.class.getEnumConstants()[0];
+        Tarea tarea = tareaDataOnDemand.getRandomTarea();
         obj.setTarea(tarea);
     }
     

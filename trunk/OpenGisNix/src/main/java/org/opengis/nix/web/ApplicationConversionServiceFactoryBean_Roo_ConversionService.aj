@@ -9,6 +9,8 @@ import org.opengis.nix.Dispositivo;
 import org.opengis.nix.Parcela;
 import org.opengis.nix.Prestamo;
 import org.opengis.nix.Producto;
+import org.opengis.nix.Tarea;
+import org.opengis.nix.TareasRealizadas;
 import org.opengis.nix.domain.Role;
 import org.opengis.nix.domain.User;
 import org.springframework.core.convert.converter.Converter;
@@ -22,6 +24,8 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(new ParcelaConverter());
         registry.addConverter(new PrestamoConverter());
         registry.addConverter(new ProductoConverter());
+        registry.addConverter(new TareaConverter());
+        registry.addConverter(new TareasRealizadasConverter());
         registry.addConverter(new RoleConverter());
         registry.addConverter(new UserConverter());
     }
@@ -47,7 +51,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.ParcelaConverter implements Converter<Parcela, String> {
         public String convert(Parcela parcela) {
-            return new StringBuilder().append(parcela.getAlias()).append(" ").append(parcela.getNumPoblacion()).append(" ").append(parcela.getNumProvincia()).append(" ").append(parcela.getNumParcela()).toString();
+            return new StringBuilder().append(parcela.getAlias()).append(" ").append(parcela.getNumPoblacion()).append(" ").append(parcela.getNumPoligono()).append(" ").append(parcela.getNumProvincia()).toString();
         }
         
     }
@@ -62,6 +66,20 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.ProductoConverter implements Converter<Producto, String> {
         public String convert(Producto producto) {
             return new StringBuilder().append(producto.getDescripcion()).append(" ").append(producto.getDosis()).toString();
+        }
+        
+    }
+    
+    static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.TareaConverter implements Converter<Tarea, String> {
+        public String convert(Tarea tarea) {
+            return new StringBuilder().append(tarea.getNombre()).append(" ").append(tarea.getDescripcion()).toString();
+        }
+        
+    }
+    
+    static class org.opengis.nix.web.ApplicationConversionServiceFactoryBean.TareasRealizadasConverter implements Converter<TareasRealizadas, String> {
+        public String convert(TareasRealizadas tareasRealizadas) {
+            return new StringBuilder().append(tareasRealizadas.getDosis()).append(" ").append(tareasRealizadas.getFechaInicio()).append(" ").append(tareasRealizadas.getFechaFin()).toString();
         }
         
     }

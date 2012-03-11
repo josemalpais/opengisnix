@@ -34,19 +34,19 @@ privileged aspect UserRoleDataOnDemand_Roo_DataOnDemand {
     
     public UserRole UserRoleDataOnDemand.getNewTransientUserRole(int index) {
         UserRole obj = new UserRole();
-        setRoleEntry(obj, index);
-        setUserEntry(obj, index);
+        setRol(obj, index);
+        setUsuario(obj, index);
         return obj;
     }
     
-    public void UserRoleDataOnDemand.setRoleEntry(UserRole obj, int index) {
-        Role roleEntry = roleDataOnDemand.getRandomRole();
-        obj.setRoleEntry(roleEntry);
+    public void UserRoleDataOnDemand.setRol(UserRole obj, int index) {
+        Role rol = roleDataOnDemand.getRandomRole();
+        obj.setRol(rol);
     }
     
-    public void UserRoleDataOnDemand.setUserEntry(UserRole obj, int index) {
-        User userEntry = userDataOnDemand.getRandomUser();
-        obj.setUserEntry(userEntry);
+    public void UserRoleDataOnDemand.setUsuario(UserRole obj, int index) {
+        User usuario = userDataOnDemand.getRandomUser();
+        obj.setUsuario(usuario);
     }
     
     public UserRole UserRoleDataOnDemand.getSpecificUserRole(int index) {

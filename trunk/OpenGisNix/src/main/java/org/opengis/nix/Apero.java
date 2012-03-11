@@ -10,9 +10,7 @@ import javax.validation.constraints.Size;
 import javax.validation.constraints.Max;
 
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.Tarea;
-import javax.persistence.Enumerated;
-import javax.persistence.EnumType;
+
 import org.springframework.beans.factory.annotation.Value;
 
 @RooJavaBean
@@ -34,8 +32,9 @@ public class Apero {
     @Size(max = 120)
     private String descripcion;
 
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
     private Tarea tarea;
+    
 
     @Value("True")
     private Boolean Activo;

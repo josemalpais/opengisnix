@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeDispositivo" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="166"/>
+	<property name="ireport.y" value="144"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="f_inicio" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="f_fin" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     dispositivo.`activo` AS dispositivo_activo,
+     dispositivo.`modelo` AS dispositivo_modelo,
+     dispositivo.`num_serie` AS dispositivo_num_serie,
+     user.`apellidos` AS user_apellidos,
+     user.`nombre` AS user_nombre,
+     prestamo.`fecha_fin` AS prestamo_fecha_fin,
+     prestamo.`fecha_inicio` AS prestamo_fecha_inicio,
+     prestamo.`dispositivo` AS prestamo_dispositivo,
+     prestamo.`id` AS prestamo_id,
+     dispositivo.`id_dispositivo` AS dispositivo_id_dispositivo,
+     user.`id` AS user_id,
+     prestamo.`usuario` AS prestamo_usuario
+FROM
+     `user` user INNER JOIN `prestamo` prestamo ON user.`id` = prestamo.`usuario`
+     INNER JOIN `dispositivo` dispositivo ON prestamo.`dispositivo` = dispositivo.`id_dispositivo`
+]]>
+	</queryString>
+	<field name="dispositivo_activo" class="java.lang.Boolean"/>
+	<field name="dispositivo_modelo" class="java.lang.String"/>
+	<field name="dispositivo_num_serie" class="java.lang.String"/>
+	<field name="user_apellidos" class="java.lang.String"/>
+	<field name="user_nombre" class="java.lang.String"/>
+	<field name="prestamo_fecha_fin" class="java.sql.Timestamp"/>
+	<field name="prestamo_fecha_inicio" class="java.sql.Timestamp"/>
+	<field name="prestamo_dispositivo" class="java.lang.Long"/>
+	<field name="prestamo_id" class="java.lang.Long"/>
+	<field name="dispositivo_id_dispositivo" class="java.lang.Long"/>
+	<field name="user_id" class="java.lang.Long"/>
+	<field name="prestamo_usuario" class="java.lang.Long"/>
+	<group name="dispositivo_modelo">
+		<groupExpression><![CDATA[$F{dispositivo_modelo}]]></groupExpression>
+		<groupHeader>
+			<band height="67">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#000000"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dispositivo_modelo}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				</rectangle>
+				<textField>
+					<reportElement style="SubTitle" x="93" y="37" width="460" height="20"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dispositivo_num_serie}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="49"/>
+		</groupFooter>
+	</group>
+	<group name="dispositivo_num_serie">
+		<groupExpression><![CDATA[$F{dispositivo_num_serie}]]></groupExpression>
+		<groupHeader>
+			<band height="19">
+				<staticText>
+					<reportElement style="Column header" x="3" y="4" width="136" height="15"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="279" y="4" width="136" height="15"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Fecha_inicio]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="147" y="4" width="136" height="15"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Apellidos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="415" y="4" width="136" height="15"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Fecha_fin]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Informe Dispositivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[OpenGis]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="139" y="16" width="138" height="15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="1" y="16" width="138" height="15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="419" y="16" width="138" height="15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{prestamo_fecha_fin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="277" y="16" width="138" height="15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{prestamo_fecha_inicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

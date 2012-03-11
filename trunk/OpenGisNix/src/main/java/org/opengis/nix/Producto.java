@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
 
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.Tarea;
+import org.opengis.nix.enumerated.Tipo;
 import javax.persistence.Enumerated;
 import javax.persistence.EnumType;
 import javax.validation.constraints.NotNull;
@@ -25,9 +25,11 @@ public class Producto {
     @Size(max = 120)
     private String descripcion;
 
+    
     @Enumerated(EnumType.STRING)
-    private Tarea tarea;
+    private Tipo tipo;
 
+    
     @NotNull
     @Max(999L)
     private int dosis;

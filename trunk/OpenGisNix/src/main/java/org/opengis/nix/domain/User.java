@@ -11,18 +11,20 @@ import javax.validation.constraints.Size;
 import javax.persistence.Column;
 import java.util.Date;
 
+import javax.persistence.EntityManager;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByDniLike", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo", "findUsersByDni" })
+@RooEntity(finders = { "findUsersByEmailAddress", "findUsersByNombreLike", "findUsersByApellidosLike",  "findUserByTipo", "findUsersByDni" })
 public class User {
         
     @NotNull
@@ -66,9 +68,6 @@ public class User {
     //@Enumerated(EnumType.STRING)
     //private TipoUser tipo;
     
-    @ManyToOne
-    private Role roleEntry;
-
     @NotNull
     @Column(unique = true)
     @Size(min = 1)
@@ -97,8 +96,10 @@ public class User {
     	return nombre+" "+apellidos;
     }
 
-	public static User findUser(String dni) {
-        if (dni == null) return null;
-        return entityManager().find(User.class, dni);
+	public static User findUser(Long id) {
+        if (id == null) return null;
+        return entityManager().find(User.class, id);
     }
+	
+   
 }

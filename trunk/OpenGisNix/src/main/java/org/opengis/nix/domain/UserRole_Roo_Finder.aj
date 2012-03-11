@@ -10,11 +10,11 @@ import org.opengis.nix.domain.UserRole;
 
 privileged aspect UserRole_Roo_Finder {
     
-    public static TypedQuery<UserRole> UserRole.findUserRolesByUserEntry(User userEntry) {
-        if (userEntry == null) throw new IllegalArgumentException("The userEntry argument is required");
+    public static TypedQuery<UserRole> UserRole.findUserRolesByUsuario(User usuario) {
+        if (usuario == null) throw new IllegalArgumentException("The usuario argument is required");
         EntityManager em = UserRole.entityManager();
-        TypedQuery<UserRole> q = em.createQuery("SELECT o FROM UserRole AS o WHERE o.userEntry = :userEntry", UserRole.class);
-        q.setParameter("userEntry", userEntry);
+        TypedQuery<UserRole> q = em.createQuery("SELECT o FROM UserRole AS o WHERE o.usuario = :usuario", UserRole.class);
+        q.setParameter("usuario", usuario);
         return q;
     }
     

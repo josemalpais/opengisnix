@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_opengis_nix_TareasRealizadas" modelAttribute="tareasRealizadas" path="/tareasrealizadases" render="${empty dependencies}" z="4cRuQEAK8peo/n7hEABv/OA/z/U=">
+        <field:select field="tarea" id="c_org_opengis_nix_TareasRealizadas_tarea" itemValue="id" items="${tareas}" path="/tareas" required="true" z="fH7sVLQ33vx+0VY7zCeHHSpv76g="/>
+        <field:select field="usuario" id="c_org_opengis_nix_TareasRealizadas_usuario" itemValue="id" items="${users}" path="/users" required="true" z="+lbyEvXtDaidhPzFnK2Q31RKeCA="/>
+        <field:select field="parcela" id="c_org_opengis_nix_TareasRealizadas_parcela" itemValue="id" items="${parcelas}" path="/parcelas" required="true" z="k79aXzIvHJoau8gMZM3pUl4AMME="/>
+        <field:select field="producto" id="c_org_opengis_nix_TareasRealizadas_producto" itemValue="id" items="${productoes}" path="/productoes" required="true" z="fPbBS3xXFd0ek/LlAfZZWAZKAC4="/>
+        <field:input field="dosis" id="c_org_opengis_nix_TareasRealizadas_dosis" max="999" required="true" z="ydM9xueoqMyTY+uaBzVodiVjKLw="/>
+        <field:select field="apero" id="c_org_opengis_nix_TareasRealizadas_apero" itemValue="id" items="${aperoes}" path="/aperoes" required="true" z="k/7qVnsuG5q5YV0iM5kKieDkFS0="/>
+        <field:datetime dateTimePattern="${tareasRealizadas_fechainicio_date_format}" field="fechaInicio" id="c_org_opengis_nix_TareasRealizadas_fechaInicio" z="e/PRk4j/GDNW6kzQ292Ra0PKeo0="/>
+        <field:datetime dateTimePattern="${tareasRealizadas_fechafin_date_format}" field="fechaFin" id="c_org_opengis_nix_TareasRealizadas_fechaFin" z="W/Z1m7Oye0meKJU59YMeKdHXd/g="/>
+        <field:checkbox field="finalizada" id="c_org_opengis_nix_TareasRealizadas_finalizada" z="sNfIog/jy9OY0BLBJuWDFWUQkhE="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_opengis_nix_TareasRealizadas" render="${not empty dependencies}" z="s3cg9pUrAEvyN/qC3rm6D+NTVxg="/>
+</div>

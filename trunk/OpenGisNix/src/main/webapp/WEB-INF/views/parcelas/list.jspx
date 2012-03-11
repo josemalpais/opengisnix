@@ -8,8 +8,8 @@
             <table:column id="c_org_opengis_nix_Parcela_numPoblacion" property="numPoblacion" z="N526TlJSAAA4RRVbict7Rw1ZtH0="/>
             <table:column id="c_org_opengis_nix_Parcela_numProvincia" property="numProvincia" z="GW56JZSM7W6cT1MhTZFSN146kPw="/>
             <table:column id="c_org_opengis_nix_Parcela_numParcela" property="numParcela" z="oE/A3ik0bVa/HjNfLTvpGOOnGOQ="/>
-            <table:column id="c_org_opengis_nix_Parcela_numPartida" property="numPartida" z="GYm1oMq8ibqOqCrXUJ2YVbAPAuU="/>
             <table:column id="c_org_opengis_nix_Parcela_Propietario" property="propietario" z="i8gtfC+5kSZgdwUmi4cDiL8zKpo="/>
+            <table:column id="c_org_opengis_nix_Parcela_numPoligono" property="numPoligono" z="4OgkrUrkEmeYvONdMJ9PHGghO/A="/>
         </table:table>
     </page:list>
 </div>

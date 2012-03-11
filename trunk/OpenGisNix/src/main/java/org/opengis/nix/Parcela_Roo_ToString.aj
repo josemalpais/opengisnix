@@ -13,9 +13,10 @@ privileged aspect Parcela_Roo_ToString {
         sb.append("Alias: ").append(getAlias()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("NumParcela: ").append(getNumParcela()).append(", ");
-        sb.append("NumPartida: ").append(getNumPartida()).append(", ");
         sb.append("NumPoblacion: ").append(getNumPoblacion()).append(", ");
+        sb.append("NumPoligono: ").append(getNumPoligono()).append(", ");
         sb.append("NumProvincia: ").append(getNumProvincia()).append(", ");
+        sb.append("Partida: ").append(getPartida()).append(", ");
         sb.append("Propietario: ").append(getPropietario()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();

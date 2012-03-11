@@ -96,11 +96,6 @@ privileged aspect PrestamoController_Roo_Controller {
         return "redirect:/prestamoes";
     }
     
-    @ModelAttribute("dispositivoes")
-    public Collection<Dispositivo> PrestamoController.populateDispositivoes() {
-        return Dispositivo.findAllDispositivoes();
-    }
-    
     @ModelAttribute("prestamoes")
     public Collection<Prestamo> PrestamoController.populatePrestamoes() {
         return Prestamo.findAllPrestamoes();

@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect UserRoleController_Roo_Controller_Finder {
     
-    @RequestMapping(params = { "find=ByUserEntry", "form" }, method = RequestMethod.GET)
-    public String UserRoleController.findUserRolesByUserEntryForm(Model uiModel) {
+    @RequestMapping(params = { "find=ByUsuario", "form" }, method = RequestMethod.GET)
+    public String UserRoleController.findUserRolesByUsuarioForm(Model uiModel) {
         uiModel.addAttribute("users", User.findAllUsers());
-        return "userroles/findUserRolesByUserEntry";
+        return "userroles/findUserRolesByUsuario";
     }
     
-    @RequestMapping(params = "find=ByUserEntry", method = RequestMethod.GET)
-    public String UserRoleController.findUserRolesByUserEntry(@RequestParam("userEntry") User userEntry, Model uiModel) {
-        uiModel.addAttribute("userroles", UserRole.findUserRolesByUserEntry(userEntry).getResultList());
+    @RequestMapping(params = "find=ByUsuario", method = RequestMethod.GET)
+    public String UserRoleController.findUserRolesByUsuario(@RequestParam("usuario") User usuario, Model uiModel) {
+        uiModel.addAttribute("userroles", UserRole.findUserRolesByUsuario(usuario).getResultList());
         return "userroles/list";
     }
     

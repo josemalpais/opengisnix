@@ -7,8 +7,9 @@
         <field:display field="numPoblacion" id="s_org_opengis_nix_Parcela_numPoblacion" object="${parcela}" z="y8CcMFARPCP2Kmoa91pck/Luejg="/>
         <field:display field="numProvincia" id="s_org_opengis_nix_Parcela_numProvincia" object="${parcela}" z="QWUk/g4uKcosT6Xko5Y84v3G2fs="/>
         <field:display field="numParcela" id="s_org_opengis_nix_Parcela_numParcela" object="${parcela}" z="G0nh9SFOgQ9pIk1dKCxpqxRH5F8="/>
-        <field:display field="numPartida" id="s_org_opengis_nix_Parcela_numPartida" object="${parcela}" z="OmOGQrZx2kafYtYKE752Q1wYNbc="/>
         <field:display field="activa" id="s_org_opengis_nix_Parcela_activa" object="${parcela}" z="x6CxDl2KwFCZyZC/zxmiSAADKVc="/>
         <field:display field="propietario" id="s_org_opengis_nix_Parcela_Propietario" object="${parcela}" z="IGnoCoIFvg7PvnfAvAMWDUe5Eto="/>
+        <field:display field="numPoligono" id="s_org_opengis_nix_Parcela_numPoligono" object="${parcela}" z="i+I53+FljNinp1wxWSnl++hZbKA="/>
+        <field:display field="partida" id="s_org_opengis_nix_Parcela_Partida" object="${parcela}" z="qyM82M5HS0DYqoZOJdwi0GJRIB0="/>
     </page:show>
 </div>

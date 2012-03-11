@@ -5,7 +5,6 @@ package org.opengis.nix.domain;
 
 import java.lang.Boolean;
 import java.lang.String;
-import org.opengis.nix.domain.Role;
 
 privileged aspect User_Roo_JavaBean {
     
@@ -79,14 +78,6 @@ privileged aspect User_Roo_JavaBean {
     
     public void User.setCodPostal(String codPostal) {
         this.codPostal = codPostal;
-    }
-    
-    public Role User.getRoleEntry() {
-        return this.roleEntry;
-    }
-    
-    public void User.setRoleEntry(Role roleEntry) {
-        this.roleEntry = roleEntry;
     }
     
     public String User.getEmailAddress() {

@@ -6,7 +6,7 @@ package org.opengis.nix;
 import java.lang.Boolean;
 import java.lang.String;
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.Tarea;
+import org.opengis.nix.enumerated.Tipo;
 
 privileged aspect Producto_Roo_JavaBean {
     
@@ -26,12 +26,12 @@ privileged aspect Producto_Roo_JavaBean {
         this.descripcion = descripcion;
     }
     
-    public Tarea Producto.getTarea() {
-        return this.tarea;
+    public Tipo Producto.getTipo() {
+        return this.tipo;
     }
     
-    public void Producto.setTarea(Tarea tarea) {
-        this.tarea = tarea;
+    public void Producto.setTipo(Tipo tipo) {
+        this.tipo = tipo;
     }
     
     public int Producto.getDosis() {

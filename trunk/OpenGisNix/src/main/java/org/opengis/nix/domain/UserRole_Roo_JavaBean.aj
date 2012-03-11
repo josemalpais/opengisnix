@@ -8,20 +8,20 @@ import org.opengis.nix.domain.User;
 
 privileged aspect UserRole_Roo_JavaBean {
     
-    public User UserRole.getUserEntry() {
-        return this.userEntry;
+    public User UserRole.getUsuario() {
+        return this.usuario;
     }
     
-    public void UserRole.setUserEntry(User userEntry) {
-        this.userEntry = userEntry;
+    public void UserRole.setUsuario(User usuario) {
+        this.usuario = usuario;
     }
     
-    public Role UserRole.getRoleEntry() {
-        return this.roleEntry;
+    public Role UserRole.getRol() {
+        return this.rol;
     }
     
-    public void UserRole.setRoleEntry(Role roleEntry) {
-        this.roleEntry = roleEntry;
+    public void UserRole.setRol(Role rol) {
+        this.rol = rol;
     }
     
 }
