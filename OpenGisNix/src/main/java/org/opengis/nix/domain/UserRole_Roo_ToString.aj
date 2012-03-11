@@ -10,8 +10,8 @@ privileged aspect UserRole_Roo_ToString {
     public String UserRole.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Id: ").append(getId()).append(", ");
-        sb.append("RoleEntry: ").append(getRoleEntry()).append(", ");
-        sb.append("UserEntry: ").append(getUserEntry()).append(", ");
+        sb.append("Rol: ").append(getRol()).append(", ");
+        sb.append("Usuario: ").append(getUsuario()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

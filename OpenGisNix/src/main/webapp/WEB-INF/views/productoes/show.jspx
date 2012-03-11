@@ -4,9 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_org_opengis_nix_Producto" object="${producto}" path="/productoes" z="jVPx2dhW2DGGam2L23a8S0Nv10s=">
         <field:display field="descripcion" id="s_org_opengis_nix_Producto_descripcion" object="${producto}" z="UJEbyFsGBjPz4/2xS+7NnrUfK7U="/>
-        <field:display field="tarea" id="s_org_opengis_nix_Producto_tarea" object="${producto}" z="JUm2bhLWVisqD7JPGzVELbVKAik="/>
         <field:display field="dosis" id="s_org_opengis_nix_Producto_dosis" object="${producto}" z="BlFLVeRj9rL4ZLdm6i0CjRPDCgw="/>
         <field:display field="activo" id="s_org_opengis_nix_Producto_Activo" object="${producto}" z="0y9GeKKH/62dQDSJ6QhJJ6z94Ek="/>
         <field:display field="propietario" id="s_org_opengis_nix_Producto_propietario" object="${producto}" z="tnzQY5tQVP95bbHGAokr/9Flsls="/>
+        <field:display field="tipo" id="s_org_opengis_nix_Producto_tipo" object="${producto}" z="M/7iBt+54DK9oalCnEBkgBoAKIY="/>
     </page:show>
 </div>

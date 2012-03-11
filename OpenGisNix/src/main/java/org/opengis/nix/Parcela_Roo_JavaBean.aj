@@ -33,6 +33,14 @@ privileged aspect Parcela_Roo_JavaBean {
         this.numPoblacion = numPoblacion;
     }
     
+    public int Parcela.getNumPoligono() {
+        return this.numPoligono;
+    }
+    
+    public void Parcela.setNumPoligono(int numPoligono) {
+        this.numPoligono = numPoligono;
+    }
+    
     public int Parcela.getNumProvincia() {
         return this.numProvincia;
     }
@@ -49,12 +57,12 @@ privileged aspect Parcela_Roo_JavaBean {
         this.numParcela = numParcela;
     }
     
-    public int Parcela.getNumPartida() {
-        return this.numPartida;
+    public String Parcela.getPartida() {
+        return this.Partida;
     }
     
-    public void Parcela.setNumPartida(int numPartida) {
-        this.numPartida = numPartida;
+    public void Parcela.setPartida(String Partida) {
+        this.Partida = Partida;
     }
     
     public Boolean Parcela.getActiva() {

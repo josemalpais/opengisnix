@@ -12,10 +12,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.opengis.nix.domain.Role;
-import org.opengis.nix.domain.RoleDataOnDemand;
 import org.opengis.nix.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect UserDataOnDemand_Roo_DataOnDemand {
@@ -25,9 +22,6 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
     private Random UserDataOnDemand.rnd = new SecureRandom();
     
     private List<User> UserDataOnDemand.data;
-    
-    @Autowired
-    private RoleDataOnDemand UserDataOnDemand.roleDataOnDemand;
     
     public User UserDataOnDemand.getNewTransientUser(int index) {
         User obj = new User();
@@ -42,7 +36,6 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
         setPassword(obj, index);
         setPoblacion(obj, index);
         setProvincia(obj, index);
-        setRoleEntry(obj, index);
         setTelefono(obj, index);
         return obj;
     }
@@ -118,11 +111,6 @@ privileged aspect UserDataOnDemand_Roo_DataOnDemand {
             provincia = provincia.substring(0, 20);
         }
         obj.setProvincia(provincia);
-    }
-    
-    public void UserDataOnDemand.setRoleEntry(User obj, int index) {
-        Role roleEntry = roleDataOnDemand.getRandomRole();
-        obj.setRoleEntry(roleEntry);
     }
     
     public void UserDataOnDemand.setTelefono(User obj, int index) {

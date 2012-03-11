@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_org_opengis_nix_domain_UserRole" object="${userrole}" path="/userroles" z="MLorrmt6Nh+FFrT3PBONYyCLKQk=">
-        <field:display field="userEntry" id="s_org_opengis_nix_domain_UserRole_userEntry" object="${userrole}" z="mJBDU2upciklNKj4Rfqg1MjRH/g="/>
-        <field:display field="roleEntry" id="s_org_opengis_nix_domain_UserRole_roleEntry" object="${userrole}" z="t1QYU8LUPI/ukLZ2ji4kpkiPn7M="/>
+        <field:display field="usuario" id="s_org_opengis_nix_domain_UserRole_usuario" object="${userrole}" z="4owOKGUprA9E2z/zc7o4AvMddz0="/>
+        <field:display field="rol" id="s_org_opengis_nix_domain_UserRole_rol" object="${userrole}" z="fe2cvgUt3lR2B3TZgHXhQZhfcLQ="/>
     </page:show>
 </div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByUsuario" id="ff_org_opengis_nix_domain_UserRole" path="/userroles" z="w1+YGAfDaHNH4PBZSPda1gJ7dAM=">
+        <field:select disableFormBinding="true" field="usuario" id="f_org_opengis_nix_domain_UserRole_usuario" itemValue="id" items="${users}" path="/users" required="true" z="UIWyDGvFvs7w+C6S58KHTjzKS2w="/>
+    </form:find>
+</div>

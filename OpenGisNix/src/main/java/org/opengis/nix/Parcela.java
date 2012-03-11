@@ -32,6 +32,10 @@ public class Parcela {
     @NotNull
     @Max(999L)
     private int numPoblacion;
+    
+    @NotNull
+    @Max(999L)
+    private int numPoligono;
 
     @NotNull
     @Max(999L)
@@ -42,8 +46,8 @@ public class Parcela {
     private int numParcela;
 
     @NotNull
-    @Max(999L)
-    private int numPartida;
+    @Size(max = 10)
+    private String Partida;
 
     @Value("True")
     private Boolean activa;

@@ -7,8 +7,9 @@
         <field:input field="numPoblacion" id="c_org_opengis_nix_Parcela_numPoblacion" max="999" required="true" z="jXD/DwPAR45LL5NhK/qTmGw2dEc="/>
         <field:input field="numProvincia" id="c_org_opengis_nix_Parcela_numProvincia" max="999" required="true" z="UJZNaCluFtuU1CnIa8bWe0cEWhE="/>
         <field:input field="numParcela" id="c_org_opengis_nix_Parcela_numParcela" max="999" required="true" z="tYoCQA3bywBtEBaOEg26TX2bY4U="/>
-        <field:input field="numPartida" id="c_org_opengis_nix_Parcela_numPartida" max="999" required="true" z="zx1yLQig9n6y2utVYwTlgeygAhc="/>
         <field:checkbox field="activa" id="c_org_opengis_nix_Parcela_activa" z="ba5Btc5FFFVYABD2t0Lt7GVC+XE="/>
         <field:select field="Propietario" id="c_org_opengis_nix_Parcela_Propietario" itemLabel="fullName" itemValue="id" items="${users}" path="/users" z="user-managed"/>
+        <field:input field="numPoligono" id="c_org_opengis_nix_Parcela_numPoligono" max="999" required="true" z="xknL8QqCN3VkREUumWTkLgGm21c="/>
+        <field:input field="Partida" id="c_org_opengis_nix_Parcela_Partida" max="10" required="true" z="HOQv18b7+cZoDWAacKWKyLew2es="/>
     </form:update>
 </div>

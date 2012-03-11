@@ -10,7 +10,7 @@
             <spring:message code="${error}" htmlEscape="false"/>
         </h3>
     </c:if>
-    <form:form action="prestamos" id="fr_org_opengis_nix_Prestamo" method="GET">
+    <form:form action="InformeDispositivo" id="fr_org_opengis_nix_Prestamo" method="POST">
      
        <spring:message code="label_report_prestamo" htmlEscape="false"/>
        <table border="0">
@@ -18,7 +18,7 @@
         <spring:message code="label_report_prestamo_fecini" htmlEscape="false"/>
         </td>
         <td>
-        <input name="fecini" type="text"/>
+        <input name="f_inicio" type="date"/>
         </td>
         <tr>
         </tr>
@@ -26,7 +26,7 @@
 	     <spring:message code="label_report_prestamo_fecfin" htmlEscape="false"/>
 	     </td>
 	     <td> 
-	     <input name="fecfin" type="text"/>
+	     <input name="f_fin" type="date"/>
 	     </td>      
   	</table>		
   	<br/>

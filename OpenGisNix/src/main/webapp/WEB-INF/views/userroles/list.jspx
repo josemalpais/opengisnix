@@ -4,8 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_org_opengis_nix_domain_UserRole" items="${userroles}" z="/9y6B0GK+MZJlDHgvIRMA4O6FYg=">
         <table:table data="${userroles}" id="l_org_opengis_nix_domain_UserRole" path="/userroles" z="tITp713pKuMj7AqRyQ2QyaUQr5g=">
-            <table:column id="c_org_opengis_nix_domain_UserRole_userEntry" property="userEntry" z="ufWJnHs3qhnNDrFt6EdSjMTNiVg="/>
-            <table:column id="c_org_opengis_nix_domain_UserRole_roleEntry" property="roleEntry" z="cKZRMvAAxfM7joihSUSioI4OcNY="/>
+            <table:column id="c_org_opengis_nix_domain_UserRole_usuario" property="usuario" z="DIkaxhia8h30j5tYeGThkQSJpyc="/>
+            <table:column id="c_org_opengis_nix_domain_UserRole_rol" property="rol" z="NXrTpx3kPbwehdQ2ogwezhPJ+Wk="/>
         </table:table>
     </page:list>
 </div>

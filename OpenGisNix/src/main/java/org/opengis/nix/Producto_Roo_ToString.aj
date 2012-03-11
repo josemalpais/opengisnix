@@ -14,7 +14,7 @@ privileged aspect Producto_Roo_ToString {
         sb.append("Dosis: ").append(getDosis()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Propietario: ").append(getPropietario()).append(", ");
-        sb.append("Tarea: ").append(getTarea()).append(", ");
+        sb.append("Tipo: ").append(getTipo()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

@@ -54,7 +54,7 @@ public class ChangePasswordValidator implements Validator {
 				UserDetails userDetails = (UserDetails) SecurityContextHolder
 						.getContext().getAuthentication().getPrincipal();
 				Query query = User
-						.findUsersByEmailAddress(userDetails.getUsername());
+						.findUsersByDni(userDetails.getUsername());
 				if(null!=query){
 					User person = (User) query.getSingleResult();
 					String storedPassword = person.getPassword();

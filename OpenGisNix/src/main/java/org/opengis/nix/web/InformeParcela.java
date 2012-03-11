@@ -40,59 +40,6 @@ public class InformeParcela extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-        
-        
-        
-        
-          response.setContentType("application/pdf");
-
-   ServletOutputStream out = response.getOutputStream();
-
-  
-
-   try
-   {
-      JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/parcelas.jasper"));
-
-      Class.forName("com.mysql.jdbc.Driver");
-      Connection conexion = DriverManager.getConnection("jdbc:mysql://79.108.245.167/dai2opengis", "dai2proyecto", "dai20112012");
-      Map parametros = new HashMap();
-      parametros.put("usuario", "00000000A");
-
-      JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametros, conexion);
-
-      JRExporter exporter = new JRPdfExporter();
-      exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
-      exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, out);
-      exporter.exportReport();
-   }
-   catch (Exception e)
-   {
-      e.printStackTrace();
-   }
-        
-        
-        
-        /////////////////
-       /* 
-        PrintWriter out = response.getWriter();
-        try {
-            /*
-             * TODO output your page here. You may use following sample code.
-             */
-        /*    out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet InformesNix</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet InformesNix at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {            
-            out.close();
-        }*/
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -124,6 +71,27 @@ public class InformeParcela extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        response.setContentType("application/pdf");
+ ServletOutputStream out = response.getOutputStream();
+ response.getContentType();
+ try
+ {
+    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeParcela.jasper"));
+    Map parametros = new HashMap();
+    parametros.put("parcela", request.getParameter("parcela"));
+
+    JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametros, ConnectorServlets.conectar());
+
+    JRExporter exporter = new JRPdfExporter();
+    exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
+    exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, out);
+    exporter.exportReport();
+ }
+ catch (Exception e)
+ {
+    e.printStackTrace();
+ }
     }
 
     /**

@@ -7,7 +7,7 @@ import java.lang.String;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import org.opengis.nix.Apero;
-import org.opengis.nix.enumerated.Tarea;
+import org.opengis.nix.Tarea;
 
 privileged aspect Apero_Roo_Finder {
     

@@ -33,21 +33,6 @@ privileged aspect User_Roo_Finder {
         return q;
     }
     
-    public static TypedQuery<User> User.findUsersByDniLike(String dni) {
-        if (dni == null || dni.length() == 0) throw new IllegalArgumentException("The dni argument is required");
-        dni = dni.replace('*', '%');
-        if (dni.charAt(0) != '%') {
-            dni = "%" + dni;
-        }
-        if (dni.charAt(dni.length() - 1) != '%') {
-            dni = dni + "%";
-        }
-        EntityManager em = User.entityManager();
-        TypedQuery<User> q = em.createQuery("SELECT o FROM User AS o WHERE LOWER(o.dni) LIKE LOWER(:dni)", User.class);
-        q.setParameter("dni", dni);
-        return q;
-    }
-    
     public static TypedQuery<User> User.findUsersByEmailAddress(String emailAddress) {
         if (emailAddress == null || emailAddress.length() == 0) throw new IllegalArgumentException("The emailAddress argument is required");
         EntityManager em = User.entityManager();

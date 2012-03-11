@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_opengis_nix_TareasRealizadas" items="${tareasrealizadases}" z="Godss6ffT6K4IP5iPmsDZjdrOMw=">
+        <table:table data="${tareasrealizadases}" id="l_org_opengis_nix_TareasRealizadas" path="/tareasrealizadases" z="DMGw9qruMIYISnRCVT2mDhCG9HU=">
+            <table:column id="c_org_opengis_nix_TareasRealizadas_tarea" property="tarea" z="kcHGZA74fLpdQ39KG6AlzYgThrU="/>
+            <table:column id="c_org_opengis_nix_TareasRealizadas_usuario" property="usuario" z="7HQTn3ChrxppGUbUUsBS6CQo6bc="/>
+            <table:column id="c_org_opengis_nix_TareasRealizadas_parcela" property="parcela" z="3wr9j0/d6uygzd7+FVKp9OY1+WA="/>
+            <table:column id="c_org_opengis_nix_TareasRealizadas_producto" property="producto" z="KWIHQwdJpq2RyIVbdCZgNA86o2U="/>
+            <table:column id="c_org_opengis_nix_TareasRealizadas_dosis" property="dosis" z="Osm9v/MVko7zNj304dJetjrhI/M="/>
+            <table:column id="c_org_opengis_nix_TareasRealizadas_apero" property="apero" z="lJduXx2qBY/4d8f0/MqR4KtSdxA="/>
+        </table:table>
+    </page:list>
+</div>

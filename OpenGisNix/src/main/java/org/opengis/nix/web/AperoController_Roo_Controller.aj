@@ -7,13 +7,12 @@ import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
-import java.util.Arrays;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.opengis.nix.Apero;
+import org.opengis.nix.Tarea;
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.Tarea;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -94,14 +93,14 @@ privileged aspect AperoController_Roo_Controller {
         return Apero.findAllAperoes();
     }
     
+    @ModelAttribute("tareas")
+    public Collection<Tarea> AperoController.populateTareas() {
+        return Tarea.findAllTareas();
+    }
+    
     @ModelAttribute("users")
     public Collection<User> AperoController.populateUsers() {
         return User.findAllUsers();
-    }
-    
-    @ModelAttribute("tareas")
-    public Collection<Tarea> AperoController.populateTareas() {
-        return Arrays.asList(Tarea.class.getEnumConstants());
     }
     
     String AperoController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

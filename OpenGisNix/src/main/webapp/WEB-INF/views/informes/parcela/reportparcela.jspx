@@ -13,7 +13,7 @@ version="2.0">
             <spring:message code="${error}" htmlEscape="false"/>
         </h3>
     </c:if>
-    <form:form action="InformeParcela" id="fr_org_opengis_nix_Parcela" method="GET">
+    <form:form action="InformeParcela" id="fr_org_opengis_nix_Parcela" method="POST">
       <spring:message code="label_report_parcela" htmlEscape="false"/>
       <br/>
       <br/>

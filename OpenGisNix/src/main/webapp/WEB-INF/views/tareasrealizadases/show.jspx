@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_opengis_nix_TareasRealizadas" object="${tareasrealizadas}" path="/tareasrealizadases" z="QOgEnHZP/qbtiQVNuVhedZeowuM=">
+        <field:display field="tarea" id="s_org_opengis_nix_TareasRealizadas_tarea" object="${tareasrealizadas}" z="1ZualDG4jMvFRynQkCK3UTl1BxA="/>
+        <field:display field="usuario" id="s_org_opengis_nix_TareasRealizadas_usuario" object="${tareasrealizadas}" z="O9Kq3fAZ+Ku8z0sEkZH0Y0DEAAk="/>
+        <field:display field="parcela" id="s_org_opengis_nix_TareasRealizadas_parcela" object="${tareasrealizadas}" z="NFMlw5phb62zguaSyNSQsIr6DDI="/>
+        <field:display field="producto" id="s_org_opengis_nix_TareasRealizadas_producto" object="${tareasrealizadas}" z="d/a3/+NLqrRJwL7hr4M5vhZAJoU="/>
+        <field:display field="dosis" id="s_org_opengis_nix_TareasRealizadas_dosis" object="${tareasrealizadas}" z="ADO+mU7gzHW0z/jD4QsI+yB8EsQ="/>
+        <field:display field="apero" id="s_org_opengis_nix_TareasRealizadas_apero" object="${tareasrealizadas}" z="E1lt1ayZjiNRWxLVsaUUf1UILys="/>
+        <field:display calendar="true" dateTimePattern="${tareasRealizadas_fechainicio_date_format}" field="fechaInicio" id="s_org_opengis_nix_TareasRealizadas_fechaInicio" object="${tareasrealizadas}" z="AC5oeQNmYk7pjEHZeTDwEOFqI+0="/>
+        <field:display calendar="true" dateTimePattern="${tareasRealizadas_fechafin_date_format}" field="fechaFin" id="s_org_opengis_nix_TareasRealizadas_fechaFin" object="${tareasrealizadas}" z="BE4Cga7zXifZGjhogxzyNVQPe+Y="/>
+        <field:display field="finalizada" id="s_org_opengis_nix_TareasRealizadas_finalizada" object="${tareasrealizadas}" z="0BUn49cEN05+rYqsjj5JMrf9mIU="/>
+    </page:show>
+</div>

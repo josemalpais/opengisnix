@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_opengis_nix_Tarea" items="${tareas}" z="4bMZnaEV9F4Pr4Ljwp+hsqY9/V4=">
+        <table:table data="${tareas}" id="l_org_opengis_nix_Tarea" path="/tareas" z="pgjLQf18cmxj2oMGy4UbYd6KX/o=">
+            <table:column id="c_org_opengis_nix_Tarea_nombre" property="nombre" z="3UJ13m0zcL5CPGuedgyBDIiSWKg="/>
+            <table:column id="c_org_opengis_nix_Tarea_descripcion" property="descripcion" z="Bjvl2AHwC8Zx07LSZMtFq1Dr12g="/>
+        </table:table>
+    </page:list>
+</div>

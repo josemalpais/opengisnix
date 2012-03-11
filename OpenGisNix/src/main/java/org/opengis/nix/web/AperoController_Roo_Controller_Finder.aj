@@ -5,7 +5,7 @@ package org.opengis.nix.web;
 
 import java.lang.String;
 import org.opengis.nix.Apero;
-import org.opengis.nix.enumerated.Tarea;
+import org.opengis.nix.Tarea;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,7 +26,7 @@ privileged aspect AperoController_Roo_Controller_Finder {
     
     @RequestMapping(params = { "find=ByTarea", "form" }, method = RequestMethod.GET)
     public String AperoController.findAperoesByTareaForm(Model uiModel) {
-        uiModel.addAttribute("tareas", java.util.Arrays.asList(Tarea.class.getEnumConstants()));
+        uiModel.addAttribute("tareas", Tarea.findAllTareas());
         return "aperoes/findAperoesByTarea";
     }
     

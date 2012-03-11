@@ -10,7 +10,7 @@
             <spring:message code="${error}" htmlEscape="false"/>
         </h3>
     </c:if>
-    <form:form action="trabajadores" id="fr_org_opengis_nix_Usuario" method="GET"> 	
+    <form:form action="InformeTrabajador" id="fr_org_opengis_nix_Usuario" method="POST"> 	
       <spring:message code="label_report_usuario" htmlEscape="false"/>
       <br/>
       <br/>

@@ -13,6 +13,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect ParcelaController_Roo_Controller_Finder {
     
+    @RequestMapping(params = { "find=ByPartida", "form" }, method = RequestMethod.GET)
+    public String ParcelaController.findParcelasByPartidaForm(Model uiModel) {
+        return "parcelas/findParcelasByPartida";
+    }
+    
+    @RequestMapping(params = "find=ByPartida", method = RequestMethod.GET)
+    public String ParcelaController.findParcelasByPartida(@RequestParam("partida") String Partida, Model uiModel) {
+        uiModel.addAttribute("parcelas", Parcela.findParcelasByPartida(Partida).getResultList());
+        return "parcelas/list";
+    }
+    
     @RequestMapping(params = { "find=ByPropietario", "form" }, method = RequestMethod.GET)
     public String ParcelaController.findParcelasByPropietarioForm(Model uiModel) {
         uiModel.addAttribute("users", User.findAllUsers());

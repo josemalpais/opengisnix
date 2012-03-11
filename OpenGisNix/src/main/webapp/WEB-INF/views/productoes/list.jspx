@@ -5,10 +5,10 @@
     <page:list id="pl_org_opengis_nix_Producto" items="${productoes}" z="tzB1IgYxCdC1AN20E4adeVXxvQ4=">
         <table:table data="${productoes}" id="l_org_opengis_nix_Producto" path="/productoes" z="FV1gjY1lOXejX7fLsrydTrPNHS8=">
             <table:column id="c_org_opengis_nix_Producto_descripcion" property="descripcion" z="HCq4Pwg9/GNBgoji4ZDjcT5Yrtk="/>
-            <table:column id="c_org_opengis_nix_Producto_tarea" property="tarea" z="6ZQTjdmJzE4daFQTyinXOeUt0OA="/>
             <table:column id="c_org_opengis_nix_Producto_dosis" property="dosis" z="nqehnqXe4nTrEhkcGdYP7QieNZ0="/>
             <table:column id="c_org_opengis_nix_Producto_Activo" property="activo" z="Utaj1TVwrP4u641Eeph37JV6qPY="/>
             <table:column id="c_org_opengis_nix_Producto_propietario" property="propietario" z="wQhkCNY9gZDk316D+a4fmI0lBz8="/>
+            <table:column id="c_org_opengis_nix_Producto_tipo" property="tipo" z="Z+SirM4UWISv588P+j0FKdUIJDw="/>
         </table:table>
     </page:list>
 </div>

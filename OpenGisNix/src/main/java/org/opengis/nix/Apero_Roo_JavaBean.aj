@@ -5,8 +5,8 @@ package org.opengis.nix;
 
 import java.lang.Boolean;
 import java.lang.String;
+import org.opengis.nix.Tarea;
 import org.opengis.nix.domain.User;
-import org.opengis.nix.enumerated.Tarea;
 
 privileged aspect Apero_Roo_JavaBean {
     

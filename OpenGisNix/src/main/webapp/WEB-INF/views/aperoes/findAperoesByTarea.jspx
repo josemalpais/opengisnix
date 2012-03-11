@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:find finderName="ByTarea" id="ff_org_opengis_nix_Apero" path="/aperoes" z="JmDtJ3jyTXZWQKMR/C6Ggm9YD94=">
-        <field:select disableFormBinding="true" field="tarea" id="f_org_opengis_nix_Apero_tarea" items="${tareas}" path="/tareas" required="true" z="V5Agq+57uWpOllUHRhEosYXkoWg="/>
+        <field:select disableFormBinding="true" field="tarea" id="f_org_opengis_nix_Apero_tarea" itemValue="id" items="${tareas}" path="/tareas" required="true" z="W9i/9MD2e+qlrVb43lyggJrNsxQ="/>
     </form:find>
 </div>

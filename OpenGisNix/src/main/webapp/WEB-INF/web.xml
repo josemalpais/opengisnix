@@ -91,6 +91,34 @@
     	<servlet-name>InformeParcela</servlet-name>
     	<servlet-class>org.opengis.nix.web.InformeParcela</servlet-class>
     </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>InformeTrabajador</display-name>
+    	<servlet-name>InformeTrabajador</servlet-name>
+    	<servlet-class>org.opengis.nix.web.InformeTrabajador</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>InformeDispositivo</display-name>
+    	<servlet-name>InformeDispositivo</servlet-name>
+    	<servlet-class>org.opengis.nix.web.InformeDispositivo</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>InformeCuaderno</display-name>
+    	<servlet-name>InformeCuaderno</servlet-name>
+    	<servlet-class>org.opengis.nix.web.InformeCuaderno</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>InformePrestamo</display-name>
+    	<servlet-name>InformePrestamo</servlet-name>
+    	<servlet-class>org.opengis.nix.web.InformePrestamo</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>OpenGisNix</servlet-name>
@@ -98,7 +126,23 @@
     </servlet-mapping>
     <servlet-mapping>
     	<servlet-name>InformeParcela</servlet-name>
-    	<url-pattern>/InformeParcela</url-pattern>
+    	<url-pattern>/informes/parcela/InformeParcela</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>InformeTrabajador</servlet-name>
+    	<url-pattern>/informes/usuario/InformeTrabajador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>InformeDispositivo</servlet-name>
+    	<url-pattern>/informes/parcela/InformeDispositivo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>InformeCuaderno</servlet-name>
+    	<url-pattern>/informes/prestamo/InformeCuaderno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>InformePrestamo</servlet-name>
+    	<url-pattern>/informes/prestamo/InformeDispositivo</url-pattern>
     </servlet-mapping>
     
     <session-config>

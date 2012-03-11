@@ -105,7 +105,7 @@ public class DatabaseAuthenticationProvider extends
 	        throw new BadCredentialsException("Invalid password");
 	      }
 	      // authorize admin
-	      authorities.add(new GrantedAuthorityImpl("ROLE_ADMIN"));
+	      authorities.add(new GrantedAuthorityImpl("Administrador"));
 	    } else {
 	      try {
 	    	TypedQuery<User> query= User.findUsersByDni(username);
@@ -121,10 +121,10 @@ public class DatabaseAuthenticationProvider extends
 	          throw new BadCredentialsException("Invalid Password");
 	        }
 	        
-	        TypedQuery<UserRole> roleQuery=UserRole.findUserRolesByUserEntry(targetUser);
+	        TypedQuery<UserRole> roleQuery=UserRole.findUserRolesByUsuario(targetUser);
 	        List<UserRole> userRoles = roleQuery.getResultList();
 	        for(UserRole userRole:userRoles){
-	        	authorities.add(new GrantedAuthorityImpl(userRole.getRoleEntry().getRoleName()));
+	        	authorities.add(new GrantedAuthorityImpl(userRole.getRol().getRoleName()));
 	        }
 	      } catch (EmptyResultDataAccessException e) {
 		        throw new BadCredentialsException("Invalid user");

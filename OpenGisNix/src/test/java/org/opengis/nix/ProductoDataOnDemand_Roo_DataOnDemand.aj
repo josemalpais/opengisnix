@@ -15,7 +15,7 @@ import javax.validation.ConstraintViolationException;
 import org.opengis.nix.Producto;
 import org.opengis.nix.domain.User;
 import org.opengis.nix.domain.UserDataOnDemand;
-import org.opengis.nix.enumerated.Tarea;
+import org.opengis.nix.enumerated.Tipo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -36,7 +36,7 @@ privileged aspect ProductoDataOnDemand_Roo_DataOnDemand {
         setDescripcion(obj, index);
         setDosis(obj, index);
         setPropietario(obj, index);
-        setTarea(obj, index);
+        setTipo(obj, index);
         return obj;
     }
     
@@ -66,9 +66,9 @@ privileged aspect ProductoDataOnDemand_Roo_DataOnDemand {
         obj.setPropietario(propietario);
     }
     
-    public void ProductoDataOnDemand.setTarea(Producto obj, int index) {
-        Tarea tarea = Tarea.class.getEnumConstants()[0];
-        obj.setTarea(tarea);
+    public void ProductoDataOnDemand.setTipo(Producto obj, int index) {
+        Tipo tipo = Tipo.class.getEnumConstants()[0];
+        obj.setTipo(tipo);
     }
     
     public Producto ProductoDataOnDemand.getSpecificProducto(int index) {

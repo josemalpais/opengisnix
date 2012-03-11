@@ -10,14 +10,14 @@ import org.opengis.nix.domain.Role;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findUserRolesByUserEntry" })
+@RooEntity(finders = { "findUserRolesByUsuario" })
 public class UserRole {
 
     @NotNull
     @ManyToOne
-    private User userEntry;
+    private User usuario;
 
     @NotNull
     @ManyToOne
-    private Role roleEntry;
+    private Role rol;
 }

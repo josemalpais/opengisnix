@@ -6,8 +6,8 @@
         <field:display field="nombre" id="s_org_opengis_nix_Apero_nombre" object="${apero}" z="8Y5uthPGQVXB025E/uKSn4fEEAg="/>
         <field:display field="tamanyo" id="s_org_opengis_nix_Apero_tamanyo" object="${apero}" z="0LBqIwzFj4CV1ZEE2si6yEjsOLc="/>
         <field:display field="descripcion" id="s_org_opengis_nix_Apero_descripcion" object="${apero}" z="vCQVUFuiVvn1BsWkqArEw/dcBog="/>
-        <field:display field="tarea" id="s_org_opengis_nix_Apero_tarea" object="${apero}" z="5luAImovFn0zNazaEgdfyIINgzs="/>
         <field:display field="activo" id="s_org_opengis_nix_Apero_Activo" object="${apero}" z="S6lCH28F89p6bLqwO5W4BECnEbY="/>
         <field:display field="propietario" id="s_org_opengis_nix_Apero_propietario" object="${apero}" z="aFSa1R/gOpRW1jbkXT4YHzA65D0="/>
+        <field:display field="tarea" id="s_org_opengis_nix_Apero_tarea" object="${apero}" z="5luAImovFn0zNazaEgdfyIINgzs="/>
     </page:show>
 </div>

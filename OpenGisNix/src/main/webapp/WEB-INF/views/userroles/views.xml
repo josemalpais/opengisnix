@@ -16,4 +16,7 @@
 <definition extends="default" name="userroles/findUserRolesByUserEntry">
         <put-attribute name="body" value="/WEB-INF/views/userroles/findUserRolesByUserEntry.jspx"/>
     </definition>
+<definition extends="default" name="userroles/findUserRolesByUsuario">
+        <put-attribute name="body" value="/WEB-INF/views/userroles/findUserRolesByUsuario.jspx"/>
+    </definition>
 </tiles-definitions>
