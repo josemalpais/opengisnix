@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_org_opengis_nix_Prestamo" modelAttribute="prestamo" path="/prestamoes" versionField="Version" z="m2ZcG0d9U4n0zjSm8DfRxVnCXzs=">
-        <field:select field="Dispositivo" id="c_org_opengis_nix_Prestamo_Dispositivo" itemValue="id" items="${Todosdispositivoes}" path="/dispositivoes" z="user-managed"/>
+        <field:select field="Dispositivo" id="c_org_opengis_nix_Prestamo_Dispositivo" itemValue="id"  itemLabel="modelo"  items="${Todosdispositivoes}" path="/dispositivoes" z="user-managed"/>
         <field:datetime dateTimePattern="${prestamo_fechainicio_date_format}" field="fechaInicio" id="c_org_opengis_nix_Prestamo_fechaInicio" required="true" z="tL4G+7pMZFddshAcCSF1ZqFbCsQ="/>
         <field:datetime dateTimePattern="${prestamo_fechafin_date_format}" field="fechaFin" id="c_org_opengis_nix_Prestamo_fechaFin" z="69U7ui7U0sOOS5ykH0tp5UNiNvc="/>
         <field:select field="Usuario" id="c_org_opengis_nix_Prestamo_Usuario" itemLabel="fullName" itemValue="id" items="${users}" path="/users" z="user-managed"/>
