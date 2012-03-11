@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_org_opengis_nix_domain_UserRole" modelAttribute="userRole" path="/userroles" versionField="Version" z="0u3piR95t05c1gU0yMe1RCGQOXM=">
-        <field:select field="usuario" id="c_org_opengis_nix_domain_UserRole_usuario" itemValue="id" items="${users}" path="/users" required="true" z="Sn6no6DCG7ON+nmTsasiZPN6MIk="/>
-        <field:select field="rol" id="c_org_opengis_nix_domain_UserRole_rol" itemValue="id" items="${roles}" path="/roles" required="true" z="ab82bhVL7Yuuq/+S7rAAswP/IeU="/>
+        <field:select field="usuario" id="c_org_opengis_nix_domain_UserRole_usuario" itemValue="id" itemLabel="fullName" items="${users}" path="/users" required="true" z="Sn6no6DCG7ON+nmTsasiZPN6MIk="/>
+        <field:select field="rol" id="c_org_opengis_nix_domain_UserRole_rol" itemValue="id" itemLabel="roleName" items="${roles}" path="/roles" required="true" z="ab82bhVL7Yuuq/+S7rAAswP/IeU="/>
     </form:update>
 </div>
