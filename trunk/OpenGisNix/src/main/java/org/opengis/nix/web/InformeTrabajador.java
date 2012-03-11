@@ -80,6 +80,7 @@ public class InformeTrabajador extends HttpServlet {
     JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeTrabajador.jasper"));
     Map parametros = new HashMap();
     parametros.put("dni", request.getParameter("dni"));
+
     JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametros, ConnectorServlets.conectar());
 
     JRExporter exporter = new JRPdfExporter();

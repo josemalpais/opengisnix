@@ -63,8 +63,8 @@ public class InformeDispositivo extends HttpServlet {
 
  try
  {	
-    //JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeDispositivo.jasper"));
-	 JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("/OpenGisNix/src/main/webapp/WEB-INF/InformeDispositivo.jasper"));
+    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeDispositivo.jasper"));
+	 //JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("/OpenGisNix/src/main/webapp/WEB-INF/InformeDispositivo.jasper"));
 	 Map parametros = new HashMap();
     parametros.put("f_inicio", request.getParameter("f_inicio"));
     parametros.put("f_fin", request.getParameter("f_fin"));

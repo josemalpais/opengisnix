@@ -77,7 +77,7 @@ public class InformeCuaderno extends HttpServlet {
  response.getContentType();
  try
  {
-    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeParcela.jasper"));
+    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeCuaderno.jasper"));
     Map parametros = new HashMap();
     parametros.put("dni", request.getParameter("dni"));
     
