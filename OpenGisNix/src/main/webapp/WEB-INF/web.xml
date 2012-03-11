@@ -134,11 +134,11 @@
     </servlet-mapping>
     <servlet-mapping>
     	<servlet-name>InformeDispositivo</servlet-name>
-    	<url-pattern>/informes/parcela/InformeDispositivo</url-pattern>
+    	<url-pattern>/informes/prestamo/InformeDispositivo</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
     	<servlet-name>InformeCuaderno</servlet-name>
-    	<url-pattern>/informes/prestamo/InformeCuaderno</url-pattern>
+    	<url-pattern>/informes/InformeCuaderno</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
     	<servlet-name>InformePrestamo</servlet-name>

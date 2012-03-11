@@ -77,7 +77,7 @@ public class InformePrestamo extends HttpServlet {
  response.getContentType();
  try
  {
-    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeParcela.jasper"));
+    JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeDispositivo.jasper"));
     Map parametros = new HashMap();
     parametros.put("f_inicio", request.getParameter("f_inicio"));
     parametros.put("f_fin", request.getParameter("f_fin"));
