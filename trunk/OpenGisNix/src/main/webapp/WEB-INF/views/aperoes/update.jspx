@@ -8,6 +8,6 @@
         <field:textarea field="descripcion" id="c_org_opengis_nix_Apero_descripcion" z="xv0iaR96kH3L0i9UddwpuwCRdb0="/>
         <field:checkbox field="Activo" id="c_org_opengis_nix_Apero_Activo" z="W/3lyiF3e6P/P+X25spRy0KDQ7A="/>
         <field:select field="propietario" id="c_org_opengis_nix_Apero_propietario" itemLabel="fullName" itemValue="id" items="${users}" path="/users" z="user-managed"/>
-        <field:select field="tarea" id="c_org_opengis_nix_Apero_tarea" itemValue="id" itemLabel="nombre" items="${tareas}" path="/tareas" z="N7GkjCMGnJBMCG4EBijGVb+k3N8="/>
+        <field:select field="tarea" id="c_org_opengis_nix_Apero_tarea" itemLabel="nombre" itemValue="id" items="${tareas}" path="/tareas" z="user-managed"/>
     </form:update>
 </div>
