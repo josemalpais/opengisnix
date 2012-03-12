@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -65,10 +66,10 @@ public class InformeDispositivo extends HttpServlet {
  {	
     JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeDispositivo.jasper"));
 	 //JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("/OpenGisNix/src/main/webapp/WEB-INF/InformeDispositivo.jasper"));
-	 Map parametros = new HashMap();
+	 Map<String, Object> parametros = new HashMap<String, Object>();
     parametros.put("f_inicio", request.getParameter("f_inicio"));
     parametros.put("f_fin", request.getParameter("f_fin"));
-    System.out.println(request.getParameter("f_inicio")+"  ||||  "+request.getParameter("f_fin"));
+    parametros.put("img","C:\\Documents and Settings\\de\\Documents\\workspace-sts-2.9.0.RELEASE\\OpenGisNix\\src\\main\\webapp\\WEB-INF\\mascota.png");
     JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametros, ConnectorServlets.conectar());
 
     JRExporter exporter = new JRPdfExporter();
@@ -79,7 +80,13 @@ public class InformeDispositivo extends HttpServlet {
  catch (Exception e)
  {
     e.printStackTrace();
-    System.out.println("HOLA");
+ }finally{
+	 try {
+		ConnectorServlets.close();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
  }
     }
 

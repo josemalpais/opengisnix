@@ -1,237 +1,669 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeCuaderno" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="ireport.zoom" value="1.0"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeCuaderno" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="0.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="262"/>
-	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
-	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
-	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
-	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<subDataset name="Table Dataset 2"/>
 	<parameter name="dni" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="img" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
      user.`id` AS user_id,
      user.`alias` AS user_alias,
      user.`apellidos` AS user_apellidos,
-     user.`cod_postal` AS user_cod_postal,
-     user.`direccion` AS user_direccion,
      user.`dni` AS user_dni,
-     user.`email_address` AS user_email_address,
      user.`nombre` AS user_nombre,
-     user.`password` AS user_password,
-     user.`poblacion` AS user_poblacion,
-     user.`provincia` AS user_provincia,
-     user.`telefono` AS user_telefono
+     user.`email_address` AS user_email_address
 FROM
      `user` user
 
 WHERE
-user.`dni`= $P{dni}]]>
+user.`dni`=$P{dni}]]>
 	</queryString>
 	<field name="user_id" class="java.lang.Long"/>
 	<field name="user_alias" class="java.lang.String"/>
 	<field name="user_apellidos" class="java.lang.String"/>
-	<field name="user_cod_postal" class="java.lang.String"/>
-	<field name="user_direccion" class="java.lang.String"/>
 	<field name="user_dni" class="java.lang.String"/>
-	<field name="user_email_address" class="java.lang.String"/>
 	<field name="user_nombre" class="java.lang.String"/>
-	<field name="user_password" class="java.lang.String"/>
-	<field name="user_poblacion" class="java.lang.String"/>
-	<field name="user_provincia" class="java.lang.String"/>
-	<field name="user_telefono" class="java.lang.String"/>
-	<group name="user_dni">
-		<groupExpression><![CDATA[$F{user_dni}]]></groupExpression>
-		<groupHeader>
-			<band height="40">
-				<textField>
-					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#000000"/>
-					<textElement>
-						<font isBold="true"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{user_dni}]]></textFieldExpression>
-				</textField>
-				<rectangle>
-					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
-				</rectangle>
-			</band>
-		</groupHeader>
-		<groupFooter>
-			<band height="131">
-				<subreport>
-					<reportElement x="13" y="0" width="528" height="100"/>
-					<subreportParameter name="dni">
-						<subreportParameterExpression><![CDATA[$P{dni}]]></subreportParameterExpression>
-					</subreportParameter>
-					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-					<subreportExpression class="java.lang.String"><![CDATA["/WEB-INF/InformeCuaderno_subreport1.jasper"]]></subreportExpression>
-				</subreport>
-			</band>
-		</groupFooter>
-	</group>
+	<field name="user_email_address" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="70" splitType="Stretch">
+		<band height="555" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="0" y="13" width="263" height="33"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<text><![CDATA[Informe Cuanderno]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="SubTitle" x="117" y="46" width="157" height="22"/>
-				<textElement textAlignment="Right"/>
+				<reportElement x="280" y="110" width="285" height="77"/>
+				<textElement textAlignment="Center">
+					<font size="48" isBold="true"/>
+				</textElement>
 				<text><![CDATA[OpenGis]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="359" y="270" width="126" height="54"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[2012]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="421" width="742" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUADERNO DE EXPLOTACIÓN PARA CULTIVO SOSTENIBLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="455" width="624" height="56"/>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGLAMENTO (CEE) Nº 1698/2005]]></text>
+			</staticText>
+			<image>
+				<reportElement x="550" y="10" width="252" height="357"/>
+				<imageExpression><![CDATA[$P{img}]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
-		<band splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="36" splitType="Stretch">
-			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
-			</line>
-			<staticText>
-				<reportElement style="SubTitle" x="0" y="14" width="157" height="22"/>
+		<band height="163">
+			<textField>
+				<reportElement x="170" y="94" width="100" height="20"/>
 				<textElement/>
-				<text><![CDATA[Trabajador]]></text>
+				<textFieldExpression><![CDATA[$F{user_apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{user_dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="51" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{user_alias}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="94" y="31" width="35" height="20"/>
+				<textElement/>
+				<text><![CDATA[DNI:]]></text>
 			</staticText>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="234" splitType="Stretch">
-			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
-			</line>
 			<textField>
-				<reportElement style="Detail" x="220" y="16" width="120" height="15"/>
+				<reportElement x="170" y="74" width="100" height="20"/>
 				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_alias}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="219" y="69" width="121" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_apellidos}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="219" y="145" width="121" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_cod_postal}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="220" y="95" width="120" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_direccion}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="220" y="196" width="120" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_email_address}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="220" y="43" width="120" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_nombre}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="220" y="121" width="120" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_poblacion}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="220" y="170" width="120" height="15"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{user_provincia}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{user_nombre}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement style="Column header" x="139" y="16" width="80" height="15"/>
+				<reportElement x="94" y="54" width="35" height="20"/>
 				<textElement/>
 				<text><![CDATA[Alias:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="139" y="145" width="80" height="15"/>
-				<textElement/>
-				<text><![CDATA[Cod_postal:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="139" y="69" width="80" height="15"/>
+				<reportElement x="94" y="94" width="51" height="20"/>
 				<textElement/>
 				<text><![CDATA[Apellidos:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="139" y="95" width="81" height="15"/>
-				<textElement/>
-				<text><![CDATA[Direccion:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="139" y="196" width="81" height="15"/>
-				<textElement/>
-				<text><![CDATA[Email:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="139" y="43" width="81" height="15"/>
+				<reportElement x="94" y="74" width="51" height="20"/>
 				<textElement/>
 				<text><![CDATA[Nombre:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="139" y="121" width="81" height="15"/>
-				<textElement/>
-				<text><![CDATA[Poblacion:]]></text>
+				<reportElement x="34" y="0" width="291" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.IDENTIFICACIÓN DEL PRODUCTOR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="139" y="170" width="81" height="15"/>
+				<reportElement x="94" y="114" width="367" height="21"/>
 				<textElement/>
-				<text><![CDATA[Provincia:]]></text>
+				<text><![CDATA[Identificación del responsable técnico: _____________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="135" width="367" height="21"/>
+				<textElement/>
+				<text><![CDATA[Cooperativa o SAT de la que forma parte:: _____________________________]]></text>
 			</staticText>
 		</band>
-	</detail>
+	</pageHeader>
 	<columnFooter>
-		<band height="45" splitType="Stretch">
+		<band height="392" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
+				<reportElement x="60" y="172" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="245" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="207" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="318" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="283" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="356" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="120" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="788" y="120" width="1" height="237"/>
+			</line>
+			<line>
+				<reportElement x="60" y="119" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="60" y="337" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="61" y="300" width="728" height="1"/>
+			</line>
+			<line>
+				<reportElement x="61" y="264" width="728" height="1"/>
+			</line>
+			<line>
+				<reportElement x="61" y="226" width="728" height="1"/>
+			</line>
+			<line>
+				<reportElement x="61" y="188" width="727" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="34" y="42" width="291" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.IDENTIFICACIÓN DE LAS PARCELAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="138" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº Orden]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="138" width="85" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Municipio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="138" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Polígono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="138" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recinto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="131" width="78" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Superficie sembrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="583" y="130" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cultivo y Variedad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="138" width="117" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<line>
+				<reportElement x="154" y="120" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="259" y="120" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="365" y="119" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="468" y="120" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="574" y="119" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="671" y="119" width="1" height="236"/>
 			</line>
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="20" splitType="Stretch">
-			<textField>
-				<reportElement style="Column header" x="433" y="0" width="80" height="20"/>
-				<textElement textAlignment="Right">
-					<font size="10" isBold="false"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-			</textField>
-			<textField evaluationTime="Report">
-				<reportElement style="Column header" x="513" y="0" width="40" height="20"/>
-				<textElement>
-					<font size="10" isBold="false"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement style="Column header" x="0" y="0" width="197" height="20"/>
-				<textElement>
-					<font size="10" isBold="false"/>
-				</textElement>
-				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
-		</band>
+		<band splitType="Stretch"/>
 	</pageFooter>
 	<summary>
-		<band splitType="Stretch"/>
+		<band height="555">
+			<line>
+				<reportElement x="63" y="179" width="471" height="1"/>
+			</line>
+			<line>
+				<reportElement x="63" y="54" width="1" height="163"/>
+			</line>
+			<line>
+				<reportElement x="64" y="160" width="470" height="1"/>
+			</line>
+			<line>
+				<reportElement x="534" y="55" width="1" height="162"/>
+			</line>
+			<staticText>
+				<reportElement x="249" y="64" width="78" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mes entrada agua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="72" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº Orden]]></text>
+			</staticText>
+			<line>
+				<reportElement x="63" y="141" width="471" height="1"/>
+			</line>
+			<line>
+				<reportElement x="64" y="122" width="469" height="1"/>
+			</line>
+			<line>
+				<reportElement x="63" y="53" width="471" height="1"/>
+			</line>
+			<line>
+				<reportElement x="64" y="198" width="470" height="1"/>
+			</line>
+			<line>
+				<reportElement x="358" y="54" width="1" height="163"/>
+			</line>
+			<line>
+				<reportElement x="63" y="106" width="471" height="1"/>
+			</line>
+			<line>
+				<reportElement x="200" y="53" width="1" height="163"/>
+			</line>
+			<line>
+				<reportElement x="63" y="217" width="471" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="402" y="64" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mes retirada agua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="10" width="481" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3.PERIODO DE INUNDACIÓN ANTES DE LA SIEMBRA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="244" width="481" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4.PREPARACION DEL TERRENO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="275" width="481" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fangueado o fresadora]]></text>
+			</staticText>
+			<line>
+				<reportElement x="63" y="383" width="644" height="1"/>
+			</line>
+			<line>
+				<reportElement x="64" y="399" width="642" height="1"/>
+			</line>
+			<line>
+				<reportElement x="64" y="437" width="643" height="1"/>
+			</line>
+			<line>
+				<reportElement x="358" y="331" width="1" height="163"/>
+			</line>
+			<staticText>
+				<reportElement x="402" y="341" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<line>
+				<reportElement x="63" y="330" width="644" height="1"/>
+			</line>
+			<line>
+				<reportElement x="532" y="330" width="1" height="164"/>
+			</line>
+			<line>
+				<reportElement x="63" y="456" width="644" height="1"/>
+			</line>
+			<line>
+				<reportElement x="200" y="330" width="1" height="163"/>
+			</line>
+			<line>
+				<reportElement x="63" y="418" width="644" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="249" y="341" width="78" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parcela]]></text>
+			</staticText>
+			<line>
+				<reportElement x="63" y="331" width="1" height="163"/>
+			</line>
+			<line>
+				<reportElement x="63" y="494" width="644" height="1"/>
+			</line>
+			<line>
+				<reportElement x="64" y="475" width="643" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="81" y="349" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Polígono]]></text>
+			</staticText>
+			<line>
+				<reportElement x="707" y="330" width="1" height="165"/>
+			</line>
+			<staticText>
+				<reportElement x="562" y="341" width="117" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+		</band>
 	</summary>
+	<noData>
+		<band height="555">
+			<line>
+				<reportElement x="64" y="184" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="64" y="59" width="1" height="145"/>
+			</line>
+			<staticText>
+				<reportElement x="675" y="77" width="117" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="165" width="728" height="1"/>
+			</line>
+			<line>
+				<reportElement x="578" y="58" width="1" height="145"/>
+			</line>
+			<staticText>
+				<reportElement x="64" y="77" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº Orden]]></text>
+			</staticText>
+			<line>
+				<reportElement x="64" y="146" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="65" y="127" width="727" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="167" y="77" width="85" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Labor efectuada]]></text>
+			</staticText>
+			<line>
+				<reportElement x="792" y="59" width="1" height="146"/>
+			</line>
+			<line>
+				<reportElement x="64" y="58" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="65" y="203" width="728" height="1"/>
+			</line>
+			<line>
+				<reportElement x="472" y="59" width="1" height="145"/>
+			</line>
+			<line>
+				<reportElement x="64" y="111" width="729" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="274" y="77" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<line>
+				<reportElement x="263" y="59" width="1" height="145"/>
+			</line>
+			<line>
+				<reportElement x="369" y="58" width="1" height="145"/>
+			</line>
+			<line>
+				<reportElement x="158" y="59" width="1" height="145"/>
+			</line>
+			<line>
+				<reportElement x="675" y="58" width="1" height="145"/>
+			</line>
+			<staticText>
+				<reportElement x="587" y="69" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="20" width="110" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboreo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="20" width="183" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nivelación(en su caso)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="69" width="100" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="69" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº Orden]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="228" width="481" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5.SIEMBRA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="259" width="481" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fangueado o fresadora]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="431" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="65" y="306" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="66" y="412" width="728" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="671" y="322" width="117" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="504" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="535" y="305" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="66" y="486" width="728" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="65" y="324" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº Orden]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="393" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="65" y="376" width="727" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="168" y="324" width="85" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Variedad]]></text>
+			</staticText>
+			<line>
+				<reportElement x="793" y="306" width="1" height="237"/>
+			</line>
+			<line>
+				<reportElement x="65" y="305" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="66" y="450" width="728" height="1"/>
+			</line>
+			<line>
+				<reportElement x="413" y="306" width="1" height="236"/>
+			</line>
+			<staticText>
+				<reportElement x="431" y="317" width="84" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dosis(kg/hectárea)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="358" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="65" y="523" width="729" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="304" y="317" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calidad Semilla(*)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="287" y="305" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="65" y="469" width="729" height="1"/>
+			</line>
+			<line>
+				<reportElement x="656" y="305" width="1" height="236"/>
+			</line>
+			<line>
+				<reportElement x="159" y="306" width="1" height="236"/>
+			</line>
+			<staticText>
+				<reportElement x="555" y="317" width="87" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha siembra]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="542" width="729" height="1"/>
+			</line>
+		</band>
+	</noData>
 </jasperReport>

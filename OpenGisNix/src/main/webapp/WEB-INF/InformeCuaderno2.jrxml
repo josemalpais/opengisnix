@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeCuaderno2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" language="java" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM
+     `parcela` parcela]]>
+	</queryString>
+	<field name="id_parcela" class="java.lang.Long"/>
+	<field name="partida" class="java.lang.String"/>
+	<field name="activa" class="java.lang.Boolean"/>
+	<field name="alias" class="java.lang.String"/>
+	<field name="num_parcela" class="java.lang.Integer"/>
+	<field name="num_poblacion" class="java.lang.Integer"/>
+	<field name="num_poligono" class="java.lang.Integer"/>
+	<field name="num_provincia" class="java.lang.Integer"/>
+	<field name="version" class="java.lang.Integer"/>
+	<field name="propietario" class="java.lang.Long"/>
+	<field name="num_partida" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<rectangle>
+				<reportElement x="234" y="33" width="230" height="40"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="329" y="33" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[HOLA MUNDO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="105" y="10" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[HOLA MUNDO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="133" y="10" width="230" height="40"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="105" y="10" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[HOLA MUNDO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="133" y="10" width="230" height="40"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
