@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +29,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
  */
 public class InformeCuaderno extends HttpServlet {
 
-    /**
+	/**
      * Processes requests for both HTTP
      * <code>GET</code> and
      * <code>POST</code> methods.
@@ -71,28 +72,44 @@ public class InformeCuaderno extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        response.setContentType("application/pdf");
+    	//String img="C:/Documents and Settings/de/Documents/workspace-sts-2.9.0.RELEASE/OpenGisNix/src/main/webapp/WEB-INF/mascota.png";
+    	//String img2="C:/Documents and Settings/de/Documents/workspace-sts-2.9.0.RELEASE/OpenGisNix/src/main/webapp/WEB-INF/FLORIDA.png";
+        String img="WEB-INF/mascota.png";
+        String img2="WEB-INF/FLORIDA.png";
+    	response.setContentType("application/pdf");
  ServletOutputStream out = response.getOutputStream();
  response.getContentType();
  try
  {
     JasperReport reporte = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeCuaderno.jasper"));
-    Map parametros = new HashMap();
+    //JasperReport reporte2 = (JasperReport) JRLoader.loadObject(getServletContext().getRealPath("WEB-INF/InformeCuaderno2.jasper"));
+    Map<String, Object> parametros = new HashMap<String, Object>();
     parametros.put("dni", request.getParameter("dni"));
-    
+    //parametros.put("img", this.getClass().getResourceAsStream(img));
+    //parametros.put("img2", this.getClass().getResourceAsStream(img2));
+    parametros.put("img","C:\\Documents and Settings\\de\\Documents\\workspace-sts-2.9.0.RELEASE\\OpenGisNix\\src\\main\\webapp\\WEB-INF\\mascota.png");
 
     JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametros, ConnectorServlets.conectar());
+    //JasperPrint jasperPrint2 = JasperFillManager.fillReport(reporte2, null, ConnectorServlets.conectar());
 
     JRExporter exporter = new JRPdfExporter();
     exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
+    //exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint2);
     exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, out);
     exporter.exportReport();
  }
  catch (Exception e)
  {
     e.printStackTrace();
+ }finally{
+	 try {
+		ConnectorServlets.close();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
  }
+ 
     }
 
     /**

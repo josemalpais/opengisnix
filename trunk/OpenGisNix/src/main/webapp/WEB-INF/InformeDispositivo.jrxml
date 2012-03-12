@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeDispositivo" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="204"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
 	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
 	<style name="Detail" fontName="Arial" fontSize="12"/>
-	<parameter name="f_inicio" class="java.lang.String">
+	<parameter name="f_inicio" class="java.util.Date">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
-	<parameter name="f_fin" class="java.lang.String">
+	<parameter name="f_fin" class="java.sql.Timestamp">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="imgif" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
      dispositivo.`activo` AS dispositivo_activo,
@@ -101,32 +102,30 @@ FROM
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="70" splitType="Stretch">
+		<band height="206" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="0" y="13" width="263" height="33"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<reportElement style="Title" x="75" y="13" width="340" height="60"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="36"/>
+				</textElement>
 				<text><![CDATA[Informe Dispositivo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="SubTitle" x="117" y="46" width="157" height="22"/>
-				<textElement textAlignment="Right"/>
+				<reportElement style="SubTitle" x="245" y="73" width="174" height="35"/>
+				<textElement textAlignment="Right">
+					<font size="24"/>
+				</textElement>
 				<text><![CDATA[OpenGis]]></text>
 			</staticText>
+			<image>
+				<reportElement x="415" y="13" width="136" height="135"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Documents and Settings\\de\\Documents\\workspace-sts-2.9.0.RELEASE\\OpenGisNix\\src\\main\\webapp\\WEB-INF\\mascota.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
 		<band splitType="Stretch"/>
 	</pageHeader>
-	<columnHeader>
-		<band height="36" splitType="Stretch">
-			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
-			</line>
-		</band>
-	</columnHeader>
 	<detail>
 		<band height="43" splitType="Stretch">
 			<line>
@@ -148,12 +147,12 @@ FROM
 			<textField>
 				<reportElement style="Detail" x="419" y="16" width="138" height="15"/>
 				<textElement textAlignment="Center"/>
-				<textFieldExpression class="java.util.Date"><![CDATA[$F{prestamo_fecha_fin}]]></textFieldExpression>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{prestamo_fecha_fin}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="Detail" x="277" y="16" width="138" height="15"/>
 				<textElement textAlignment="Center"/>
-				<textFieldExpression class="java.util.Date"><![CDATA[$F{prestamo_fecha_inicio}]]></textFieldExpression>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{prestamo_fecha_inicio}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
