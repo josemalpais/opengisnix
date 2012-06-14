@@ -16,9 +16,7 @@
       <a href="${logout}">
         <spring:message code="security_logout"/>
       </a>
-    <div>|</div>
-            <a href="/OpenGisNix/changepassword/index">password</a>
-        </span>
+    </span>
   </c:if>
 
   <span id="language">
@@ -26,16 +24,20 @@
     <spring:message code="global_language"/>
     <c:out value=": "/>
   <util:language label="English" locale="en"/>
-    <util:language label="Espanol" locale="es"/>
-    <util:language label="Valencian_Catalan" locale="ca"/>
     </span>
-  <util:theme/>
-
-  <spring:url value="/resources/images/springsource-logo.png" var="logo"/>
-  <spring:message code="global_sponsored" htmlEscape="false" var="sponsored"/>
-  <span>
-    <a href="http://springsource.com" title="${fn:escapeXml(sponsored)}">
-      <img align="right" alt="${fn:escapeXml(sponsored)}" src="${logo}"/>
-    </a>
-  </span>
+	
+	<spring:url var="f1" value="/resources/images/footer_1.jpg" />
+    <spring:url var="f2" value="/resources/images/footer_2.jpg" />
+    <spring:url var="f3" value="/resources/images/footer_3.jpg" />
+    <spring:url var="f4" value="/resources/images/footer_4.jpg" />
+    <spring:url var="f5" value="/resources/images/footer_5.jpg" />
+    				
+	<div id="partners">
+		<a title="Unión Europea"  href="http://europa.eu/index_es.htm"><img src="${f1}" /></a>
+		<a title="Ministerio de Educación"  href="http://www.educacion.gob.es/portada.html"><img  src="${f2}" /></a>
+		<a title="Anecoop"  href="http://www.anecoop.com/"><img  src="${f3}" /></a>
+		<a title="I.E.S Virgen de la Cabeza"  href="http://www.juntadeandalucia.es/averroes/centros-tic/23700293/helvia/sitio/"><img  src="${f4}" /></a>
+		<a title="gvSIG"  href="#"><img  src="${f5}" /></a>
+	</div>
+	
 </div>
