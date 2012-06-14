@@ -3,9 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_org_opengis_nix_domain_User" object="${user}" path="/users" z="ic3yJrgOcY/vUeIhk92p5rZj1+w=">
-        <field:display field="emailAddress" id="s_org_opengis_nix_domain_User_emailAddress" object="${user}" z="XWYCNTOH25+0pr9iQD9H/jVTcuw="/>
-        <field:display field="password" id="s_org_opengis_nix_domain_User_password" object="${user}" z="pa/kPkokC5h0eqxOnKwfvg6JDe8="/>
-        <field:display field="enabled" id="s_org_opengis_nix_domain_User_enabled" object="${user}" z="BDmmjOZsi2BXVXm94KmJC6bC9kQ="/>
         <field:display field="dni" id="s_org_opengis_nix_domain_User_dni" object="${user}" z="2IaYj0N1LXlW1UIT2mC/cYcC79k="/>
         <field:display field="nombre" id="s_org_opengis_nix_domain_User_nombre" object="${user}" z="SifB4VpWc9DYpkwg8PjbYjIIGhs="/>
         <field:display field="apellidos" id="s_org_opengis_nix_domain_User_apellidos" object="${user}" z="8oA7jCBq+8xgn4sOPg05I6/eK70="/>
@@ -14,6 +11,9 @@
         <field:display field="direccion" id="s_org_opengis_nix_domain_User_direccion" object="${user}" z="PptI3x5GZHm+6fuA7nsiWnrIlds="/>
         <field:display field="poblacion" id="s_org_opengis_nix_domain_User_poblacion" object="${user}" z="wvrmd/3ZuL2YPfg6lKfzCxeivbk="/>
         <field:display field="provincia" id="s_org_opengis_nix_domain_User_provincia" object="${user}" z="OV14bJqPjZLGMO7j5ODaMv1Rjbs="/>
-        <field:display field="codPostal" id="s_org_opengis_nix_domain_User_codPostal" object="${user}" z="BIPxgbEFDgedAFw0QglhwuE5APQ="/>
+        <field:display field="codPostal" id="s_org_opengis_nix_domain_User_codPostal" object="${user}" z="BIPxgbEFDgedAFw0QglhwuE5APQ="/>        
+        <field:display field="emailAddress" id="s_org_opengis_nix_domain_User_emailAddress" object="${user}" z="XWYCNTOH25+0pr9iQD9H/jVTcuw="/>
+        <field:display field="password" render="false" id="s_org_opengis_nix_domain_User_password" object="${user}" z="pa/kPkokC5h0eqxOnKwfvg6JDe8="/>
+        <field:display field="enabled" render="false" id="s_org_opengis_nix_domain_User_enabled" object="${user}" z="BDmmjOZsi2BXVXm94KmJC6bC9kQ="/>
     </page:show>
 </div>
