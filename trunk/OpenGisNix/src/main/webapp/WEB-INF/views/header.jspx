@@ -1,11 +1,28 @@
 <div id="header" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:spring="http://www.springframework.org/tags" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
+			
 
-  <spring:url var="banner" value="/resources/images/banner-graphic.png" />
-  <spring:url var="home" value="/" />
-  <spring:message code="button_home" var="home_label" htmlEscape="false" />
-  <a href="${home}" name="${fn:escapeXml(home_label)}" title="${fn:escapeXml(home_label)}">
-    <img src="${banner}" />
-  </a>
+		<a title="Home" name="Home" href="/OpenGisNix"><img id="marcoBot" src="images/marcoBannerBot.png" /></a>
+		<a title="Home" name="Florida Universitaria" href="http://www.florida-uni.es/web_es/home.php"><img id="florida" src="images/florida.png" /></a>
+		<a name="Home" href="/OpenGisNix"><img id="navegadores" src="images/navegadores.png" /></a>
+		<!--<a title="Home" name="Home" href="/myTest/"><img id="marcoTop" src="marcoBannerTop.png" /></a>-->
+		<div id="wowslider-container1">
+			<div class="ws_images">
+				<ul>
+					<li><img src="data1/images/imgbanner1.jpg" alt="imgBanner1" title="imgBanner1" id="wows1_0"/></li>
+					<li><img src="data1/images/imgbanner2.jpg" alt="imgBanner2" title="imgBanner2" id="wows1_1"/></li>
+					<li><img src="data1/images/imgbanner3.jpg" alt="imgBanner3" title="imgBanner3" id="wows1_2"/></li>
+					<li><img src="data1/images/imgbanner4.jpg" alt="imgBanner4" title="imgBanner4" id="wows1_3"/></li>
+				</ul>
+			</div>
+			<div class="ws_bullets"><div>
+				<a href="#" title="images/imgBanner1"><img src="data1/tooltips/imgbanner1.jpg" alt="imgBanner1"/>1</a>
+				<a href="#" title="images/imgBanner2"><img src="data1/tooltips/imgbanner2.jpg" alt="imgBanner2"/>2</a>
+				<a href="#" title="images/imgBanner3"><img src="data1/tooltips/imgbanner3.jpg" alt="imgBanner3"/>3</a>
+				<a href="#" title="images/imgBanner4"><img src="data1/tooltips/imgbanner4.jpg" alt="imgBanner4"/>4</a>
+			</div>
+		</div>
+			<div class="ws_shadow"></div>
+		</div>
 </div> 

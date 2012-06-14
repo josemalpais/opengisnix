@@ -373,9 +373,11 @@ fieldset th {
 	text-transform: uppercase;
 	font-weight:bold;
 	font-size: 12px;
-	padding: 6px  23px;
+	padding: 6px  0;
 	border-radius:  5px;
 	border-style: outset;
+	text-align: center;
+	width: 108px;
 }
 
 #menu a {
@@ -445,12 +447,12 @@ position: relative;
 
 img#marcoBot{
 	position: absolute;
-	z-index: 	10;
+	z-index: 	96;
 	top: 226px;
 }
 img#marcoTop{
 	position: absolute;
-	z-index: 	10;
+	z-index: 	76;
 }
 
 #foot{
@@ -474,3 +476,5 @@ div#partners{
 	left: 317px;
 	margin-bottom: 10px;
 }
+
+
