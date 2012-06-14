@@ -12,21 +12,23 @@
             <menu:item id="fi_user_emailaddress" messageCode="global_menu_find" url="/users?find=ByEmailAddress&amp;form" z="zQpmROgoAt/F36huYhJLnYE4iTg="/>
             -->
             <menu:item id="fi_user_dni" messageCode="global_menu_find" url="/users?find=ByDni&amp;form" z="C+gry2dLtG3EMsjYWEYDwNLYptE="/>
-          
+            <menu:item id="fi_user_apellidoslike" messageCode="global_menu_find" url="/users?find=ByApellidosLike&amp;form" z="FVknPe+/fVLITKuD/rSwhjwvcl4="/>
+            <menu:item id="fi_user_emailaddress" messageCode="global_menu_find" url="/users?find=ByEmailAddress&amp;form" z="zQpmROgoAt/F36huYhJLnYE4iTg="/>
+            <menu:item id="fi_user_nombrelike" messageCode="global_menu_find" url="/users?find=ByNombreLike&amp;form" z="t0c3z6dMG16enmSwVy3Dz0Dvl2Y="/>
         </menu:category>
         <menu:category id="c_parcela" z="gE2ikfsXLALiVs0vLR4rWLPCEzQ=">
             <menu:item id="i_parcela_new" messageCode="global_menu_new" url="/parcelas?form" z="S0qD/awgICiMThWtDtNwcn5jsqk="/>
             <menu:item id="i_parcela_list" messageCode="global_menu_list" url="/parcelas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kKVdVx0fiUNoHvJ0a0wNz/85p6E="/>
             <menu:item id="fi_parcela_partida" messageCode="global_menu_find" url="/parcelas?find=ByPartida&amp;form" z="8kux2gVViCZrlLl8wP5QGgFsiLg="/>
             <!--<menu:item id="fi_parcela_propietario" messageCode="global_menu_find" url="/parcelas?find=ByPropietario&amp;form" z="B/K+25EkQzQ8TNKTRVN0dBVBuR4="/>-->
-           
+            <menu:item id="fi_parcela_propietario" messageCode="global_menu_find" url="/parcelas?find=ByPropietario&amp;form" z="B/K+25EkQzQ8TNKTRVN0dBVBuR4="/>
         </menu:category>
         <menu:category id="c_apero" z="uH4mBFzvc3/PaYaX8nekX1nfAlg=">
             <menu:item id="i_apero_new" messageCode="global_menu_new" url="/aperoes?form" z="zWFDynXGuqBv9TaGNx0JmaVORqY="/>
             <menu:item id="i_apero_list" messageCode="global_menu_list" url="/aperoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MUp/PskdjyKmq4UYMDaQg89RkUE="/>
             <!--<menu:item id="fi_apero_nombrelike" messageCode="global_menu_find" url="/aperoes?find=ByNombreLike&amp;form" z="jSlXjztN5flRRdNpVBgdzret4GY="/>-->
             <menu:item id="fi_apero_tarea" messageCode="global_menu_find" url="/aperoes?find=ByTarea&amp;form" z="THOboqKGgnPu6w8kTfCu1l4KLLc="/>
-            
+            <menu:item id="fi_apero_nombrelike" messageCode="global_menu_find" url="/aperoes?find=ByNombreLike&amp;form" z="jSlXjztN5flRRdNpVBgdzret4GY="/>
         </menu:category>
         <menu:category id="c_dispositivo" z="LmhAm25b/cuzruqeC85Hz8M6vPY=">
             <menu:item id="i_dispositivo_new" messageCode="global_menu_new" url="/dispositivoes?form" z="us6cPxOqWjUNP9WZvqTt0h7r8+Q="/>
@@ -43,43 +45,30 @@
             <menu:item id="i_producto_new" messageCode="global_menu_new" url="/productoes?form" z="NU69Oah+Fo/A/7suYZU0TbHCT/w="/>
             <menu:item id="i_producto_list" messageCode="global_menu_list" url="/productoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EqA+KL5NJZW09+MF6BSDVmfkk80="/>
         </menu:category>
-        <!--<menu:category id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=" >
-            <menu:item id="i_role_new" messageCode="global_menu_new" url="/roles?form" z="WNB2HvnzvtbOA3r7qL1gqrUOq8g="/>
-            <menu:item id="i_role_list" messageCode="global_menu_list" url="/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DVFtqj4xcHbEiJh6bgI7Tyre3ec="/>
-        </menu:category>
-        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
-            <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
-            <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
-            <menu:item id="fi_userrole_usuario" messageCode="global_menu_find" url="/userroles?find=ByUsuario&amp;form" z="DP6oVGHOZKV82UB1t99Ta5QJO6w="/>
-        </menu:category>
-        -->
+
         <menu:category id="c_view" z="HjmI4Chx/kBYfS/6HjBLbCA+XpU=">
             <menu:item id="i_view__informes_parcelareportparcela_id" messageCode="global_generic" url="/informes/parcela/reportparcela" z="vFCA7KWotjF5C/wDe/hq2wloe7Y="/>
             <menu:item id="i_view__informes_usuarioreportusuario_id" messageCode="global_generic" url="/informes/usuario/reportusuario" z="Fok+yp/KwAnbK+qUVKMMlLbZ4Kk="/>
             <menu:item id="i_view__informes_prestamoreportprestamo_id" messageCode="global_generic" url="/informes/prestamo/reportprestamo" z="iNJ9k48FJHocoMX/pBKbpYW6fuU="/>
             <menu:item id="i_view__informes_cuaderno_cuaderno_id" messageCode="global_generic" url="/informes/cuaderno//cuaderno" z="PhSUgDcPwQQqgcQm7BPYX9yHG9s="/>
         </menu:category>
-        <!-- 
 
-        
-        <menu:category id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=">
+        <menu:category render="false" id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=">
             <menu:item id="i_role_new" messageCode="global_menu_new" url="/roles?form" z="WNB2HvnzvtbOA3r7qL1gqrUOq8g="/>
             <menu:item id="i_role_list" messageCode="global_menu_list" url="/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DVFtqj4xcHbEiJh6bgI7Tyre3ec="/>
         </menu:category>
-        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
+        <menu:category render="false" id="c_tarea" z="ZUSskDa1xg9hPVgZu8zZabeqNSg=">
+            <menu:item id="i_tarea_new" messageCode="global_menu_new" url="/tareas?form" z="LQXWZhgOK0iqSpDDiTiV4qQ3C7Q="/>
+            <menu:item id="i_tarea_list" messageCode="global_menu_list" url="/tareas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DQnx+Kpp1PEUDVOp8NP1hiM/4Xk="/>
+        </menu:category>
+        <menu:category render="false" id="c_tareasrealizadas" z="2Oj9B6CcfpwwijyO8hg7UlBB0Vs=">
+            <menu:item id="i_tareasrealizadas_new" messageCode="global_menu_new" url="/tareasrealizadases?form" z="vT9fXDhll9o/9a69AkeHVdU6Jrc="/>
+            <menu:item id="i_tareasrealizadas_list" messageCode="global_menu_list" url="/tareasrealizadases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fKoPkyuMV690EGOLMX1//ecutF8="/>
+        </menu:category>
+        <menu:category render="false" id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
             <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
             <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
             <menu:item id="fi_userrole_usuario" messageCode="global_menu_find" url="/userroles?find=ByUsuario&amp;form" z="DP6oVGHOZKV82UB1t99Ta5QJO6w="/>
         </menu:category>
-        <menu:category id="c_tarea" z="ZUSskDa1xg9hPVgZu8zZabeqNSg=">
-            <menu:item id="i_tarea_new" messageCode="global_menu_new" url="/tareas?form" z="LQXWZhgOK0iqSpDDiTiV4qQ3C7Q="/>
-            <menu:item id="i_tarea_list" messageCode="global_menu_list" url="/tareas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DQnx+Kpp1PEUDVOp8NP1hiM/4Xk="/>
-        </menu:category>
-        <menu:category id="c_tareasrealizadas" z="2Oj9B6CcfpwwijyO8hg7UlBB0Vs=">
-            <menu:item id="i_tareasrealizadas_new" messageCode="global_menu_new" url="/tareasrealizadases?form" z="vT9fXDhll9o/9a69AkeHVdU6Jrc="/>
-            <menu:item id="i_tareasrealizadas_list" messageCode="global_menu_list" url="/tareasrealizadases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fKoPkyuMV690EGOLMX1//ecutF8="/>
-         
-        </menu:category>-->
-       
     </menu:menu>
 </div>

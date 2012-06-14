@@ -21,7 +21,6 @@ body {
 	max-width: 800px;
 	margin-right: auto;
 	margin-left: auto;
-
 	/* fix max-width incompatibility in IE6 */
 	width:expression(document.body.clientWidth > 800? "800px": "auto" );
 	
@@ -36,58 +35,12 @@ body {
 	display:box;
 }
 
-#menu {
-	background: #eee;
-	position:relative;
-	float:left;  	
-	left:0px;
-	width:220px;
-	margin-right:15px;
-}
-
-#menu ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-#menu ul li{
-	padding: 0px;
-}
-
-
-#menu a, #menu h2 {
-	display: block;
-	margin: 0;
-	padding: 2px 6px;
-	color:#FFFFFF;
-}
-
-#menu h2 {
-	color: #fff;
-	background: #648C1D;
-	text-transform: uppercase;
-	font-weight:bold;
-	font-size: 12px;
-}
-
-#menu a {
-	color: #666666;
-	background: #efefef;
-	text-decoration: none;
-	padding: 2px 12px;
-}
-
-#menu a:hover {
-	color: #648C1D;
-	background: #fff;
-}
 
 #footer {
 	background:#fff;
 	border:none;
 	margin-top:15px;
-	border-top:1px solid #999999;
+	border-top:1.5px solid #999999;
 }
 
 #footer .new {
@@ -102,10 +55,6 @@ body {
 }
 .quicklinks span {
 	float: right;
-}
-
-table.navigation {
-	border: 0px;
 }
 
 label {
@@ -221,7 +170,7 @@ li {
 }
 
 ul li {
-	margin:0 0 0.25em 0;
+	margin:0 5em 0.25em 0;
 	padding:0;
 }
 /* table elements */
@@ -370,4 +319,158 @@ fieldset th {
 .flag {
 	height: 11px;
 	width: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#menu{
+	font-size: 0.7em;
+	width: 850px;
+	position:relative;
+	right:40px;
+	margin: 20px auto;
+}
+
+
+#menu a, #menu h2 {
+	display: block;
+	margin: 0;
+	padding: 2px 6px;
+	color:#FFFFFF;
+}
+
+#menu h2 {
+	color: #fff;
+	/*background:  #648C1D; BACKGROUND VERDE BOTONES*/ 
+	background:grey;
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size: 12px;
+	padding: 6px  23px;
+	border-radius:  5px;
+	border-style: outset;
+}
+
+#menu a {
+	color: #666666;
+	background: #efefef;
+	text-decoration: none;
+	padding: 2px 12px;
+}
+
+#menu a:hover {
+	color: #648C1D;
+	background: #fff;
+}
+
+#menu ul { 
+	list-style-type: none;
+}
+#menu ul li{
+	display: inline-block;
+	margin: 0 0 0 0;
+}
+	
+#menu ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	border: solid 3px white;
+	position:relative;
+	top:2px;
+}
+
+#menu ul li:hover {
+	position: relative;
+}
+
+#menu ul li ul {display: none;
+}
+
+#menu ul li a:hover ul, #menu ul li:hover ul {
+	display: block;
+	position: absolute;
+	left: 0px;
+}
+
+#menu ul li ul li a {/*BOTONES DESPLEGABLES*/
+	/*background: #ABC974;*/
+	background:lightgrey;
+	padding: 5px 5px 5px 5px;
+	position:relative;
+	right:42px;
+	width: 186px;
+	
+}
+
+#menu ul li ul li a:hover {
+	/*border-top-color: #000;*/
+	position: relative;
+	background: 	#A6E72F;
+}
+
+table.falsa {border-collapse:collapse;
+border:0px;
+float: left;
+position: relative;
+
+}
+
+img#marcoBot{
+	position: absolute;
+	z-index: 	10;
+	top: 226px;
+}
+img#marcoTop{
+	position: absolute;
+	z-index: 	10;
+}
+
+#foot{
+	margin-top:  55px;
+	position: relative;
+}
+
+#florida{
+	position: absolute;
+	top: 50px;
+	z-index: 77;
+}
+
+div#partners{
+	width: 860px;
+	padding: 50px 0;
+}
+
+#navegadores{
+	position: relative;
+	left: 317px;
+	margin-bottom: 10px;
 }
