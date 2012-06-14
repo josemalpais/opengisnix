@@ -6,29 +6,23 @@
         <menu:category id="c_user" z="uoTSf/uIZ821ZppidzS9aO776yk=">
             <menu:item id="i_user_new" messageCode="global_menu_new" url="/users?form" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
             <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
-            <!--  <menu:item id="fi_user_apellidoslike" messageCode="global_menu_find" url="/users?find=ByApellidosLike&amp;form" z="FVknPe+/fVLITKuD/rSwhjwvcl4="/>
-            <menu:item id="fi_user_nombrelike" messageCode="global_menu_find" url="/users?find=ByNombreLike&amp;form" z="t0c3z6dMG16enmSwVy3Dz0Dvl2Y="/>
+
             <menu:item id="fi_user_dni" messageCode="global_menu_find" url="/users?find=ByDni&amp;form" z="C+gry2dLtG3EMsjYWEYDwNLYptE="/>
-            <menu:item id="fi_user_emailaddress" messageCode="global_menu_find" url="/users?find=ByEmailAddress&amp;form" z="zQpmROgoAt/F36huYhJLnYE4iTg="/>
-            -->
-            <menu:item id="fi_user_dni" messageCode="global_menu_find" url="/users?find=ByDni&amp;form" z="C+gry2dLtG3EMsjYWEYDwNLYptE="/>
-            <menu:item id="fi_user_apellidoslike" messageCode="global_menu_find" url="/users?find=ByApellidosLike&amp;form" z="FVknPe+/fVLITKuD/rSwhjwvcl4="/>
-            <menu:item id="fi_user_emailaddress" messageCode="global_menu_find" url="/users?find=ByEmailAddress&amp;form" z="zQpmROgoAt/F36huYhJLnYE4iTg="/>
-            <menu:item id="fi_user_nombrelike" messageCode="global_menu_find" url="/users?find=ByNombreLike&amp;form" z="t0c3z6dMG16enmSwVy3Dz0Dvl2Y="/>
+            <menu:item id="fi_user_apellidoslike" render="false" messageCode="global_menu_find" url="/users?find=ByApellidosLike&amp;form" z="FVknPe+/fVLITKuD/rSwhjwvcl4="/>
+            <menu:item id="fi_user_emailaddress" render="false"  messageCode="global_menu_find" url="/users?find=ByEmailAddress&amp;form" z="zQpmROgoAt/F36huYhJLnYE4iTg="/>
+            <menu:item id="fi_user_nombrelike" render="false"  messageCode="global_menu_find" url="/users?find=ByNombreLike&amp;form" z="t0c3z6dMG16enmSwVy3Dz0Dvl2Y="/>
         </menu:category>
         <menu:category id="c_parcela" z="gE2ikfsXLALiVs0vLR4rWLPCEzQ=">
             <menu:item id="i_parcela_new" messageCode="global_menu_new" url="/parcelas?form" z="S0qD/awgICiMThWtDtNwcn5jsqk="/>
             <menu:item id="i_parcela_list" messageCode="global_menu_list" url="/parcelas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kKVdVx0fiUNoHvJ0a0wNz/85p6E="/>
             <menu:item id="fi_parcela_partida" messageCode="global_menu_find" url="/parcelas?find=ByPartida&amp;form" z="8kux2gVViCZrlLl8wP5QGgFsiLg="/>
-            <!--<menu:item id="fi_parcela_propietario" messageCode="global_menu_find" url="/parcelas?find=ByPropietario&amp;form" z="B/K+25EkQzQ8TNKTRVN0dBVBuR4="/>-->
-            <menu:item id="fi_parcela_propietario" messageCode="global_menu_find" url="/parcelas?find=ByPropietario&amp;form" z="B/K+25EkQzQ8TNKTRVN0dBVBuR4="/>
+            <menu:item id="fi_parcela_propietario" render="false" messageCode="global_menu_find" url="/parcelas?find=ByPropietario&amp;form" z="B/K+25EkQzQ8TNKTRVN0dBVBuR4="/>
         </menu:category>
         <menu:category id="c_apero" z="uH4mBFzvc3/PaYaX8nekX1nfAlg=">
             <menu:item id="i_apero_new" messageCode="global_menu_new" url="/aperoes?form" z="zWFDynXGuqBv9TaGNx0JmaVORqY="/>
             <menu:item id="i_apero_list" messageCode="global_menu_list" url="/aperoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MUp/PskdjyKmq4UYMDaQg89RkUE="/>
-            <!--<menu:item id="fi_apero_nombrelike" messageCode="global_menu_find" url="/aperoes?find=ByNombreLike&amp;form" z="jSlXjztN5flRRdNpVBgdzret4GY="/>-->
             <menu:item id="fi_apero_tarea" messageCode="global_menu_find" url="/aperoes?find=ByTarea&amp;form" z="THOboqKGgnPu6w8kTfCu1l4KLLc="/>
-            <menu:item id="fi_apero_nombrelike" messageCode="global_menu_find" url="/aperoes?find=ByNombreLike&amp;form" z="jSlXjztN5flRRdNpVBgdzret4GY="/>
+            <menu:item id="fi_apero_nombrelike"  render="false" messageCode="global_menu_find" url="/aperoes?find=ByNombreLike&amp;form" z="jSlXjztN5flRRdNpVBgdzret4GY="/>
         </menu:category>
         <menu:category id="c_dispositivo" z="LmhAm25b/cuzruqeC85Hz8M6vPY=">
             <menu:item id="i_dispositivo_new" messageCode="global_menu_new" url="/dispositivoes?form" z="us6cPxOqWjUNP9WZvqTt0h7r8+Q="/>
