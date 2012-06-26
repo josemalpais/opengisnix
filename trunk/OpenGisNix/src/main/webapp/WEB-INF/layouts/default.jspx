@@ -4,7 +4,8 @@
 	
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />  
 	<jsp:directive.page pageEncoding="UTF-8" /> 
-			
+	<spring:url value="/resources/engine1/script.js" var="script" />
+  	<spring:url value="/resources/engine1/wowslider.js" var="wowslider" />		
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=8" />	
@@ -16,7 +17,36 @@
 	
   	<body class="tundra spring">
    		<div id="wrapper">
-		    <tiles:insertAttribute name="header" ignore="true" />
+   			<div id="header" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+		    	  <jsp:directive.page contentType="text/html;charset=UTF-8" />
+					  <jsp:output omit-xml-declaration="yes" />
+					  <spring:url value="/resources/images/testBanner.jpg" var="banner" />
+					  <spring:url value="/resources/images/marcoBannerBot.png" var="imb" />
+					  <spring:url value="/resources/images/florida.png" var="florida" />
+					  <spring:url value="/resources/images/navegadores.png" var="nav" />
+					  <spring:url value="/resources/data1/images/imgbanner1.jpg" var="imgB1" />
+					  <spring:url value="/resources/data1/images/imgbanner2.jpg" var="imgB2" />
+					  <spring:url value="/resources/data1/images/imgbanner3.jpg" var="imgB3" />
+					  <spring:url value="/resources/data1/images/imgbanner4.jpg" var="imgB4" />
+					  <spring:url value="/resources/data1/tooltips/imgBanner1.jpg" var="bimgB1" />
+					  <spring:url value="/resources/data1/tooltips/imgBanner2.jpg" var="bimgB2" />
+					  <spring:url value="/resources/data1/tooltips/imgBanner3.jpg" var="bimgB3" />
+					  <spring:url value="/resources/data1/tooltips/imgBanner4.jpg" var="bimgB4" />
+				  		<a title="Home" name="Home" href="/OpenGisNix"><img id="marcoBot" src="${imb}" /></a>
+						<a title="Home" name="Florida Universitaria" href="http://www.florida-uni.es/web_es/home.php"><img id="florida" src="${florida}" /></a>
+						<a name="Home" href="/OpenGisNix"><img id="navegadores" src="${nav}" /></a>
+						 <div id="wowslider-container1">
+							<div class="ws_images">
+								<ul>
+									<li><img src="${imgB1}" alt="imgBanner1" title="imgBanner1" id="wows1_0"/></li>
+									<li><img src="${imgB2}" alt="imgBanner2" title="imgBanner2" id="wows1_1"/></li>
+									<li><img src="${imgB3}" alt="imgBanner3" title="imgBanner3" id="wows1_2"/></li>
+									<li><img src="${imgB4}" alt="imgBanner4" title="imgBanner4" id="wows1_3"/></li>
+								</ul>
+							</div>
+				
+						</div>
+			</div>
 		    <tiles:insertAttribute name="menu" ignore="true" />   
 		    <div id="main">
 	    		<tiles:insertAttribute name="body"/> 
