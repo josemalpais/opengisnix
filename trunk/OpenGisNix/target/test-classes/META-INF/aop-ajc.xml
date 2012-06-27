@@ -1,0 +1,49 @@
+<aspectj>
+<aspects>
+<aspect name="org.opengis.nix.PrestamoIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.domain.UserRoleIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.domain.UserIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.ProductoDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.domain.UserDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareasRealizadasDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareasRealizadasIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareasDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.ParcelaDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.ProductoIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.AperoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.domain.UserRoleDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.AperoIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.domain.UserIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.DispositivoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.ParcelaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.domain.RoleIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.domain.RoleIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.AperoIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.ProductoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.DispositivoDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.PrestamoDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.DispositivoIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareaIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.DispositivoIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.ProductoIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.domain.UserRoleIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareaDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareasRealizadasDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.domain.RoleDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.domain.RoleDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.AperoDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.domain.UserDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.domain.UserRoleDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareasIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.TareasRealizadasIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="org.opengis.nix.PrestamoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.ParcelaIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.TareasDataOnDemand_Roo_Configurable"/>
+<aspect name="org.opengis.nix.ParcelaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="org.opengis.nix.TareasIntegrationTest_Roo_Configurable"/>
+<aspect name="org.opengis.nix.PrestamoIntegrationTest_Roo_IntegrationTest"/>
+</aspects>
+</aspectj>
+
